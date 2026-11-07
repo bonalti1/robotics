@@ -1,0 +1,328 @@
+{
+  "id": "v1",
+  "title": "Meet Flop, Our Robot",
+  "out": "output/v1/draft.mp4",
+  "watermark": "DRAFT - no voice yet - timing is a guess",
+  "segments": [
+    {
+      "note": "intro: Cranebot waves at Flop",
+      "type": "clip",
+      "src": "output/v1/shot1_take2.mp4",
+      "dur": 5.0
+    },
+    {
+      "note": "five parts: gentle push-in on the whole robot",
+      "type": "still",
+      "src": "refs/16x9/02_flop_robot_16x9.png",
+      "dur": 4.0,
+      "zoom": {
+        "to": 1.08,
+        "cx": 894,
+        "cy": 696
+      }
+    },
+    {
+      "note": "wheels = legs: Flop drives right",
+      "type": "clip",
+      "src": "output/v1/shot2_take1.mp4",
+      "dur": 5.0
+    },
+    {
+      "note": "intake = mouth: zoom to the green intake",
+      "type": "still",
+      "src": "refs/16x9/02_flop_robot_16x9.png",
+      "dur": 5.5,
+      "zoom": {
+        "to": 1.9,
+        "cx": 1306,
+        "cy": 589
+      }
+    },
+    {
+      "note": "arm = neck: arm lifts the bag (holds last frame)",
+      "type": "clip",
+      "src": "output/v1/shot3_take2.mp4",
+      "dur": 6.0
+    },
+    {
+      "note": "camera = eyes: zoom to the eye panel",
+      "type": "still",
+      "src": "refs/16x9/02_flop_robot_16x9.png",
+      "dur": 5.0,
+      "zoom": {
+        "to": 2.0,
+        "cx": 894,
+        "cy": 549
+      }
+    },
+    {
+      "note": "bumper = nose: zoom to the red bumper",
+      "type": "still",
+      "src": "refs/16x9/02_flop_robot_16x9.png",
+      "dur": 4.0,
+      "zoom": {
+        "to": 2.2,
+        "cx": 1153,
+        "cy": 749
+      }
+    },
+    {
+      "note": "outro: Cranebot bobs happily (holds last frame)",
+      "type": "clip",
+      "src": "output/v1/shot4_take1.mp4",
+      "dur": 6.0
+    },
+    {
+      "note": "hands-on challenge card",
+      "type": "card",
+      "dur": 6.0,
+      "card": {
+        "background": "refs/04_mascot_and_flop.png",
+        "title": "TRY IT!",
+        "lines": [
+          "Point to each part",
+          "on our real robot!"
+        ],
+        "footer": "Wheels  -  Intake  -  Arm  -  Camera  -  Bumper"
+      }
+    }
+  ],
+  "captions": [
+    {
+      "start": 1.2,
+      "end": 5.0,
+      "size": 100,
+      "parts": [
+        [
+          "MEET ",
+          "white"
+        ],
+        [
+          "FLOP!",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "start": 5.4,
+      "end": 9.0,
+      "parts": [
+        [
+          "5 ",
+          "yellow"
+        ],
+        [
+          "PARTS",
+          "white"
+        ]
+      ]
+    },
+    {
+      "start": 9.5,
+      "end": 14.0,
+      "parts": [
+        [
+          "WHEELS",
+          "white"
+        ],
+        [
+          " = ",
+          "yellow"
+        ],
+        [
+          "LEGS",
+          "cyan"
+        ]
+      ]
+    },
+    {
+      "start": 14.5,
+      "end": 19.5,
+      "parts": [
+        [
+          "INTAKE",
+          "white"
+        ],
+        [
+          " = ",
+          "yellow"
+        ],
+        [
+          "MOUTH",
+          "cyan"
+        ]
+      ]
+    },
+    {
+      "start": 20.0,
+      "end": 25.5,
+      "pos": "topleft",
+      "parts": [
+        [
+          "ARM",
+          "white"
+        ],
+        [
+          " = ",
+          "yellow"
+        ],
+        [
+          "NECK",
+          "cyan"
+        ]
+      ],
+      "size": 90
+    },
+    {
+      "start": 26.0,
+      "end": 28.6,
+      "parts": [
+        [
+          "CAMERA",
+          "white"
+        ],
+        [
+          " = ",
+          "yellow"
+        ],
+        [
+          "EYES",
+          "cyan"
+        ]
+      ]
+    },
+    {
+      "start": 28.6,
+      "end": 30.5,
+      "parts": [
+        [
+          "RED  ",
+          "red"
+        ],
+        [
+          "BLUE  ",
+          "blue"
+        ],
+        [
+          "YELLOW",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "start": 31.0,
+      "end": 33.0,
+      "parts": [
+        [
+          "BUMPER",
+          "white"
+        ],
+        [
+          " = ",
+          "yellow"
+        ],
+        [
+          "NOSE",
+          "cyan"
+        ]
+      ]
+    },
+    {
+      "start": 33.0,
+      "end": 34.5,
+      "size": 140,
+      "parts": [
+        [
+          "BOOP!",
+          "yellow"
+        ]
+      ],
+      "pos": [
+        1120,
+        430
+      ]
+    },
+    {
+      "start": 35.0,
+      "end": 38.2,
+      "pos": "bottom",
+      "size": 84,
+      "parts": [
+        [
+          "5 PARTS",
+          "white"
+        ],
+        [
+          "  -  ",
+          "yellow"
+        ],
+        [
+          "1 ROBOT",
+          "white"
+        ],
+        [
+          "  -  ",
+          "yellow"
+        ],
+        [
+          "1 TEAM",
+          "white"
+        ]
+      ]
+    },
+    {
+      "start": 38.2,
+      "end": 40.5,
+      "pos": "bottom",
+      "size": 96,
+      "parts": [
+        [
+          "LET'S BUILD IT!",
+          "yellow"
+        ]
+      ]
+    }
+  ],
+  "narration": [
+    {
+      "start": 0.4,
+      "end": 4.8,
+      "text": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot!"
+    },
+    {
+      "start": 5.2,
+      "end": 8.8,
+      "text": "Flop has five parts, just like a body."
+    },
+    {
+      "start": 9.3,
+      "end": 13.8,
+      "text": "Wheels are Flop's legs: they drive and turn."
+    },
+    {
+      "start": 14.3,
+      "end": 19.3,
+      "text": "The intake is Flop's mouth: it grabs bean bags and spits them out."
+    },
+    {
+      "start": 19.8,
+      "end": 25.3,
+      "text": "The arm is Flop's neck: it lifts bags up high, just like my long crane neck!"
+    },
+    {
+      "start": 25.8,
+      "end": 30.3,
+      "text": "The camera is Flop's eyes: it sees red, blue and yellow."
+    },
+    {
+      "start": 30.8,
+      "end": 34.3,
+      "text": "And the bumper is Flop's nose: boop!"
+    },
+    {
+      "start": 35.0,
+      "end": 40.3,
+      "text": "Five parts, one robot, one team. Let's build it!"
+    }
+  ]
+}

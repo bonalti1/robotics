@@ -1,0 +1,50 @@
+[
+  {
+    "out": "output/v1/shot1_take1.mp4",
+    "image": "refs/04_mascot_and_flop.png",
+    "prompt": "Cranebot the cartoon crane turns its head toward the robot and flaps one wing in a friendly wave. The robot stays still. Flat 2D cartoon style, gentle motion, static camera.",
+    "seed": 1102
+  },
+  {
+    "out": "output/v1/shot1_take2.mp4",
+    "image": "refs/04_mascot_and_flop.png",
+    "prompt": "Cranebot the cartoon crane turns its head toward the robot and flaps one wing in a friendly wave. The robot stays still. Flat 2D cartoon style, gentle motion, static camera.",
+    "seed": 2202
+  },
+  {
+    "out": "output/v1/shot2_take1.mp4",
+    "image": "refs/16x9/02_flop_robot_16x9_left.png",
+    "prompt": "The cartoon robot rolls slowly to the right, its two wheels spinning. Flat 2D cartoon, smooth motion, static camera, plain background.",
+    "seed": 1103
+  },
+  {
+    "out": "output/v1/shot2_take2.mp4",
+    "image": "refs/16x9/02_flop_robot_16x9_left.png",
+    "prompt": "The cartoon robot rolls slowly to the right, its two wheels spinning. Flat 2D cartoon, smooth motion, static camera, plain background.",
+    "seed": 2203
+  },
+  {
+    "out": "output/v1/shot3_take1.mp4",
+    "image": "refs/16x9/03_flop_arm_up_with_bag_16x9.png",
+    "prompt": "The purple robot arm slowly lifts up, carrying the yellow bean bag higher. Flat 2D cartoon style, slow smooth motion, static camera.",
+    "seed": 1104
+  },
+  {
+    "out": "output/v1/shot3_take2.mp4",
+    "image": "refs/16x9/03_flop_arm_up_with_bag_16x9.png",
+    "prompt": "The purple robot arm slowly lifts up, carrying the yellow bean bag higher. Flat 2D cartoon style, slow smooth motion, static camera.",
+    "seed": 2204
+  },
+  {
+    "out": "output/v1/shot4_take1.mp4",
+    "image": "refs/16x9/01_mascot_hero_16x9.png",
+    "prompt": "The cartoon crane mascot blinks its glowing goggle eyes and bobs its head happily, the gear on its chest spins once. Flat 2D cartoon, static camera.",
+    "seed": 1105
+  },
+  {
+    "out": "output/v1/shot4_take2.mp4",
+    "image": "refs/16x9/01_mascot_hero_16x9.png",
+    "prompt": "The cartoon crane mascot blinks its glowing goggle eyes and bobs its head happily, the gear on its chest spins once. Flat 2D cartoon, static camera.",
+    "seed": 2205
+  }
+]

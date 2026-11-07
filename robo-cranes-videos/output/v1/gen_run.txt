@@ -1,0 +1,17 @@
+running output/v1/shot1_take1.mp4 b49b0036-a63a-4082-b768-d41830095e3c
+running output/v1/shot1_take2.mp4 3ed7c0a6-251a-457f-9869-1c673f160406
+running output/v1/shot2_take1.mp4 32fe72fb-438f-44b7-8196-34866a05e843
+done output/v1/shot1_take1.mp4
+done output/v1/shot1_take2.mp4
+done output/v1/shot2_take1.mp4
+running output/v1/shot2_take2.mp4 ec304041-3c29-4ac1-be3f-bc552a94b69a
+running output/v1/shot3_take1.mp4 0f38d6aa-af15-4139-abe6-84a8e450afcd
+running output/v1/shot3_take2.mp4 ab5e1b94-de70-407a-b205-58efcb4a0574
+done output/v1/shot2_take2.mp4
+done output/v1/shot3_take2.mp4
+running output/v1/shot4_take1.mp4 1d5be99a-eece-49e5-a391-e1a3893563f7
+running output/v1/shot4_take2.mp4 6d9042de-f980-42a4-a553-ee36aee2b789
+done output/v1/shot3_take1.mp4
+done output/v1/shot4_take1.mp4
+done output/v1/shot4_take2.mp4
+all finished

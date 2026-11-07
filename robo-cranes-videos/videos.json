@@ -1,0 +1,152 @@
+[
+  {
+    "id": "v1",
+    "title": "Meet Flop, Our Robot",
+    "target_length": "45 sec",
+    "use_in": "Session 1",
+    "voiceover_script": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot! Flop has five parts, just like a body. Wheels are Flop's legs: they drive and turn. The intake is Flop's mouth: it grabs bean bags and spits them out. The arm is Flop's neck: it lifts bags up high, just like my long crane neck! The camera is Flop's eyes: it sees red, blue and yellow. And the bumper is Flop's nose: boop! Five parts, one robot, one team. Let's build it!",
+    "shots": [
+      {
+        "n": 1,
+        "reference_image": "refs/04_mascot_and_flop.png",
+        "seconds": 5,
+        "motion_prompt": "Cranebot the cartoon crane turns its head toward the robot and flaps one wing in a friendly wave. The robot stays still. Flat 2D cartoon style, gentle motion, static camera."
+      },
+      {
+        "n": 2,
+        "reference_image": "refs/02_flop_robot.png",
+        "seconds": 5,
+        "motion_prompt": "The cartoon robot rolls slowly to the right, its two wheels spinning. Flat 2D cartoon, smooth motion, static camera, plain background."
+      },
+      {
+        "n": 3,
+        "reference_image": "refs/03_flop_arm_up_with_bag.png",
+        "seconds": 5,
+        "motion_prompt": "The purple robot arm slowly lifts up, carrying the yellow bean bag higher. Flat 2D cartoon style, slow smooth motion, static camera."
+      },
+      {
+        "n": 4,
+        "reference_image": "refs/01_mascot_hero.png",
+        "seconds": 5,
+        "motion_prompt": "The cartoon crane mascot blinks its glowing goggle eyes and bobs its head happily, the gear on its chest spins once. Flat 2D cartoon, static camera."
+      }
+    ]
+  },
+  {
+    "id": "v2",
+    "title": "How Points Work",
+    "target_length": "50 sec",
+    "use_in": "Session 1",
+    "voiceover_script": "How do we score in Level Up? With bean bags! Drop a bean bag in the floor goal: one point. Put it on top of the pyramid: three points! Now here's the secret. Put a bag ON TOP of another bag on the pyramid, and it reaches the next level: six points! That's double! So the best teams drop every bag in the exact same spot, so they stack. One, three, six. Higher means more points!",
+    "shots": [
+      {
+        "n": 1,
+        "reference_image": "refs/06_beanbags_three.png",
+        "seconds": 5,
+        "motion_prompt": "The three bean bags (red, blue, yellow) bounce once, one after another, landing softly. Flat 2D cartoon, static camera."
+      },
+      {
+        "n": 2,
+        "reference_image": "refs/07_scoring_floor_L1_stack.png",
+        "seconds": 5,
+        "motion_prompt": "Camera slowly pans from left to right across the floor goal and the two pyramids. Flat 2D cartoon, smooth pan, nothing else moves."
+      },
+      {
+        "n": 3,
+        "reference_image": "refs/08_pyramid_stack_tall.png",
+        "seconds": 5,
+        "motion_prompt": "A red bean bag drops from above and lands on top of the stack, the stack wobbles a little then settles. Flat 2D cartoon, static camera."
+      }
+    ]
+  },
+  {
+    "id": "v3",
+    "title": "The Color Rule",
+    "target_length": "35 sec",
+    "use_in": "Session 1",
+    "voiceover_script": "Bean bags come in three colors. Red bags go on the red goal. Blue bags go on the blue goal. And yellow? Yellow is WILD! It counts on any goal. If a bag is the wrong color, or still touching the robot, it's zero points. Match the color, let it go, and score!",
+    "shots": [
+      {
+        "n": 1,
+        "reference_image": "refs/06_beanbags_three.png",
+        "seconds": 5,
+        "motion_prompt": "Camera slowly zooms in on the yellow bean bag, which gives a little sparkle bounce. Flat 2D cartoon, smooth zoom."
+      },
+      {
+        "n": 2,
+        "reference_image": "refs/05_field_topdown.png",
+        "seconds": 5,
+        "motion_prompt": "Top-down view of the game field. The camera slowly zooms in toward the red goal on the left side. Flat 2D cartoon, nothing else moves."
+      }
+    ]
+  },
+  {
+    "id": "v4",
+    "title": "Walk and Chew Gum: Wait vs. Don't Wait",
+    "target_length": "45 sec",
+    "use_in": "Session 6",
+    "voiceover_script": "Flop can do things one at a time: drive... stop... then lift the arm. That's slow! Or Flop can do two things at once: lift the arm WHILE it drives. In VEXcode, click the little arrow on the arm block and pick 'and don't wait.' Now the next block starts right away. It's like walking and chewing gum at the same time. Save a second here, a second there, and you'll have time for more bean bags!",
+    "shots": [
+      {
+        "n": 1,
+        "reference_image": "refs/02_flop_robot.png",
+        "seconds": 5,
+        "motion_prompt": "The cartoon robot drives to the right and stops, then pauses. Flat 2D cartoon, static camera."
+      },
+      {
+        "n": 2,
+        "reference_image": "refs/03_flop_arm_up_with_bag.png",
+        "seconds": 5,
+        "motion_prompt": "The cartoon robot drives to the right while its purple arm smoothly rises at the same time. Flat 2D cartoon, static camera."
+      },
+      {
+        "n": 3,
+        "reference_image": "refs/01_mascot_hero.png",
+        "seconds": 5,
+        "motion_prompt": "The cartoon crane mascot nods and does a small happy hop. Flat 2D cartoon, static camera."
+      }
+    ]
+  },
+  {
+    "id": "v5",
+    "title": "The Lost Robot: Turn to Heading",
+    "target_length": "45 sec",
+    "use_in": "Session 6",
+    "voiceover_script": "Every time Flop turns, it can be a tiny bit wrong. One little mistake is okay. But after many turns, the mistakes add up, and Flop gets lost! The fix: instead of 'turn right 90,' use 'turn to heading.' That means 'face that direction,' like 'face the window.' Flop checks its compass every time, so mistakes don't pile up. Smart robot!",
+    "shots": [
+      {
+        "n": 1,
+        "reference_image": "refs/05_field_topdown.png",
+        "seconds": 5,
+        "motion_prompt": "Top-down view of the game field, the camera slowly rotates a little to the left and back. Flat 2D cartoon, gentle motion."
+      },
+      {
+        "n": 2,
+        "reference_image": "refs/09_mascot_pointing_field.png",
+        "seconds": 5,
+        "motion_prompt": "The cartoon crane mascot points its wing toward the field and nods. Flat 2D cartoon, static camera."
+      }
+    ]
+  },
+  {
+    "id": "v6",
+    "title": "Robo Cranes, Let's Go!",
+    "target_length": "30 sec",
+    "use_in": "Session 1 opener",
+    "voiceover_script": "Last season, the Robo Cranes from Grulla Elementary went to the VEX World Championship! This year, it's your turn. We'll build a robot, code a robot, drive a robot, and do it as a team. Are you ready? Robo Cranes, let's go!",
+    "shots": [
+      {
+        "n": 1,
+        "reference_image": "refs/01_mascot_hero.png",
+        "seconds": 5,
+        "motion_prompt": "The cartoon crane mascot spreads its wings wide and jumps with excitement, confetti falls. Flat 2D cartoon, static camera."
+      },
+      {
+        "n": 2,
+        "reference_image": "refs/04_mascot_and_flop.png",
+        "seconds": 5,
+        "motion_prompt": "The crane mascot and the robot both bounce happily side by side. Flat 2D cartoon, static camera."
+      }
+    ]
+  }
+]

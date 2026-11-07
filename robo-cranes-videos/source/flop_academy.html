@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Robo Cranes · Flop Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c2340;--paper:#fff8ec;--y:#f5c400;--r:#e5484d;--b:#3e7bfa;--g:#22a06b;--card:#ffffff;--soft:#f1e7d3}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Baloo 2',system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:18px}
+header{background:var(--ink);color:#fff;padding:14px 18px 0}
+header h1{margin:0;font-size:1.8rem;line-height:1.1}
+header p{margin:2px 0 10px;opacity:.85}
+nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:0}
+nav button{flex:0 0 auto;border:0;border-radius:14px 14px 0 0;padding:10px 14px;font:700 1rem 'Baloo 2',system-ui,sans-serif;background:#2f3866;color:#fff;cursor:pointer}
+nav button.on{background:var(--paper);color:var(--ink)}
+main{max-width:980px;margin:0 auto;padding:18px}
+.ch{display:none}.ch.on{display:block;animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h2{font-size:1.7rem;margin:.2em 0}
+.lead{font-size:1.15rem;margin:0 0 14px}
+.row{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:20px;padding:14px;box-shadow:5px 5px 0 var(--ink)}
+.btn{border:3px solid var(--ink);border-radius:14px;padding:8px 14px;font:800 1rem 'Baloo 2',system-ui,sans-serif;cursor:pointer;background:#fff;box-shadow:3px 3px 0 var(--ink);color:var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.go{background:var(--g);color:#fff}.btn.red{background:var(--r);color:#fff}.btn.blue{background:var(--b);color:#fff}.btn.yel{background:var(--y)}
+.btn.sel{outline:5px solid var(--ink);outline-offset:2px}
+.big{font-size:2.4rem;font-weight:800}
+.msg{min-height:2.2em;font-weight:700;font-size:1.1rem;margin-top:8px}
+.tag{display:inline-block;background:var(--soft);border-radius:10px;padding:0 10px;font-weight:700}
+/* Meet Flop */
+#flopSvg{width:min(460px,100%);height:auto}
+.part{cursor:pointer}
+.part:hover{filter:brightness(1.15)}
+#partCard h3{margin:0;font-size:1.6rem}
+#partCard .kid{font-size:1.3rem;font-weight:800;color:var(--b)}
+.spin{animation:spin .6s linear 3;transform-box:fill-box;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.lift{animation:lift 1.2s ease 1;transform-box:fill-box;transform-origin:0% 100%}
+@keyframes lift{50%{transform:rotate(-35deg)}}
+.blink{animation:blink .3s 3}
+@keyframes blink{50%{transform:scaleY(.1)}}
+.boop{animation:boop .3s 2;transform-box:fill-box;transform-origin:center}
+@keyframes boop{50%{transform:scale(1.3)}}
+.zoom{animation:zoom 1s ease 1}
+@keyframes zoom{50%{transform:translateX(40px)}}
+/* Points */
+.goals{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;margin-top:10px}
+.goal{cursor:pointer;text-align:center;font-weight:800}
+.goal svg{display:block}
+/* Grid game */
+#field{touch-action:manipulation;width:min(380px,100%);height:auto;background:#d9dde6;border-radius:12px;border:3px solid var(--ink)}
+.cmds{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+#prog{display:flex;flex-wrap:wrap;gap:6px;min-height:52px;background:var(--soft);border-radius:14px;padding:8px}
+.blk{border-radius:10px;padding:4px 10px;font-weight:800;color:#fff;cursor:pointer;font-size:.95rem}
+.blk.run{outline:4px solid var(--y)}
+.c-move{background:#4c97ff}.c-arm{background:#8a63d2}.c-grab{background:#22a06b}
+.stars{font-size:2rem;letter-spacing:4px}
+/* race */
+.lane{position:relative;height:84px;background:repeating-linear-gradient(90deg,#e9e2d0 0 40px,#efe9da 40px 80px);border-radius:14px;border:3px solid var(--ink);margin:10px 0;overflow:hidden}
+.lane .bot{position:absolute;left:8px;top:12px;width:60px;height:56px}
+.lane .flag{position:absolute;right:10px;top:16px;font-size:2rem}
+.lane .lbl{position:absolute;left:10px;bottom:2px;font-weight:800;font-size:.85rem}
+.clock{font-weight:800;font-size:1.4rem}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:9}
+.tip{background:#e9f2ff;border-left:6px solid var(--b);padding:8px 12px;border-radius:10px;margin-top:12px}
+footer{text-align:center;opacity:.6;font-size:.85rem;padding:20px}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+<header>
+  <div style="display:flex;align-items:center;gap:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" width="70" height="84" aria-label="Robo Crane mascot: a cartoon crane bird with robot goggles">
+<ellipse cx="150" cy="345" rx="90" ry="10" fill="#000000" opacity="0.12"/>
+<path d="M128 270 L118 340 M168 270 L178 340" stroke="#4a4f63" stroke-width="7" stroke-linecap="round"/>
+<path d="M104 340h28M164 340h28" stroke="#4a4f63" stroke-width="7" stroke-linecap="round"/>
+<ellipse cx="150" cy="220" rx="78" ry="62" fill="#c9cfdc" stroke="#1c2340" stroke-width="6"/>
+<path d="M92 205 Q60 250 96 268 Q120 240 118 212Z" fill="#a9b1c4" stroke="#1c2340" stroke-width="5"/>
+<path d="M186 172 Q200 110 168 70" fill="none" stroke="#1c2340" stroke-width="30" stroke-linecap="round"/>
+<path d="M186 172 Q200 110 168 70" fill="none" stroke="#e8ebf2" stroke-width="18" stroke-linecap="round"/>
+<circle cx="160" cy="58" r="40" fill="#e8ebf2" stroke="#1c2340" stroke-width="6"/>
+<path d="M132 40 Q150 14 178 30 Q170 44 150 44Z" fill="#e5484d" stroke="#1c2340" stroke-width="4"/>
+<path d="M196 60 L262 74 L196 80Z" fill="#f5c400" stroke="#1c2340" stroke-width="5" stroke-linejoin="round"/>
+<rect x="138" y="44" width="54" height="30" rx="14" fill="#1c2340"/>
+<circle cx="153" cy="59" r="9" fill="#5ef0ff"/><circle cx="178" cy="59" r="9" fill="#5ef0ff"/>
+<circle cx="155" cy="56" r="3" fill="#ffffff"/><circle cx="180" cy="56" r="3" fill="#ffffff"/>
+<g transform="translate(150 225)"><circle r="26" fill="#3e7bfa" stroke="#1c2340" stroke-width="5"/>
+<path d="M0 -34v10M0 24v10M-34 0h10M24 0h10M-24 -24l7 7M17 17l7 7M24 -24l-7 7M-17 17l-7 7" stroke="#1c2340" stroke-width="7" stroke-linecap="round"/>
+<circle r="9" fill="#f5c400" stroke="#1c2340" stroke-width="4"/></g>
+</svg><div><div style="font-weight:800;color:#f5c400;letter-spacing:1px">ROBO CRANES</div>
+  <h1>Flop Academy</h1>
+  <p>Learn VEX IQ <b>Level Up</b> by playing. Tap, build, score!</p></div></div>
+  <nav id="nav">
+    <button data-ch="c1" class="on">1 · Meet Flop</button>
+    <button data-ch="c2">2 · Points</button>
+    <button data-ch="c3">3 · Code</button>
+    <button data-ch="c4">4 · Race</button>
+    <button data-ch="c5">5 · Lost Robot</button>
+    <button data-ch="c6">6 · Quiz</button>
+    <button data-ch="c7">7 · Human Robot</button>
+  </nav>
+</header>
+<main>
+
+<!-- ============ CHAPTER 1 ============ -->
+<section id="c1" class="ch on">
+  <h2>Meet Flop, our robot! 👋</h2>
+  <p class="lead">Flop has 5 important parts. <b>Tap each part</b> to see what it does. Can you find all 5?</p>
+  <div class="row">
+    <div class="card" style="flex:1 1 380px">
+      <svg id="flopSvg" viewBox="0 0 460 320" aria-label="Cartoon robot with clickable parts">
+        <rect x="0" y="270" width="460" height="50" fill="#d9dde6"/>
+        <g id="botAll">
+          <!-- arm (neck) -->
+          <g class="part" data-p="arm" id="pArm">
+            <rect x="250" y="70" width="150" height="22" rx="11" fill="#8a63d2"/>
+            <!-- intake (mouth) at end of arm -->
+          </g>
+          <g class="part" data-p="intake" id="pIntake">
+            <circle cx="400" cy="120" r="34" fill="#22a06b"/>
+            <path d="M380 120h40M400 100v40" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+            <rect x="388" y="88" width="24" height="20" fill="#22a06b"/>
+          </g>
+          <!-- body -->
+          <rect x="70" y="120" width="250" height="120" rx="26" fill="#ffffff" stroke="#1c2340" stroke-width="5"/>
+          <text x="195" y="215" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="30" fill="#1c2340">FLOP</text>
+          <!-- eyes (camera) -->
+          <g class="part" data-p="eyes" id="pEyes">
+            <rect x="130" y="70" width="130" height="60" rx="20" fill="#1c2340"/>
+            <g id="eyeBalls"><circle cx="170" cy="100" r="13" fill="#5ef0ff"/><circle cx="220" cy="100" r="13" fill="#5ef0ff"/></g>
+          </g>
+          <!-- bumper (nose) -->
+          <g class="part" data-p="bumper" id="pBumper">
+            <circle cx="324" cy="200" r="16" fill="#e5484d" stroke="#1c2340" stroke-width="4"/>
+          </g>
+          <!-- wheels (legs) -->
+          <g class="part" data-p="wheels">
+            <g id="w1"><circle cx="120" cy="250" r="30" fill="#1c2340"/><path d="M120 225v50M95 250h50" stroke="#9aa3c7" stroke-width="5"/></g>
+            <g id="w2"><circle cx="270" cy="250" r="30" fill="#1c2340"/><path d="M270 225v50M245 250h50" stroke="#9aa3c7" stroke-width="5"/></g>
+          </g>
+        </g>
+      </svg>
+      <div style="font-weight:800">Found: <span id="foundCount">0</span> / 5 <span id="foundStars"></span></div>
+    </div>
+    <div class="card" id="partCard" style="flex:1 1 300px">
+      <h3>👆 Tap a part!</h3>
+      <p>Every part of Flop has a job. Robots are like bodies: legs to move, a mouth to grab, eyes to see.</p>
+    </div>
+  </div>
+  <div class="tip">🧑‍🏫 <b>Coach question:</b> "Which part does Flop need to score a bean bag up high?" (Answer: the neck, the arm!)</div>
+</section>
+
+<!-- ============ CHAPTER 2 ============ -->
+<section id="c2" class="ch">
+  <h2>The Points Machine 🧮</h2>
+  <p class="lead">Pick a bean bag color, then tap where to put it. Learn the rules by trying!</p>
+  <div class="card">
+    <div><b>1. Pick a bag:</b>
+      <button class="btn yel bagPick sel" data-c="yellow">Yellow</button>
+      <button class="btn red bagPick" data-c="red">Red</button>
+      <button class="btn blue bagPick" data-c="blue">Blue</button>
+    </div>
+    <div style="margin-top:10px"><b>2. Tap a goal:</b></div>
+    <div class="goals">
+      <div class="goal" data-g="floor">
+        <svg width="170" height="90"><rect x="5" y="50" width="160" height="34" rx="8" fill="#ffd4d6" stroke="#e5484d" stroke-width="5"/><g id="floorBags"></g></svg>
+        Red Floor Goal<br><span class="tag">1 point</span>
+      </div>
+      <div class="goal" data-g="pyr">
+        <svg width="200" height="190" id="pyrSvg">
+          <polygon points="20,180 180,180 140,100 60,100" fill="#ffd4d6" stroke="#e5484d" stroke-width="5"/>
+          <rect x="55" y="92" width="90" height="10" rx="4" fill="#e5484d"/>
+          <text x="100" y="150" text-anchor="middle" font-weight="800" fill="#e5484d" font-family="Baloo 2">RED PYRAMID</text>
+          <g id="pyrBags"></g>
+        </svg>
+        Red Pyramid<br><span class="tag">L1 = 3 · stack on top = 6</span>
+      </div>
+    </div>
+    <div class="row" style="align-items:center;margin-top:10px">
+      <div>Score: <span class="big" id="ptsTotal">0</span></div>
+      <button class="btn" id="ptsReset">Clear the field</button>
+    </div>
+    <div class="msg" id="ptsMsg"></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <b>🏆 Challenges:</b>
+    <ol style="margin:6px 0">
+      <li>Get exactly <b>4 points</b> with 2 bags. <span id="ch4"></span></li>
+      <li>Get <b>9 points</b> with only 2 bags. <span id="ch9"></span></li>
+      <li>What happens with a <b>blue</b> bag on the red pyramid? <span id="chBlue"></span></li>
+    </ol>
+  </div>
+  <div class="tip">🧠 <b>Big idea:</b> a bag stacked on top of another bag is worth <b>double</b>. That's why the best teams drop every bag in the <b>exact same spot</b>.</div>
+</section>
+
+<!-- ============ CHAPTER 3 ============ -->
+<section id="c3" class="ch">
+  <h2>Code the Robot 🧩</h2>
+  <p class="lead">Tap blocks to build a program, then press <b>RUN</b>. Robots do <b>exactly</b> what you say, one block at a time, top to bottom.</p>
+  <div class="row">
+    <div class="card" style="flex:0 1 400px">
+      <div><b>Level:</b>
+        <button class="btn lvlBtn sel" data-l="0">1</button>
+        <button class="btn lvlBtn" data-l="1">2</button>
+        <button class="btn lvlBtn" data-l="2">3</button>
+      </div>
+      <p id="lvlGoal" style="margin:6px 0;font-weight:700"></p>
+      <svg id="field" viewBox="0 0 360 480"></svg>
+      <div style="font-size:.9rem">⬛ = barrier (arm must be <b>down</b> to drive under)</div>
+    </div>
+    <div class="card" style="flex:1 1 300px">
+      <b>Blocks:</b>
+      <div class="cmds">
+        <span class="blk c-move" data-cmd="F">⬆ forward 1 tile</span>
+        <span class="blk c-move" data-cmd="L">↺ turn left</span>
+        <span class="blk c-move" data-cmd="R">↻ turn right</span>
+        <span class="blk c-grab" data-cmd="G">😋 grab bag</span>
+        <span class="blk c-arm" data-cmd="U">💪 arm up</span>
+        <span class="blk c-arm" data-cmd="D">👇 arm down</span>
+        <span class="blk c-grab" data-cmd="P">🎯 drop bag</span>
+      </div>
+      <b>My program</b> <span style="font-size:.85rem">(tap a block to remove it)</span>
+      <div id="prog"></div>
+      <div class="row" style="margin-top:10px;gap:8px">
+        <button class="btn go" id="runBtn">▶ RUN</button>
+        <button class="btn" id="resetBtn">↩ Reset robot</button>
+        <button class="btn" id="clearBtn">🗑 Clear</button>
+      </div>
+      <div>Points: <span class="big" id="gridPts">0</span> <span class="stars" id="gridStars"></span></div>
+      <div class="msg" id="gridMsg"></div>
+    </div>
+  </div>
+  <div class="tip">🔬 <b>Scientist rule:</b> nobody gets it right the first time. Guess → test → fix. Every mistake teaches you something!</div>
+</section>
+
+<!-- ============ CHAPTER 4 ============ -->
+<section id="c4" class="ch">
+  <h2>The Big Race: Wait vs. Don't Wait 🏁</h2>
+  <p class="lead">Both robots do the <b>same job</b>: drive to the goal and lift the arm. Who wins?</p>
+  <div class="card">
+    <div class="lane"><div class="bot" id="botA"></div><div class="flag">🏁</div><div class="lbl">🐢 "WAIT": drive... THEN lift arm</div></div>
+    <div class="lane"><div class="bot" id="botB"></div><div class="flag">🏁</div><div class="lbl">🐇 "DON'T WAIT": lift arm WHILE driving</div></div>
+    <div class="row" style="align-items:center">
+      <button class="btn go" id="raceBtn">▶ RACE!</button>
+      <span class="clock">🐢 <span id="tA">0.0</span>s</span>
+      <span class="clock">🐇 <span id="tB">0.0</span>s</span>
+    </div>
+    <div class="msg" id="raceMsg"></div>
+  </div>
+  <div class="tip">🧠 <b>Big idea:</b> in VEXcode, click the little ▸ arrow on a motor block to choose <b>"and don't wait"</b>. Then Flop can move its arm and drive <b>at the same time</b>, like walking and chewing gum!<br>
+  <i>(This race is pretend timing to show the idea. Real seconds are measured in VEXcode VR with a stopwatch.)</i></div>
+</section>
+
+<!-- ============ CHAPTER 5 ============ -->
+<section id="c5" class="ch">
+  <h2>The Lost Robot 🧭</h2>
+  <p class="lead">Each turn Flop makes is a <b>tiny bit wrong</b>. Watch what happens after many turns!</p>
+  <div class="card">
+    <svg id="driftSvg" viewBox="0 0 420 320" style="width:min(520px,100%);background:#f4efe3;border-radius:14px"></svg>
+    <div class="row" style="margin-top:8px">
+      <button class="btn red" id="driftA">🌀 "Turn right 90" ×8</button>
+      <button class="btn blue" id="driftB">🧭 "Turn to heading" ×8</button>
+    </div>
+    <div class="msg" id="driftMsg"></div>
+  </div>
+  <div class="tip">🧠 <b>Big idea:</b> <b>"turn right 90"</b> means "spin a bit." Every little mistake <b>adds up</b>.<br><b>"turn to heading 90"</b> means "face the window." Flop checks its compass, so mistakes <b>don't pile up</b>.</div>
+</section>
+
+<!-- ============ CHAPTER 6 QUIZ ============ -->
+<section id="c6" class="ch">
+  <h2>Quiz Show! 🎤</h2>
+  <p class="lead">Read the question out loud. Everyone points to an answer. Then tap it!</p>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;font-weight:800"><span>Question <span id="qNum">1</span> / <span id="qTot"></span></span><span>Team score: <span id="qScore">0</span> 🏅</span></div>
+    <h3 id="qText" style="font-size:2rem;margin:10px 0 14px;line-height:1.2"></h3>
+    <div id="qAns" style="display:grid;grid-template-columns:1fr 1fr;gap:12px"></div>
+    <div class="msg" id="qMsg"></div>
+    <button class="btn go" id="qNext" style="display:none">Next question ▶</button>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 7 HUMAN ROBOT ============ -->
+<section id="c7" class="ch">
+  <h2>Human Robot Challenge 🧍‍♂️🤖</h2>
+  <p class="lead">Put this map on the projector. Set up the floor to match, then the <b>Coder</b> gives exact commands to the <b>Robot</b>.</p>
+  <div class="row">
+    <div class="card" style="flex:0 1 420px"><svg id="hrMap" viewBox="0 0 400 400" style="width:100%;height:auto"></svg></div>
+    <div class="card" style="flex:1 1 280px">
+      <b>Allowed words only:</b>
+      <ul style="margin:6px 0 12px"><li>"Forward ___ steps"</li><li>"Turn left" / "Turn right"</li><li>"Grab" / "Drop"</li><li>"Arm up" / "Arm down" (hands up or down!)</li></ul>
+      <div class="row" style="gap:8px">
+        <button class="btn go" id="hrNew">🎲 New challenge</button>
+        <button class="btn" id="hrBar">Barrier: OFF</button>
+      </div>
+      <p id="hrTxt" style="font-weight:700"></p>
+      <div class="tip" style="margin-top:8px">⬛ Barrier = a jump rope held low. Robots must <b>duck</b> (arm down) to get under it!</div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Made for a 3rd-grade VEX IQ class · Practice game for learning; real numbers come from testing in VEXcode VR and on the field.</footer>
+
+<script>
+// ---------- helpers ----------
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+let audio=null;
+function beep(f=660,d=.12){try{audio=audio||new (window.AudioContext||window.webkitAudioContext)();const o=audio.createOscillator(),g=audio.createGain();o.frequency.value=f;o.type='triangle';g.gain.setValueAtTime(.15,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+d);o.connect(g);g.connect(audio.destination);o.start();o.stop(audio.currentTime+d);}catch(e){}}
+function yay(){beep(523);setTimeout(()=>beep(659),110);setTimeout(()=>beep(784,.25),220);confetti();}
+function boo(){beep(220,.25);}
+// confetti
+const cv=$('#confetti'),cx=cv.getContext('2d');let parts=[];
+function confetti(){cv.width=innerWidth;cv.height=innerHeight;for(let i=0;i<120;i++)parts.push({x:innerWidth/2,y:innerHeight/3,vx:(Math.random()-.5)*14,vy:Math.random()*-12-2,c:['#f5c400','#e5484d','#3e7bfa','#22a06b','#8a63d2'][i%5],l:90});if(parts.length<=120)tick();}
+function tick(){cx.clearRect(0,0,cv.width,cv.height);parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.4;p.l--;cx.fillStyle=p.c;cx.fillRect(p.x,p.y,8,12);});parts=parts.filter(p=>p.l>0);if(parts.length)requestAnimationFrame(tick);else cx.clearRect(0,0,cv.width,cv.height);}
+// nav
+$$('#nav button').forEach(b=>b.onclick=()=>{$$('#nav button').forEach(x=>x.classList.toggle('on',x===b));$$('.ch').forEach(c=>c.classList.toggle('on',c.id===b.dataset.ch));beep(880,.05);});
+
+// ---------- CH1 Meet Flop ----------
+const PARTS={
+ wheels:{n:'Wheels',k:'"Flop\'s legs" 🦵',t:'The drivetrain moves Flop forward, backward, and turns it. In code: drive and turn blocks.',a:()=>{['#w1','#w2'].forEach(s=>anim($(s),'spin'));anim($('#botAll'),'zoom');}},
+ intake:{n:'Intake',k:'"Flop\'s mouth" 😋',t:'Spins one way to GRAB a bean bag, the other way to SPIT it out. In code: IntakeMotor intake / outtake.',a:()=>anim($('#pIntake'),'spin')},
+ arm:{n:'Arm',k:'"Flop\'s neck" 🦒',t:'Lifts the bean bag up high to reach the pyramid. It must be DOWN to fit under the barrier! In code: ArmMotor up / down.',a:()=>{anim($('#pArm'),'lift');anim($('#pIntake'),'lift');}},
+ eyes:{n:'AI Vision camera',k:'"Flop\'s eyes" 👀',t:'Sees bean bag colors (red, blue, yellow) and special stickers on the goals called AprilTags.',a:()=>anim($('#eyeBalls'),'blink')},
+ bumper:{n:'Bumper sensor',k:'"Flop\'s nose" 👃',t:'Feels when Flop bumps into something. Boop!',a:()=>anim($('#pBumper'),'boop')}};
+const found=new Set();
+function anim(el,c){el.classList.remove(c);void el.getBBox;requestAnimationFrame(()=>el.classList.add(c));setTimeout(()=>el.classList.remove(c),1300);}
+$$('.part').forEach(p=>p.addEventListener('click',()=>{const d=PARTS[p.dataset.p];d.a();beep(600+found.size*80);
+ $('#partCard').innerHTML=`<h3>${d.n}</h3><div class="kid">${d.k}</div><p>${d.t}</p>`;
+ found.add(p.dataset.p);$('#foundCount').textContent=found.size;$('#foundStars').textContent='⭐'.repeat(found.size);
+ if(found.size===5&&!found.done){found.done=1;setTimeout(()=>{yay();$('#partCard').innerHTML+='<p class="kid">🎉 You found all 5 parts! You know Flop!</p>';},400);}}));
+
+// ---------- CH2 Points ----------
+let pick='yellow',pts=0,floorN=[],pyrN=[],placed=0;const COL={yellow:'#f5c400',red:'#e5484d',blue:'#3e7bfa'};
+$$('.bagPick').forEach(b=>b.onclick=()=>{pick=b.dataset.c;$$('.bagPick').forEach(x=>x.classList.toggle('sel',x===b));beep(700,.05);});
+function bagSvg(x,y,c){return `<rect x="${x}" y="${y}" width="40" height="22" rx="8" fill="${COL[c]}" stroke="#1c2340" stroke-width="3"/>`;}
+function drawPts(){$('#floorBags').innerHTML=floorN.map((c,i)=>bagSvg(12+i*36%150,56-Math.floor(i/4)*8,c)).join('');
+ $('#pyrBags').innerHTML=pyrN.map((c,i)=>bagSvg(80,70-i*20,c)).join('');$('#ptsTotal').textContent=pts;}
+$$('.goal').forEach(g=>g.onclick=()=>{const m=$('#ptsMsg');
+ if(pick==='blue'){boo();m.textContent='❌ No points! A blue bag doesn\'t match the RED goal. (Yellow is wild: it matches any goal!)';$('#chBlue').textContent='✅';return;}
+ placed++;
+ if(g.dataset.g==='floor'){floorN.push(pick);pts+=1;m.textContent='✅ +1 point: the bag is in the floor goal.';beep(660);}
+ else{ if(pyrN.length>=4){m.textContent='The stack is full! Try clearing the field.';return;}
+   const add=pyrN.length===0?3:6;pyrN.push(pick);pts+=add;
+   m.textContent=add===3?'✅ +3 points! The bag is on the pyramid (level 1).':'🔥 +6 points! STACKED on another bag, so it reaches level 2. Double!';add===6?yay():beep(784);}
+ drawPts();
+ if(placed===2&&pts===4){$('#ch4').textContent='✅';yay();}
+ if(placed===2&&pts===9){$('#ch9').textContent='✅';yay();}});
+$('#ptsReset').onclick=()=>{pts=0;floorN=[];pyrN=[];placed=0;$('#ptsMsg').textContent='Field cleared. Every challenge starts from a clear field.';drawPts();};
+drawPts();
+
+// ---------- CH3 Grid game ----------
+const T=60,COLS=6,ROWS=8;
+const LEVELS=[
+ {goal:'Level 1: Carry the YELLOW bag to the red pyramid. (Tip: arm UP before you drop!)',start:{x:0,y:7,d:0},bags:[{x:0,y:4,c:'yellow'}],pyr:{x:2,y:1},bar:[],target:3},
+ {goal:'Level 2: Get the RED bag to the pyramid. Watch out for the barrier: arm DOWN to drive under it!',start:{x:0,y:7,d:0},bags:[{x:3,y:6,c:'red'}],pyr:{x:4,y:1},bar:[{x:0,y:4},{x:1,y:4},{x:2,y:4},{x:3,y:4}],target:3},
+ {goal:'Level 3: STACK! Put BOTH red bags on the pyramid. The second one scores 6!',start:{x:0,y:7,d:0},bags:[{x:0,y:5,c:'red'},{x:2,y:5,c:'red'}],pyr:{x:2,y:1},bar:[],target:9}];
+let L=0,S,prog=[],running=false;
+function resetRobot(){const lv=LEVELS[L];S={x:lv.start.x,y:lv.start.y,d:lv.start.d,arm:'down',carry:null,pts:0,stack:0,bags:lv.bags.map(b=>({...b})),floor:[]};$('#gridPts').textContent=0;$('#gridStars').textContent='';drawField();}
+const DX=[0,1,0,-1],DY=[-1,0,1,0];
+function drawField(){const lv=LEVELS[L];let h='';
+ for(let y=0;y<ROWS;y++)for(let x=0;x<COLS;x++)h+=`<rect x="${x*T+1}" y="${y*T+1}" width="${T-2}" height="${T-2}" fill="#eef0f5" rx="4"/>`;
+ lv.bar.forEach(b=>h+=`<rect x="${b.x*T+4}" y="${b.y*T+22}" width="${T-8}" height="16" fill="#1c2340" rx="4"/>`);
+ const p=lv.pyr;h+=`<polygon points="${p.x*T+6},${p.y*T+56} ${p.x*T+54},${p.y*T+56} ${p.x*T+42},${p.y*T+10} ${p.x*T+18},${p.y*T+10}" fill="#ffd4d6" stroke="#e5484d" stroke-width="4"/>`;
+ for(let i=0;i<S.stack;i++)h+=`<rect x="${p.x*T+18}" y="${p.y*T+20-i*10}" width="24" height="12" rx="4" fill="#e5484d" stroke="#1c2340" stroke-width="2"/>`;
+ S.bags.forEach(b=>h+=`<rect x="${b.x*T+16}" y="${b.y*T+22}" width="28" height="16" rx="6" fill="${COL[b.c]}" stroke="#1c2340" stroke-width="2"/>`);
+ S.floor.forEach(b=>h+=`<rect x="${b.x*T+16}" y="${b.y*T+22}" width="28" height="16" rx="6" fill="${COL[b.c]}" opacity=".5"/>`);
+ const cx=S.x*T+30,cy=S.y*T+30,ang=S.d*90,armLen=S.arm==='up'?30:22;
+ h+=`<g transform="translate(${cx},${cy}) rotate(${ang})"><rect x="-18" y="-16" width="36" height="34" rx="8" fill="#fff" stroke="#1c2340" stroke-width="3"/>
+ <circle cx="-7" cy="-4" r="4" fill="#1c2340"/><circle cx="7" cy="-4" r="4" fill="#1c2340"/>
+ <rect x="-4" y="${-16-armLen}" width="8" height="${armLen}" rx="3" fill="${S.arm==='up'?'#8a63d2':'#b9a5e3'}"/>
+ ${S.carry?`<rect x="-10" y="${-24-armLen+6}" width="20" height="12" rx="4" fill="${COL[S.carry]}" stroke="#1c2340" stroke-width="2"/>`:''}</g>`;
+ $('#field').innerHTML=h;}
+function drawProg(active=-1){$('#prog').innerHTML=prog.length?prog.map((c,i)=>{const src=$(`.cmds [data-cmd="${c}"]`);return `<span class="blk ${src.className.split(' ')[1]} ${i===active?'run':''}" data-i="${i}">${i+1}. ${src.textContent}</span>`;}).join(''):'<i style="opacity:.6">Tap blocks above to add them here…</i>';
+ $$('#prog .blk').forEach(b=>b.onclick=()=>{if(running)return;prog.splice(+b.dataset.i,1);drawProg();});}
+$$('.cmds .blk').forEach(b=>b.onclick=()=>{if(running)return;if(prog.length>=30)return;prog.push(b.dataset.cmd);beep(500+prog.length*10,.05);drawProg();});
+function setLevel(i){L=i;$$('.lvlBtn').forEach(b=>b.classList.toggle('sel',+b.dataset.l===i));$('#lvlGoal').textContent=LEVELS[i].goal;$('#gridMsg').textContent='';prog=[];drawProg();resetRobot();}
+$$('.lvlBtn').forEach(b=>b.onclick=()=>setLevel(+b.dataset.l));
+function step(c){const lv=LEVELS[L],fx=S.x+DX[S.d],fy=S.y+DY[S.d];
+ if(c==='L'){S.d=(S.d+3)%4;return 'ok';} if(c==='R'){S.d=(S.d+1)%4;return 'ok';}
+ if(c==='U'){S.arm='up';return 'ok';} if(c==='D'){S.arm='down';return 'ok';}
+ if(c==='F'){ if(fx<0||fy<0||fx>=COLS||fy>=ROWS)return '💥 Bonk! Flop hit the wall.';
+   if(fx===lv.pyr.x&&fy===lv.pyr.y)return '💥 Bonk! Flop drove into the pyramid. Stop one tile before it, facing it.';
+   if(lv.bar.some(b=>b.x===fx&&b.y===fy)&&S.arm==='up')return '💥 CLANG! The arm is UP and hit the barrier. Put the arm DOWN first!';
+   S.x=fx;S.y=fy;return 'ok';}
+ if(c==='G'){const i=S.bags.findIndex(b=>b.x===S.x&&b.y===S.y);if(S.carry)return '🤔 Flop\'s mouth is already full!';if(i<0)return '🤔 No bag here to grab. Drive ON TOP of the bag first.';S.carry=S.bags[i].c;S.bags.splice(i,1);beep(700);return 'ok';}
+ if(c==='P'){ if(!S.carry)return '🤔 Flop has no bag to drop.';
+   if(fx===lv.pyr.x&&fy===lv.pyr.y){ if(S.arm!=='up'){S.floor.push({x:S.x,y:S.y,c:S.carry});S.carry=null;return '😬 The bag bumped the side of the pyramid and fell. The arm must be UP to drop on the pyramid!';}
+     if(S.carry==='blue')return '❌ Blue doesn\'t match the red pyramid.';
+     const add=S.stack===0?3:6;S.stack++;S.pts+=add;S.carry=null;$('#gridPts').textContent=S.pts;add===6?yay():beep(880,.2);return 'ok';}
+   S.floor.push({x:S.x,y:S.y,c:S.carry});S.carry=null;return '🤷 The bag dropped on the floor, not in a goal: 0 points.';}
+ return 'ok';}
+async function run(){if(running)return;if(!prog.length){$('#gridMsg').textContent='Your program is empty! Add some blocks.';return;}
+ running=true;resetRobot();$('#gridMsg').textContent='Running…';
+ for(let i=0;i<prog.length;i++){drawProg(i);const r=step(prog[i]);drawField();await new Promise(z=>setTimeout(z,450));
+   if(r!=='ok'){$('#gridMsg').textContent=r+` (block ${i+1})`;boo();if(!r.startsWith('😬')&&!r.startsWith('🤷')){running=false;drawProg();return;}}}
+ drawProg();running=false;const lv=LEVELS[L];
+ if(S.pts>=lv.target){const st=prog.length<=lv.target*4?'⭐⭐⭐':'⭐⭐';$('#gridStars').textContent=st;$('#gridMsg').textContent=`🎉 Level complete with ${S.pts} points!`+(st==='⭐⭐'?' Can you do it with fewer blocks?':' Super short program!');yay();}
+ else if(!$('#gridMsg').textContent.match(/😬|🤷|❌/)) $('#gridMsg').textContent=`Program finished with ${S.pts} points. Goal: ${lv.target}. Change something and try again!`;}
+$('#runBtn').onclick=run;$('#resetBtn').onclick=()=>{if(!running){resetRobot();$('#gridMsg').textContent='';}};$('#clearBtn').onclick=()=>{if(!running){prog=[];drawProg();resetRobot();}};
+setLevel(0);
+
+// ---------- CH4 Race ----------
+const miniBot=(c)=>`<svg viewBox="0 0 60 56"><rect x="4" y="16" width="44" height="30" rx="8" fill="#fff" stroke="#1c2340" stroke-width="3"/><circle cx="18" cy="28" r="4"/><circle cx="34" cy="28" r="4"/><rect class="arm" x="44" y="22" width="14" height="6" rx="3" fill="${c}" style="transform-origin:44px 25px;transition:transform .9s"/><circle cx="14" cy="48" r="6" fill="#1c2340"/><circle cx="38" cy="48" r="6" fill="#1c2340"/></svg>`;
+$('#botA').innerHTML=miniBot('#8a63d2');$('#botB').innerHTML=miniBot('#8a63d2');
+let racing=false;
+$('#raceBtn').onclick=()=>{if(racing)return;racing=true;$('#raceMsg').textContent='';
+ const lane=$('.lane').clientWidth-100,DRIVE=2.0,LIFT=1.0;// pretend seconds
+ const A=$('#botA'),B=$('#botB');[A,B].forEach(b=>{b.style.transition='none';b.style.left='8px';b.querySelector('.arm').style.transform='rotate(0)';});
+ requestAnimationFrame(()=>{[A,B].forEach(b=>{b.style.transition=`left ${DRIVE}s linear`;b.style.left=lane+'px';});
+  B.querySelector('.arm').style.transform='rotate(-60deg)';
+  setTimeout(()=>{A.querySelector('.arm').style.transform='rotate(-60deg)';},DRIVE*1000);});
+ const t0=performance.now();let doneB=false;
+ (function clk(){const s=(performance.now()-t0)/1000;$('#tA').textContent=Math.min(s,DRIVE+LIFT).toFixed(1);$('#tB').textContent=Math.min(s,DRIVE).toFixed(1);
+  if(s>=DRIVE&&!doneB){doneB=true;beep(880,.2);}
+  if(s<DRIVE+LIFT)requestAnimationFrame(clk);else{racing=false;yay();$('#raceMsg').textContent='🐇 "Don\'t wait" wins! It lifted the arm while driving, so it saved the lift time. Do that 6 times in a match and those seconds add up to more bean bags!';}})();};
+
+// ---------- CH5 Drift ----------
+function drift(err){const svg=$('#driftSvg');let x=110,y=250,a=-90,path=`M${x} ${y}`;const side=130;let h='<rect x="110" y="120" width="130" height="130" fill="none" stroke="#22a06b" stroke-width="3" stroke-dasharray="8 6"/><text x="175" y="190" text-anchor="middle" font-family="Baloo 2" font-weight="800" fill="#22a06b">the plan</text>';
+ const pts=[];for(let i=0;i<8;i++){x+=side*Math.cos(a*Math.PI/180);y+=side*Math.sin(a*Math.PI/180);pts.push([x,y]);a+=90+err;}
+ let i=0;svg.innerHTML=h+`<path id="dp" d="${path}" fill="none" stroke="${err?'#e5484d':'#3e7bfa'}" stroke-width="5" stroke-linecap="round"/><circle id="dr" cx="110" cy="250" r="10" fill="#1c2340"/>`;
+ const iv=setInterval(()=>{const [px,py]=pts[i];path+=` L${px.toFixed(1)} ${py.toFixed(1)}`;$('#dp').setAttribute('d',path);$('#dr').setAttribute('cx',px);$('#dr').setAttribute('cy',py);beep(400+i*40,.06);i++;
+  if(i===8){clearInterval(iv);$('#driftMsg').textContent=err?'😵 Each turn was only 6° wrong, but the mistakes ADDED UP. Flop is lost!':'😎 Flop checked its compass every time, so it stayed on the plan!';if(!err)yay();else boo();}},450);}
+$('#driftA').onclick=()=>drift(6);$('#driftB').onclick=()=>drift(0);
+$('#driftSvg').innerHTML='<rect x="110" y="120" width="130" height="130" fill="none" stroke="#22a06b" stroke-width="3" stroke-dasharray="8 6"/><text x="175" y="190" text-anchor="middle" font-family="Baloo 2" font-weight="800" fill="#22a06b">the plan</text><circle cx="110" cy="250" r="10" fill="#1c2340"/>';$('#driftMsg').textContent='Press a button to drive the square two times!';
+
+// ---------- hash routing ----------
+const HASH={'meet-flop':'c1','points':'c2','code':'c3','race':'c4','lost-robot':'c5','quiz':'c6','human-robot':'c7'};
+const REV=Object.fromEntries(Object.entries(HASH).map(([k,v])=>[v,k]));
+function show(id){$$('#nav button').forEach(x=>x.classList.toggle('on',x.dataset.ch===id));$$('.ch').forEach(c=>c.classList.toggle('on',c.id===id));}
+function fromHash(){const h=(location.hash||'').slice(1);if(HASH[h])show(HASH[h]);}
+$$('#nav button').forEach(b=>b.addEventListener('click',()=>{try{history.replaceState(null,'','#'+REV[b.dataset.ch]);}catch(e){}}));
+addEventListener('hashchange',fromHash);fromHash();
+
+// ---------- CH6 Quiz ----------
+const QZ=[
+ ['How many points is a bean bag on the pyramid (level 1)?',['1','3','6','10'],1,'3 points! Higher goals = more points.'],
+ ['Which bean bag color counts on ANY goal?',['Red','Blue','Yellow','Green'],2,'Yellow is WILD!'],
+ ['A bag stacked on top of another bag on the pyramid is worth…',['1','3','6','0'],2,'6 points: double!'],
+ ['Which part of Flop GRABS the bean bag?',['Wheels','Intake (mouth)','Bumper','Camera'],1,'The intake is Flop\'s mouth.'],
+ ['To drive UNDER the barrier, Flop\'s arm must be…',['Up','Down','Spinning','Gone'],1,'Arm DOWN to duck under!'],
+ ['What does a robot do if you say "go over there"?',['Goes there','Nothing! It needs exact steps','Dances','Asks why'],1,'Robots need EXACT instructions.'],
+ ['Robots run code blocks…',['All at once','Randomly','One at a time, top to bottom','Bottom to top'],2,'That\'s called a SEQUENCE.'],
+ ['Your code didn\'t work the first time. What do scientists do?',['Give up','Test, fix, try again','Blame the robot','Cry'],1,'Guess → test → fix!']];
+let qi=0,qs=0,qlock=false;$('#qTot').textContent=QZ.length;
+function drawQ(){const [t,a,c]=QZ[qi];qlock=false;$('#qNum').textContent=qi+1;$('#qText').textContent=t;$('#qMsg').textContent='';$('#qNext').style.display='none';
+ const cols=['blue','red','yel','go'];$('#qAns').innerHTML=a.map((x,i)=>`<button class="btn ${cols[i]}" data-i="${i}" style="font-size:1.4rem;padding:16px">${x}</button>`).join('');
+ $$('#qAns button').forEach(b=>b.onclick=()=>{if(qlock)return;qlock=true;const ok=+b.dataset.i===c;
+  $$('#qAns button').forEach(x=>{x.style.opacity=+x.dataset.i===c?1:.35;});
+  if(ok){qs++;$('#qScore').textContent=qs;yay();$('#qMsg').textContent='✅ YES! '+QZ[qi][3];}else{boo();$('#qMsg').textContent='❌ Not quite. '+QZ[qi][3];}
+  $('#qNext').style.display='inline-block';$('#qNext').textContent=qi<QZ.length-1?'Next question ▶':'🏆 See final score';});}
+$('#qNext').onclick=()=>{if(qi<QZ.length-1){qi++;drawQ();}else{$('#qText').textContent=`Final team score: ${qs} / ${QZ.length}! ${qs>=6?'🏆 Robo Cranes champions!':'Great try! Play again to beat it!'}`;$('#qAns').innerHTML='';$('#qMsg').textContent='';$('#qNext').textContent='🔁 Play again';qi=-1;qs=0;$('#qScore').textContent=0;yay();$('#qNext').onclick=()=>{qi=0;drawQ();$('#qNext').onclick=nextQ;};}};
+const nextQ=$('#qNext').onclick;drawQ();
+
+// ---------- CH7 Human Robot ----------
+let hrBar=false;
+function rnd(n){return Math.floor(Math.random()*n);}
+function newHR(){const N=5,C=80;let robot,bag,goal;
+ do{robot={x:rnd(N),y:N-1};bag={x:rnd(N),y:1+rnd(3)};goal={x:rnd(N),y:0};}while(bag.x===robot.x&&bag.y===robot.y);
+ let h='';for(let y=0;y<N;y++)for(let x=0;x<N;x++)h+=`<rect x="${x*C+2}" y="${y*C+2}" width="${C-4}" height="${C-4}" rx="8" fill="#eef0f5"/>`;
+ for(let x=0;x<N;x++)h+=`<text x="${x*C+40}" y="398" text-anchor="middle" font-size="12" fill="#888"></text>`;
+ if(hrBar){const by=bag.y<N-2?bag.y+1:bag.y; h+=`<rect x="4" y="${(N-2)*C+32}" width="${N*C-8}" height="14" rx="6" fill="#1c2340"/>`;}
+ h+=`<polygon points="${goal.x*C+10},${goal.y*C+70} ${goal.x*C+70},${goal.y*C+70} ${goal.x*C+56},${goal.y*C+12} ${goal.x*C+24},${goal.y*C+12}" fill="#ffd4d6" stroke="#e5484d" stroke-width="4"/>`;
+ h+=`<rect x="${bag.x*C+22}" y="${bag.y*C+28}" width="36" height="24" rx="8" fill="#f5c400" stroke="#1c2340" stroke-width="3"/>`;
+ h+=`<g transform="translate(${robot.x*C+40},${robot.y*C+40})"><rect x="-22" y="-20" width="44" height="40" rx="10" fill="#fff" stroke="#1c2340" stroke-width="4"/><circle cx="-8" cy="-4" r="5" fill="#1c2340"/><circle cx="8" cy="-4" r="5" fill="#1c2340"/><path d="M0 -20v-14" stroke="#8a63d2" stroke-width="6" stroke-linecap="round"/></g>`;
+ $('#hrMap').innerHTML=h;
+ $('#hrTxt').textContent=`Robot starts at the bottom, facing UP. Grab the yellow bag, then drop it on the pyramid. Each square = 1 big step.${hrBar?' Watch out for the barrier!':''}`;beep(600,.08);}
+$('#hrNew').onclick=newHR;$('#hrBar').onclick=()=>{hrBar=!hrBar;$('#hrBar').textContent='Barrier: '+(hrBar?'ON':'OFF');newHR();};newHR();
+</script>
+</body>
+</html>

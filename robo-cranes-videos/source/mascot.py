@@ -1,0 +1,22 @@
+# Original "Robo Crane" mascot: a sandhill-crane-style bird with robot goggles and a gear
+def mascot(w=300,h=360):
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" width="{w}" height="{h}" aria-label="Robo Crane mascot: a cartoon crane bird with robot goggles">
+<ellipse cx="150" cy="345" rx="90" ry="10" fill="#000000" opacity="0.12"/>
+<path d="M128 270 L118 340 M168 270 L178 340" stroke="#4a4f63" stroke-width="7" stroke-linecap="round"/>
+<path d="M104 340h28M164 340h28" stroke="#4a4f63" stroke-width="7" stroke-linecap="round"/>
+<ellipse cx="150" cy="220" rx="78" ry="62" fill="#c9cfdc" stroke="#1c2340" stroke-width="6"/>
+<path d="M92 205 Q60 250 96 268 Q120 240 118 212Z" fill="#a9b1c4" stroke="#1c2340" stroke-width="5"/>
+<path d="M186 172 Q200 110 168 70" fill="none" stroke="#1c2340" stroke-width="30" stroke-linecap="round"/>
+<path d="M186 172 Q200 110 168 70" fill="none" stroke="#e8ebf2" stroke-width="18" stroke-linecap="round"/>
+<circle cx="160" cy="58" r="40" fill="#e8ebf2" stroke="#1c2340" stroke-width="6"/>
+<path d="M132 40 Q150 14 178 30 Q170 44 150 44Z" fill="#e5484d" stroke="#1c2340" stroke-width="4"/>
+<path d="M196 60 L262 74 L196 80Z" fill="#f5c400" stroke="#1c2340" stroke-width="5" stroke-linejoin="round"/>
+<rect x="138" y="44" width="54" height="30" rx="14" fill="#1c2340"/>
+<circle cx="153" cy="59" r="9" fill="#5ef0ff"/><circle cx="178" cy="59" r="9" fill="#5ef0ff"/>
+<circle cx="155" cy="56" r="3" fill="#ffffff"/><circle cx="180" cy="56" r="3" fill="#ffffff"/>
+<g transform="translate(150 225)"><circle r="26" fill="#3e7bfa" stroke="#1c2340" stroke-width="5"/>
+<path d="M0 -34v10M0 24v10M-34 0h10M24 0h10M-24 -24l7 7M17 17l7 7M24 -24l-7 7M-17 17l-7 7" stroke="#1c2340" stroke-width="7" stroke-linecap="round"/>
+<circle r="9" fill="#f5c400" stroke="#1c2340" stroke-width="4"/></g>
+</svg>'''
+if __name__=='__main__':
+    open('mascot.svg','w').write(mascot())
