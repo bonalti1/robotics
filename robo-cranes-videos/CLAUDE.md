@@ -56,8 +56,11 @@ Mascot: **Cranebot**, an original cartoon robot crane (refs/01_mascot_hero.png).
 - VEX is student-centered: these videos teach concepts. Never make content that gives kids a finished competition program to copy.
 - No real children's faces in generated content.
 - "Grulla" is Spanish and is said "GROO-ya". In AI voice text, spell it "Groo-yah"; captions keep "Grulla".
-- Real robot pictures: use **the team's own photos/phone clips of their real Flop** (put them in `refs/real/`). Never
-  use VEX's or news photos in the videos (copyrighted); link to VEX's videos instead. No kids' faces or name tags in
+- Real robot pictures: Rolando chose to show the real Flop. `refs/real/flop_vex_render.png` is VEX's official render
+  (he supplied it). It is used only in the edit, with an "Image: VEX Robotics" credit, never as generator input.
+  `source/real_flop.py` makes the spotlight pictures (`refs/real/spot_*.png`) that Lesson 1 shows after each
+  cartoon part. The bumper sensor isn't visible in that render, and the camera is assumed to be the front sensor module.
+  The team's own photos of their robot would be even better (and are copyright-free). No kids' faces or name tags in
   the frame, since the repo is public.
 
 ## Already built (for context)

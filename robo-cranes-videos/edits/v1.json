@@ -11,10 +11,10 @@
       "dur": 5.0
     },
     {
-      "note": "five parts: gentle push-in on the whole robot",
+      "note": "five parts: the cartoon",
       "type": "still",
       "src": "refs/16x9/02_flop_robot_16x9.png",
-      "dur": 4.0,
+      "dur": 2.0,
       "zoom": {
         "to": 1.08,
         "cx": 894,
@@ -22,38 +22,70 @@
       }
     },
     {
-      "note": "wheels = legs: Flop drives right",
-      "type": "clip",
-      "src": "output/v1/shot2_take1.mp4",
-      "dur": 5.0
+      "note": "five parts: the real Flop (VEX render)",
+      "type": "still",
+      "src": "refs/real/spot_full.png",
+      "dur": 2.0
     },
     {
-      "note": "intake = mouth: zoom to the green intake",
+      "note": "wheels = legs: cartoon Flop drives",
+      "type": "clip",
+      "src": "output/v1/shot2_take1.mp4",
+      "dur": 3.0
+    },
+    {
+      "note": "the real wheels",
+      "type": "still",
+      "src": "refs/real/spot_wheels.png",
+      "dur": 2.0
+    },
+    {
+      "note": "intake = mouth: cartoon",
       "type": "still",
       "src": "refs/16x9/02_flop_robot_16x9.png",
-      "dur": 5.5,
+      "dur": 2.8,
       "zoom": {
         "to": 1.9,
         "cx": 1306,
-        "cy": 589
+        "cy": 589,
+        "ease": 0.6
       }
     },
     {
-      "note": "arm = neck: arm lifts the bag (holds last frame)",
-      "type": "clip",
-      "src": "output/v1/shot3_take2.mp4",
-      "dur": 6.0
+      "note": "the real intake",
+      "type": "still",
+      "src": "refs/real/spot_intake.png",
+      "dur": 2.7
     },
     {
-      "note": "camera = eyes: zoom to the eye panel",
+      "note": "arm = neck: cartoon arm lifts",
+      "type": "clip",
+      "src": "output/v1/shot3_take2.mp4",
+      "dur": 3.3
+    },
+    {
+      "note": "the real arm",
+      "type": "still",
+      "src": "refs/real/spot_arm.png",
+      "dur": 2.7
+    },
+    {
+      "note": "camera = eyes: cartoon",
       "type": "still",
       "src": "refs/16x9/02_flop_robot_16x9.png",
-      "dur": 5.0,
+      "dur": 2.5,
       "zoom": {
         "to": 2.0,
         "cx": 894,
-        "cy": 549
+        "cy": 549,
+        "ease": 0.6
       }
+    },
+    {
+      "note": "the real camera (AI Vision sensor)",
+      "type": "still",
+      "src": "refs/real/spot_camera.png",
+      "dur": 2.5
     },
     {
       "note": "bumper = nose: zoom to the red bumper",

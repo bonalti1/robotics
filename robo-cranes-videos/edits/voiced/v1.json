@@ -22,10 +22,10 @@
    "dur": 5.0
   },
   {
-   "note": "five parts: gentle push-in on the whole robot",
+   "note": "five parts: the cartoon",
    "type": "still",
    "src": "refs/16x9/02_flop_robot_16x9.png",
-   "dur": 3.0667,
+   "dur": 1.5333,
    "zoom": {
     "to": 1.08,
     "cx": 894,
@@ -33,38 +33,70 @@
    }
   },
   {
-   "note": "wheels = legs: Flop drives right",
-   "type": "clip",
-   "src": "output/v1/shot2_take1.mp4",
-   "dur": 3.7667
+   "note": "five parts: the real Flop (VEX render)",
+   "type": "still",
+   "src": "refs/real/spot_full.png",
+   "dur": 1.5333
   },
   {
-   "note": "intake = mouth: zoom to the green intake",
+   "note": "wheels = legs: cartoon Flop drives",
+   "type": "clip",
+   "src": "output/v1/shot2_take1.mp4",
+   "dur": 2.2667
+  },
+  {
+   "note": "the real wheels",
+   "type": "still",
+   "src": "refs/real/spot_wheels.png",
+   "dur": 1.5
+  },
+  {
+   "note": "intake = mouth: cartoon",
    "type": "still",
    "src": "refs/16x9/02_flop_robot_16x9.png",
-   "dur": 5.1,
+   "dur": 2.6,
    "zoom": {
     "to": 1.9,
     "cx": 1306,
-    "cy": 589
+    "cy": 589,
+    "ease": 0.6
    }
   },
   {
-   "note": "arm = neck: arm lifts the bag (holds last frame)",
-   "type": "clip",
-   "src": "output/v1/shot3_take2.mp4",
-   "dur": 6.5
+   "note": "the real intake",
+   "type": "still",
+   "src": "refs/real/spot_intake.png",
+   "dur": 2.5
   },
   {
-   "note": "camera = eyes: zoom to the eye panel",
+   "note": "arm = neck: cartoon arm lifts",
+   "type": "clip",
+   "src": "output/v1/shot3_take2.mp4",
+   "dur": 3.5667
+  },
+  {
+   "note": "the real arm",
+   "type": "still",
+   "src": "refs/real/spot_arm.png",
+   "dur": 2.9333
+  },
+  {
+   "note": "camera = eyes: cartoon",
    "type": "still",
    "src": "refs/16x9/02_flop_robot_16x9.png",
-   "dur": 4.7,
+   "dur": 2.3333,
    "zoom": {
     "to": 2.0,
     "cx": 894,
-    "cy": 549
+    "cy": 549,
+    "ease": 0.6
    }
+  },
+  {
+   "note": "the real camera (AI Vision sensor)",
+   "type": "still",
+   "src": "refs/real/spot_camera.png",
+   "dur": 2.3667
   },
   {
    "note": "bumper = nose: zoom to the red bumper",
@@ -379,6 +411,31 @@
   {
    "src": "audio/sfx/motor.mp3",
    "start": 9.883,
+   "volume": 0.35
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 8.232,
+   "volume": 0.35
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 12.021,
+   "volume": 0.35
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 16.118,
+   "volume": 0.35
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 22.193,
+   "volume": 0.35
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 27.459,
    "volume": 0.35
   },
   {
