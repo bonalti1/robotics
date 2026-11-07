@@ -55,6 +55,10 @@ Mascot: **Cranebot**, an original cartoon robot crane (refs/01_mascot_hero.png).
   Higher tiers (L3/L4) are intentionally left out for 3rd graders.
 - VEX is student-centered: these videos teach concepts. Never make content that gives kids a finished competition program to copy.
 - No real children's faces in generated content.
+- "Grulla" is Spanish and is said "GROO-ya". In AI voice text, spell it "Groo-yah"; captions keep "Grulla".
+- Real robot pictures: use **the team's own photos/phone clips of their real Flop** (put them in `refs/real/`). Never
+  use VEX's or news photos in the videos (copyrighted); link to VEX's videos instead. No kids' faces or name tags in
+  the frame, since the repo is public.
 
 ## Already built (for context)
 - Flop Academy (interactive games): https://claude.ai/artifact/SLNoVEN74XzRi7BftyLZge  (source/flop_academy.html)

@@ -1,23 +1,4 @@
 {
-  "audio/voice/opener_01.mp3": {
-    "task": "0e330957-21ff-4f02-bbfd-ae47237eb2e1",
-    "status": "SUCCEEDED",
-    "estimate": {
-      "credits": 1
-    },
-    "body": {
-      "model": "eleven_v4",
-      "promptText": "This is the Robo Cranes, from Grulla Elementary!",
-      "voice": {
-        "type": "runway-preset",
-        "presetId": "Kylie"
-      },
-      "speed": 0.92,
-      "languageCode": "en",
-      "seed": 7,
-      "nextText": "Last season, we made it all the way to the VEX World Championship."
-    }
-  },
   "audio/voice/opener_02.mp3": {
     "task": "b0588d0e-025e-4307-966d-4f9d57678b4b",
     "status": "SUCCEEDED",
@@ -1033,6 +1014,44 @@
       "promptText": "Small toy robot electric motor whirring as it drives",
       "duration": 2.5,
       "loop": false
+    }
+  },
+  "audio/voice/opener_01.mp3_v1_english_grulla": {
+    "task": "0e330957-21ff-4f02-bbfd-ae47237eb2e1",
+    "status": "SUCCEEDED",
+    "estimate": {
+      "credits": 1
+    },
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "This is the Robo Cranes, from Grulla Elementary!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "nextText": "Last season, we made it all the way to the VEX World Championship."
+    }
+  },
+  "audio/voice/opener_01.mp3": {
+    "task": "4707453f-0eb7-470d-8590-7d6bcc487199",
+    "status": "SUCCEEDED",
+    "estimate": {
+      "credits": 1
+    },
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "This is the Robo Cranes, from Groo-yah Elementary!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "nextText": "Last season, we made it all the way to the VEX World Championship."
     }
   }
 }

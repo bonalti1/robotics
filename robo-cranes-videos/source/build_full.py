@@ -8,7 +8,8 @@ For every part in the plan it:
      narration times are anchors; segments, captions and sound effects are stretched or squeezed between them;
   2. optionally adds a "LESSON n" chapter card (with a whoosh) at the start;
   3. renders the part with source/assemble.py (voice + sfx + music that ducks under the voice);
-then joins all parts into one video with one narration subtitle track.
+then joins all parts into one video with one narration subtitle track, normalized to -16 LUFS.
+SKIP_RENDER=1 re-uses parts that are already rendered (delete a part's mp4 to re-render just that part).
 Each part is also a finished stand-alone video in output/full/parts/.
 """
 import json, os, subprocess, sys
@@ -122,7 +123,23 @@ def main(plan_path):
                   "-map", "0:v", "-map", "0:a", "-map", "1:s", "-c:v", "copy", "-c:a", "copy", "-c:s", "mov_text",
                   "-metadata:s:s:0", "language=eng", "-metadata", f"title={plan['title']}", "-movflags", "+faststart", out])
     os.remove(lst)
+    loudnorm(out)
     print(f"wrote {out} ({offset:.1f}s, {len(outs)} parts) and {srt}")
+
+
+def loudnorm(path, target=-16):
+    """Two-pass loudness normalization of the audio (video and subtitles copied) to the usual web/phone level."""
+    r = subprocess.run(["ffmpeg", "-nostats", "-i", path, "-map", "0:a", "-af",
+                        f"loudnorm=I={target}:TP=-1.5:LRA=11:print_format=json", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    j = json.loads(r.stderr[r.stderr.rindex("{"):])
+    m = (f"measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}:"
+         f"measured_thresh={j['input_thresh']}:offset={j['target_offset']}")
+    tmp = path + ".tmp.mp4"
+    assemble.run(["ffmpeg", "-y", "-v", "error", "-i", path, "-map", "0", "-c:v", "copy", "-c:s", "copy",
+                  "-af", f"loudnorm=I={target}:TP=-1.5:LRA=11:{m}:linear=true,aresample=48000",
+                  "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", tmp])
+    os.replace(tmp, path)
 
 
 if __name__ == "__main__":

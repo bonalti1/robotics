@@ -4,7 +4,7 @@
     "endpoint": "/text_to_speech",
     "body": {
       "model": "eleven_v4",
-      "promptText": "This is the Robo Cranes, from Grulla Elementary!",
+      "promptText": "This is the Robo Cranes, from Groo-yah Elementary!",
       "voice": {
         "type": "runway-preset",
         "presetId": "Kylie"
@@ -14,7 +14,8 @@
       "seed": 7,
       "nextText": "Last season, we made it all the way to the VEX World Championship."
     },
-    "text": "This is the Robo Cranes, from Grulla Elementary!"
+    "text": "This is the Robo Cranes, from Grulla Elementary!",
+    "note": "Grulla is Spanish (GROO-ya); spelled phonetically for the voice. Captions keep the real spelling."
   },
   {
     "out": "audio/voice/opener_02.mp3",
@@ -29,7 +30,7 @@
       "speed": 0.92,
       "languageCode": "en",
       "seed": 7,
-      "previousText": "This is the Robo Cranes, from Grulla Elementary!",
+      "previousText": "This is the Robo Cranes, from Groo-yah Elementary!",
       "nextText": "This year, the game is Level Up."
     },
     "text": "Last season, we made it all the way to the VEX World Championship."

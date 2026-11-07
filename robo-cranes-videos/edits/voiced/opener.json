@@ -7,25 +7,25 @@
    "note": "confetti jump",
    "type": "clip",
    "src": "output/v6/shot1_take2.mp4",
-   "dur": 3.9667
+   "dur": 4.2667
   },
   {
    "note": "Cranebot and Flop bounce",
    "type": "clip",
    "src": "output/v6/shot2_take1.mp4",
-   "dur": 5.4
+   "dur": 5.3667
   },
   {
    "note": "Flop drives",
    "type": "clip",
    "src": "output/v1/shot2_take1.mp4",
-   "dur": 3.1
+   "dur": 3.1333
   },
   {
    "note": "bag lands on the stack",
    "type": "clip",
    "src": "output/v2/shot3_take2.mp4",
-   "dur": 2.7667
+   "dur": 2.7333
   },
   {
    "note": "Cranebot blinks and bobs",
@@ -50,7 +50,7 @@
  "captions": [
   {
    "start": 0.3,
-   "end": 2.236,
+   "end": 2.383,
    "pos": "bottom",
    "size": 130,
    "parts": [
@@ -61,8 +61,8 @@
    ]
   },
   {
-   "start": 2.236,
-   "end": 3.982,
+   "start": 2.383,
+   "end": 4.254,
    "pos": "bottom",
    "size": 96,
    "parts": [
@@ -73,8 +73,8 @@
    ]
   },
   {
-   "start": 4.282,
-   "end": 6.315,
+   "start": 4.554,
+   "end": 6.587,
    "pos": "topright",
    "size": 100,
    "parts": [
@@ -85,8 +85,8 @@
    ]
   },
   {
-   "start": 6.315,
-   "end": 9.362,
+   "start": 6.587,
+   "end": 9.634,
    "pos": "topright",
    "size": 150,
    "parts": [
@@ -97,8 +97,8 @@
    ]
   },
   {
-   "start": 9.562,
-   "end": 12.48,
+   "start": 9.834,
+   "end": 12.752,
    "size": 110,
    "parts": [
     [
@@ -112,8 +112,8 @@
    ]
   },
   {
-   "start": 12.58,
-   "end": 15.22,
+   "start": 12.852,
+   "end": 15.492,
    "size": 100,
    "parts": [
     [
@@ -123,8 +123,8 @@
    ]
   },
   {
-   "start": 15.416,
-   "end": 18.06,
+   "start": 15.688,
+   "end": 18.332,
    "pos": "bottom",
    "size": 90,
    "parts": [
@@ -138,27 +138,27 @@
  "narration": [
   {
    "start": 0.3,
-   "end": 3.882,
+   "end": 4.154,
    "text": "This is the Robo Cranes, from Grulla Elementary!"
   },
   {
-   "start": 4.282,
-   "end": 9.162,
+   "start": 4.554,
+   "end": 9.434,
    "text": "Last season, we made it all the way to the VEX World Championship."
   },
   {
-   "start": 9.562,
-   "end": 12.18,
+   "start": 9.834,
+   "end": 12.452,
    "text": "This year, the game is Level Up."
   },
   {
-   "start": 12.58,
-   "end": 17.86,
+   "start": 12.852,
+   "end": 18.132,
    "text": "We stack bean bags higher and higher, and we learn something new every day."
   },
   {
-   "start": 18.26,
-   "end": 19.266,
+   "start": 18.532,
+   "end": 19.538,
    "text": "Let's go!"
   }
  ],
@@ -169,19 +169,19 @@
   },
   {
    "src": "audio/voice_trim/opener_02.wav",
-   "start": 4.282
+   "start": 4.554
   },
   {
    "src": "audio/voice_trim/opener_03.wav",
-   "start": 9.562
+   "start": 9.834
   },
   {
    "src": "audio/voice_trim/opener_04.wav",
-   "start": 12.58
+   "start": 12.852
   },
   {
    "src": "audio/voice_trim/opener_05.wav",
-   "start": 18.26
+   "start": 18.532
   }
  ],
  "sfx": [
@@ -192,42 +192,42 @@
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 3.932,
+   "start": 4.204,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 9.312,
+   "start": 9.584,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/motor.mp3",
-   "start": 9.562,
+   "start": 9.834,
    "volume": 0.35
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 12.43,
+   "start": 12.702,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/thud.mp3",
-   "start": 14.829,
+   "start": 15.101,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 15.171,
+   "start": 15.443,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 18.01,
+   "start": 18.282,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/pop.mp3",
-   "start": 18.26,
+   "start": 18.532,
    "volume": 0.55
   }
  ],
