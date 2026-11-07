@@ -19,13 +19,20 @@ Mascot: **Cranebot**, an original cartoon robot crane (refs/01_mascot_hero.png).
 
 ## Pipeline (built while making v1; reuse for v2–v6)
 - **Generator:** Runway Gen-4.5 (`gen4.5`, 12 credits/s → 60 credits per 5 s take). Rolando asked for the best model.
-  v1 cost 480 credits (4 shots × 2 takes). Higgsfield had only ~24 credits, so it isn't used.
+  v1 cost 480 credits; v2–v6 cost 1,440 (all approved). Runway balance afterwards: 2,328. Higgsfield had only ~24
+  credits, so it isn't used. All 6 drafts exist (`output/v1/NOTES.md`, `output/REVIEW_v2-v6.md`); next step is
+  Rolando's voiceover, then the finals.
+- Gen-4.5 tends to overdo camera moves on flat art (v5 shot 1 spun the field ~90°). Free ffmpeg moves in the edit
+  (`zoom`, `wobble`) are often the better choice for simple camera motion.
 - `source/pad16x9.py <in> <out> <left share>` widens square refs to 16:9 by extending the background (`refs/16x9/`),
   so Runway doesn't crop the art. 1920x1080 refs (04–07, 09) are used as they are.
 - `source/runway_gen.py output/<id>/jobs.json output/<id>/runway_log.json` submits the takes (3 at a time), downloads
   them, and logs seeds and task ids. It can be resumed and skips finished files.
-- `source/assemble.py edits/<id>.json` builds the video from a timeline: generated clips, free ffmpeg zooms on the
-  ref art, BIG captions, a "Try it!" hands-on challenge card at the end, and a narration `.srt`. See `output/v1/NOTES.md`.
+- `source/assemble.py edits/<id>.json` builds the video from a timeline: generated clips (`src_end` to use only
+  the start), free ffmpeg zooms (`zoom` with `ease`) or rocking (`wobble`) on the ref art, BIG captions (pos
+  top/bottom/topleft/topright/[x,y]), cards with drawn code blocks, a "Try it!" card, and a narration `.srt`.
+  The script's docstring lists every option.
+- `source/diagrams.py` draws edit-time teaching diagrams (`refs/diagrams/`: drift path, compass heading).
 - Each video ends with a short **"Try it!"** card: a hands-on challenge that links the video's idea to the real robot
   (watch → try → measure → decide), so the kids learn while getting better at the game.
 

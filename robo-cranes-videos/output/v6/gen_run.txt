@@ -1,0 +1,9 @@
+running output/v6/shot1_take1.mp4 cf5eeccc-e236-484d-957b-ec383edf30e5
+running output/v6/shot1_take2.mp4 579740c8-9283-46bd-aa41-e8234371e32b
+running output/v6/shot2_take1.mp4 3eb9ab18-fc55-40f7-98c0-f88bce006c2a
+done output/v6/shot1_take1.mp4
+done output/v6/shot1_take2.mp4
+done output/v6/shot2_take1.mp4
+running output/v6/shot2_take2.mp4 0ce78451-bc3a-4fda-a3d4-f9c7c204f737
+done output/v6/shot2_take2.mp4
+all finished

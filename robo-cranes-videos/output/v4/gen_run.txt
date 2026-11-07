@@ -1,0 +1,13 @@
+running output/v4/shot1_take1.mp4 b5e214df-f41c-4333-bdf5-10033002fb82
+running output/v4/shot1_take2.mp4 1acdd87f-7de6-4c8c-83f6-9cbf324b9591
+running output/v4/shot2_take1.mp4 4a6ee35a-e111-4625-9646-4bf4593ad29a
+done output/v4/shot1_take1.mp4
+done output/v4/shot1_take2.mp4
+done output/v4/shot2_take1.mp4
+running output/v4/shot2_take2.mp4 61bc4fd9-fe60-4e35-bc1b-f37753bcfbba
+running output/v4/shot3_take1.mp4 8fd44864-3b77-424e-b4d4-1ec7a4e61dac
+running output/v4/shot3_take2.mp4 d70a391d-10ab-4aa0-9189-5a91b2b45c31
+done output/v4/shot2_take2.mp4
+done output/v4/shot3_take1.mp4
+done output/v4/shot3_take2.mp4
+all finished

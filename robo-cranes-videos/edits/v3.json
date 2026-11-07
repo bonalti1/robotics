@@ -1,0 +1,39 @@
+{
+  "id": "v3",
+  "title": "The Color Rule",
+  "out": "output/v3/draft.mp4",
+  "watermark": "DRAFT - no voice yet - timing is a guess",
+  "segments": [
+    {"note": "three colours", "type": "still", "src": "refs/06_beanbags_three.png", "dur": 3.0, "zoom": {"to": 1.06, "cx": 960, "cy": 640}},
+    {"note": "red bags -> red goal (generated zoom toward the red goal)", "type": "clip", "src": "output/v3/shot2_take2.mp4", "dur": 5.0, "src_end": 3.0},
+    {"note": "blue bags -> blue goal (frames the blue goal + blue pyramid; no blue bag sits near it in the art)", "type": "still", "src": "refs/05_field_topdown.png", "dur": 3.2, "zoom": {"to": 2.6, "cx": 1551, "cy": 840, "ease": 0.5}},
+    {"note": "yellow is wild (zoom + sparkle on the yellow bag)", "type": "clip", "src": "output/v3/shot1_take1.mp4", "dur": 5.0},
+    {"note": "wrong colour: red bag next to the blue goal", "type": "still", "src": "refs/05_field_topdown.png", "dur": 2.8, "zoom": {"to": 2.0, "cx": 1530, "cy": 560}},
+    {"note": "still touching the robot", "type": "still", "src": "refs/16x9/03_flop_arm_up_with_bag_16x9.png", "dur": 3.0, "zoom": {"to": 1.7, "cx": 1180, "cy": 430}},
+    {"note": "match, let go, score", "type": "still", "src": "refs/06_beanbags_three.png", "dur": 3.7, "zoom": {"to": 1.1, "cx": 960, "cy": 640}},
+    {"note": "hands-on challenge", "type": "card", "dur": 6.0, "card": {
+      "background": "refs/05_field_topdown.png",
+      "title": "TRY IT!",
+      "lines": ["Sort the bags: red to red,", "blue to blue. Where can yellow go?"],
+      "footer": "Wrong color or still touching the robot = 0"}}
+  ],
+  "captions": [
+    {"start": 0.4, "end": 3.0, "parts": [["RED  ", "red"], ["BLUE  ", "blue"], ["YELLOW", "yellow"]]},
+    {"start": 3.4, "end": 8.0, "parts": [["RED", "red"], [" BAG  ", "white"], ["=", "yellow"], ["  RED", "red"], [" GOAL", "white"]]},
+    {"start": 8.2, "end": 11.2, "parts": [["BLUE", "blue"], [" BAG  ", "white"], ["=", "yellow"], ["  BLUE", "blue"], [" GOAL", "white"]]},
+    {"start": 11.4, "end": 14.0, "size": 130, "parts": [["YELLOW", "yellow"], [" IS ", "white"], ["WILD!", "yellow"]]},
+    {"start": 14.0, "end": 16.2, "parts": [["ANY GOAL!", "cyan"]]},
+    {"start": 16.4, "end": 19.0, "parts": [["WRONG COLOR", "white"], [" = ", "yellow"], ["0", "red"]]},
+    {"start": 19.0, "end": 22.0, "size": 100, "parts": [["TOUCHING THE ROBOT", "white"], [" = ", "yellow"], ["0", "red"]]},
+    {"start": 22.3, "end": 25.7, "size": 100, "parts": [["MATCH", "white"], ["  -  ", "yellow"], ["LET GO", "white"], ["  -  ", "yellow"], ["SCORE!", "cyan"]]}
+  ],
+  "narration": [
+    {"start": 0.4, "end": 2.8, "text": "Bean bags come in three colors."},
+    {"start": 3.2, "end": 5.8, "text": "Red bags go on the red goal."},
+    {"start": 8.2, "end": 10.7, "text": "Blue bags go on the blue goal."},
+    {"start": 11.3, "end": 13.9, "text": "And yellow? Yellow is WILD!"},
+    {"start": 14.1, "end": 16.0, "text": "It counts on any goal."},
+    {"start": 16.4, "end": 21.6, "text": "If a bag is the wrong color, or still touching the robot, it's zero points."},
+    {"start": 22.2, "end": 25.5, "text": "Match the color, let it go, and score!"}
+  ]
+}

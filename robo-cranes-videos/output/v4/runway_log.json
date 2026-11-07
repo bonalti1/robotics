@@ -1,0 +1,44 @@
+{
+  "output/v4/shot1_take1.mp4": {
+    "task": "b5e214df-f41c-4333-bdf5-10033002fb82",
+    "seed": 10401,
+    "image": "refs/16x9/02_flop_robot_16x9_left.png",
+    "prompt": "The cartoon robot drives to the right and stops, then pauses. Flat 2D cartoon, static camera.",
+    "status": "SUCCEEDED"
+  },
+  "output/v4/shot1_take2.mp4": {
+    "task": "1acdd87f-7de6-4c8c-83f6-9cbf324b9591",
+    "seed": 20401,
+    "image": "refs/16x9/02_flop_robot_16x9_left.png",
+    "prompt": "The cartoon robot drives to the right and stops, then pauses. Flat 2D cartoon, static camera.",
+    "status": "SUCCEEDED"
+  },
+  "output/v4/shot2_take1.mp4": {
+    "task": "4a6ee35a-e111-4625-9646-4bf4593ad29a",
+    "seed": 10402,
+    "image": "refs/16x9/03_flop_arm_up_with_bag_16x9_left.png",
+    "prompt": "The cartoon robot drives to the right while its purple arm smoothly rises at the same time. Flat 2D cartoon, static camera.",
+    "status": "SUCCEEDED"
+  },
+  "output/v4/shot2_take2.mp4": {
+    "task": "61bc4fd9-fe60-4e35-bc1b-f37753bcfbba",
+    "seed": 20402,
+    "image": "refs/16x9/03_flop_arm_up_with_bag_16x9_left.png",
+    "prompt": "The cartoon robot drives to the right while its purple arm smoothly rises at the same time. Flat 2D cartoon, static camera.",
+    "status": "SUCCEEDED"
+  },
+  "output/v4/shot3_take1.mp4": {
+    "task": "8fd44864-3b77-424e-b4d4-1ec7a4e61dac",
+    "seed": 10403,
+    "image": "refs/16x9/01_mascot_hero_16x9.png",
+    "prompt": "The cartoon crane mascot nods and does a small happy hop. Flat 2D cartoon, static camera.",
+    "status": "SUCCEEDED"
+  },
+  "output/v4/shot3_take2.mp4": {
+    "task": "d70a391d-10ab-4aa0-9189-5a91b2b45c31",
+    "seed": 20403,
+    "image": "refs/16x9/01_mascot_hero_16x9.png",
+    "prompt": "The cartoon crane mascot nods and does a small happy hop. Flat 2D cartoon, static camera.",
+    "status": "SUCCEEDED"
+  }
+}

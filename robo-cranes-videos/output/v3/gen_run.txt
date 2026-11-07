@@ -1,0 +1,9 @@
+running output/v3/shot1_take1.mp4 4a7c3dc0-0bbf-47f6-b4ea-3f184cc9354a
+running output/v3/shot1_take2.mp4 171ad102-7cb7-456e-a99f-d11d9ca10731
+running output/v3/shot2_take1.mp4 cdbf4be3-2886-4699-afba-ca6292360331
+done output/v3/shot1_take1.mp4
+done output/v3/shot2_take1.mp4
+running output/v3/shot2_take2.mp4 7bd632e5-1373-4d75-95ae-a93eda18099f
+done output/v3/shot1_take2.mp4
+done output/v3/shot2_take2.mp4
+all finished

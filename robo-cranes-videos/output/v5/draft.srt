@@ -1,0 +1,28 @@
+1
+00:00:00,400 --> 00:00:03,600
+Every time Flop turns, it can be a tiny bit wrong.
+
+2
+00:00:04,000 --> 00:00:05,900
+One little mistake is okay.
+
+3
+00:00:06,400 --> 00:00:10,800
+But after many turns, the mistakes add up, and Flop gets lost!
+
+4
+00:00:11,200 --> 00:00:15,700
+The fix: instead of 'turn right 90,' use 'turn to heading.'
+
+5
+00:00:16,100 --> 00:00:19,900
+That means 'face that direction,' like 'face the window.'
+
+6
+00:00:20,300 --> 00:00:24,400
+Flop checks its compass every time, so mistakes don't pile up.
+
+7
+00:00:24,800 --> 00:00:26,100
+Smart robot!
+

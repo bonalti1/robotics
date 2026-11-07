@@ -1,0 +1,41 @@
+{
+  "id": "v5",
+  "title": "The Lost Robot: Turn to Heading",
+  "out": "output/v5/draft.mp4",
+  "watermark": "DRAFT - no voice yet - timing is a guess",
+  "segments": [
+    {"note": "every turn can be a tiny bit wrong: field rocks ~4 degrees (ffmpeg; both Runway takes spun the field ~90 deg and warped the bags)", "type": "still", "src": "refs/05_field_topdown.png", "dur": 6.0, "wobble": {"deg": 4, "period": 3.0}},
+    {"note": "mistakes add up: planned square (dashed) vs real path (red)", "type": "still", "src": "refs/diagrams/drift_path.png", "dur": 5.0, "zoom": {"to": 1.15, "cx": 860, "cy": 640}},
+    {"note": "the fix: turn for -> turn to heading (drawn illustration of two blocks)", "type": "card", "dur": 5.0, "card": {
+      "background": "refs/05_field_topdown.png",
+      "title": "THE FIX",
+      "blocks": [{"text": "turn right for 90 degrees", "mark": "x", "dim": true, "size": 72},
+                 {"text": "turn to heading 90 degrees", "mark": "check", "size": 72}]}},
+    {"note": "face that direction, like 'face the window'", "type": "still", "src": "refs/diagrams/compass_heading.png", "dur": 4.2},
+    {"note": "Cranebot points at the field and nods", "type": "clip", "src": "output/v5/shot2_take1.mp4", "dur": 6.4},
+    {"note": "hands-on challenge", "type": "card", "dur": 6.0, "card": {
+      "background": "refs/05_field_topdown.png",
+      "title": "TRY IT!",
+      "lines": ["Drive a square: 4 turns.", "Where does Flop end up?"],
+      "footer": "Try 'turn for' first, then 'turn to heading'"}}
+  ],
+  "captions": [
+    {"start": 0.7, "end": 3.8, "parts": [["A TINY BIT WRONG", "white"]]},
+    {"start": 4.0, "end": 6.0, "size": 100, "parts": [["ONE MISTAKE", "white"], [" = ", "yellow"], ["OKAY", "cyan"]]},
+    {"start": 6.4, "end": 9.0, "parts": [["MISTAKES ADD UP", "white"]]},
+    {"start": 9.0, "end": 11.0, "size": 130, "parts": [["FLOP GETS LOST!", "yellow"]]},
+    {"start": 16.3, "end": 18.4, "size": 90, "parts": [["FACE THAT DIRECTION", "white"]]},
+    {"start": 18.4, "end": 20.2, "size": 90, "parts": [["LIKE \"FACE THE WINDOW\"", "cyan"]]},
+    {"start": 20.6, "end": 24.5, "pos": [700, 895], "size": 90, "parts": [["CHECK EVERY TIME", "white"]]},
+    {"start": 24.6, "end": 26.6, "pos": [760, 885], "size": 100, "parts": [["SMART ROBOT!", "yellow"]]}
+  ],
+  "narration": [
+    {"start": 0.4, "end": 3.6, "text": "Every time Flop turns, it can be a tiny bit wrong."},
+    {"start": 4.0, "end": 5.9, "text": "One little mistake is okay."},
+    {"start": 6.4, "end": 10.8, "text": "But after many turns, the mistakes add up, and Flop gets lost!"},
+    {"start": 11.2, "end": 15.7, "text": "The fix: instead of 'turn right 90,' use 'turn to heading.'"},
+    {"start": 16.1, "end": 19.9, "text": "That means 'face that direction,' like 'face the window.'"},
+    {"start": 20.3, "end": 24.4, "text": "Flop checks its compass every time, so mistakes don't pile up."},
+    {"start": 24.8, "end": 26.1, "text": "Smart robot!"}
+  ]
+}

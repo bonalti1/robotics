@@ -1,0 +1,28 @@
+1
+00:00:00,400 --> 00:00:02,800
+Bean bags come in three colors.
+
+2
+00:00:03,200 --> 00:00:05,800
+Red bags go on the red goal.
+
+3
+00:00:08,200 --> 00:00:10,700
+Blue bags go on the blue goal.
+
+4
+00:00:11,300 --> 00:00:13,900
+And yellow? Yellow is WILD!
+
+5
+00:00:14,100 --> 00:00:16,000
+It counts on any goal.
+
+6
+00:00:16,400 --> 00:00:21,600
+If a bag is the wrong color, or still touching the robot, it's zero points.
+
+7
+00:00:22,200 --> 00:00:25,500
+Match the color, let it go, and score!
+

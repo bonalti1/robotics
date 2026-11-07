@@ -1,0 +1,26 @@
+[
+  {
+    "out": "output/v3/shot1_take1.mp4",
+    "image": "refs/06_beanbags_three.png",
+    "prompt": "Camera slowly zooms in on the yellow bean bag, which gives a little sparkle bounce. Flat 2D cartoon, smooth zoom.",
+    "seed": 10301
+  },
+  {
+    "out": "output/v3/shot1_take2.mp4",
+    "image": "refs/06_beanbags_three.png",
+    "prompt": "Camera slowly zooms in on the yellow bean bag, which gives a little sparkle bounce. Flat 2D cartoon, smooth zoom.",
+    "seed": 20301
+  },
+  {
+    "out": "output/v3/shot2_take1.mp4",
+    "image": "refs/05_field_topdown.png",
+    "prompt": "Top-down view of the game field. The camera slowly zooms in toward the red goal on the left side. Flat 2D cartoon, nothing else moves.",
+    "seed": 10302
+  },
+  {
+    "out": "output/v3/shot2_take2.mp4",
+    "image": "refs/05_field_topdown.png",
+    "prompt": "Top-down view of the game field. The camera slowly zooms in toward the red goal on the left side. Flat 2D cartoon, nothing else moves.",
+    "seed": 20302
+  }
+]

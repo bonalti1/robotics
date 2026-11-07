@@ -1,0 +1,28 @@
+1
+00:00:00,400 --> 00:00:05,600
+Flop can do things one at a time: drive... stop... then lift the arm.
+
+2
+00:00:06,000 --> 00:00:07,200
+That's slow!
+
+3
+00:00:07,700 --> 00:00:12,600
+Or Flop can do two things at once: lift the arm WHILE it drives.
+
+4
+00:00:13,100 --> 00:00:18,500
+In VEXcode, click the little arrow on the arm block and pick 'and don't wait.'
+
+5
+00:00:18,900 --> 00:00:21,400
+Now the next block starts right away.
+
+6
+00:00:21,900 --> 00:00:25,500
+It's like walking and chewing gum at the same time.
+
+7
+00:00:26,000 --> 00:00:31,200
+Save a second here, a second there, and you'll have time for more bean bags!
+

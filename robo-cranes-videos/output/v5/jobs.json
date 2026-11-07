@@ -1,0 +1,26 @@
+[
+  {
+    "out": "output/v5/shot1_take1.mp4",
+    "image": "refs/05_field_topdown.png",
+    "prompt": "Top-down view of the game field, the camera slowly rotates a little to the left and back. Flat 2D cartoon, gentle motion.",
+    "seed": 10501
+  },
+  {
+    "out": "output/v5/shot1_take2.mp4",
+    "image": "refs/05_field_topdown.png",
+    "prompt": "Top-down view of the game field, the camera slowly rotates a little to the left and back. Flat 2D cartoon, gentle motion.",
+    "seed": 20501
+  },
+  {
+    "out": "output/v5/shot2_take1.mp4",
+    "image": "refs/09_mascot_pointing_field.png",
+    "prompt": "The cartoon crane mascot points its wing toward the field and nods. Flat 2D cartoon, static camera.",
+    "seed": 10502
+  },
+  {
+    "out": "output/v5/shot2_take2.mp4",
+    "image": "refs/09_mascot_pointing_field.png",
+    "prompt": "The cartoon crane mascot points its wing toward the field and nods. Flat 2D cartoon, static camera.",
+    "seed": 20502
+  }
+]

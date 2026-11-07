@@ -1,0 +1,26 @@
+[
+  {
+    "out": "output/v6/shot1_take1.mp4",
+    "image": "refs/16x9/01_mascot_hero_16x9.png",
+    "prompt": "The cartoon crane mascot spreads its wings wide and jumps with excitement, confetti falls. Flat 2D cartoon, static camera.",
+    "seed": 10601
+  },
+  {
+    "out": "output/v6/shot1_take2.mp4",
+    "image": "refs/16x9/01_mascot_hero_16x9.png",
+    "prompt": "The cartoon crane mascot spreads its wings wide and jumps with excitement, confetti falls. Flat 2D cartoon, static camera.",
+    "seed": 20601
+  },
+  {
+    "out": "output/v6/shot2_take1.mp4",
+    "image": "refs/04_mascot_and_flop.png",
+    "prompt": "The crane mascot and the robot both bounce happily side by side. Flat 2D cartoon, static camera.",
+    "seed": 10602
+  },
+  {
+    "out": "output/v6/shot2_take2.mp4",
+    "image": "refs/04_mascot_and_flop.png",
+    "prompt": "The crane mascot and the robot both bounce happily side by side. Flat 2D cartoon, static camera.",
+    "seed": 20602
+  }
+]

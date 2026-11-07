@@ -1,0 +1,38 @@
+[
+  {
+    "out": "output/v2/shot1_take1.mp4",
+    "image": "refs/06_beanbags_three.png",
+    "prompt": "The three bean bags (red, blue, yellow) bounce once, one after another, landing softly. Flat 2D cartoon, static camera.",
+    "seed": 10201
+  },
+  {
+    "out": "output/v2/shot1_take2.mp4",
+    "image": "refs/06_beanbags_three.png",
+    "prompt": "The three bean bags (red, blue, yellow) bounce once, one after another, landing softly. Flat 2D cartoon, static camera.",
+    "seed": 20201
+  },
+  {
+    "out": "output/v2/shot2_take1.mp4",
+    "image": "refs/07_scoring_floor_L1_stack.png",
+    "prompt": "Camera slowly pans from left to right across the floor goal and the two pyramids. Flat 2D cartoon, smooth pan, nothing else moves.",
+    "seed": 10202
+  },
+  {
+    "out": "output/v2/shot2_take2.mp4",
+    "image": "refs/07_scoring_floor_L1_stack.png",
+    "prompt": "Camera slowly pans from left to right across the floor goal and the two pyramids. Flat 2D cartoon, smooth pan, nothing else moves.",
+    "seed": 20202
+  },
+  {
+    "out": "output/v2/shot3_take1.mp4",
+    "image": "refs/16x9/08_pyramid_stack_tall_16x9.png",
+    "prompt": "A red bean bag drops from above and lands on top of the stack, the stack wobbles a little then settles. Flat 2D cartoon, static camera.",
+    "seed": 10203
+  },
+  {
+    "out": "output/v2/shot3_take2.mp4",
+    "image": "refs/16x9/08_pyramid_stack_tall_16x9.png",
+    "prompt": "A red bean bag drops from above and lands on top of the stack, the stack wobbles a little then settles. Flat 2D cartoon, static camera.",
+    "seed": 20203
+  }
+]

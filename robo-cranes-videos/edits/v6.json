@@ -1,0 +1,38 @@
+{
+  "id": "v6",
+  "title": "Robo Cranes, Let's Go!",
+  "out": "output/v6/draft.mp4",
+  "watermark": "DRAFT - no voice yet - timing is a guess",
+  "segments": [
+    {"note": "Cranebot jumps, confetti", "type": "clip", "src": "output/v6/shot1_take2.mp4", "dur": 6.0},
+    {"note": "your turn", "type": "still", "src": "refs/04_mascot_and_flop.png", "dur": 2.0, "zoom": {"to": 1.05, "cx": 960, "cy": 600}},
+    {"note": "build", "type": "still", "src": "refs/16x9/02_flop_robot_16x9.png", "dur": 1.4, "zoom": {"to": 1.12, "cx": 894, "cy": 650}},
+    {"note": "code", "type": "still", "src": "refs/16x9/03_flop_arm_up_with_bag_16x9.png", "dur": 1.4, "zoom": {"to": 1.12, "cx": 960, "cy": 600}},
+    {"note": "drive", "type": "still", "src": "refs/16x9/02_flop_robot_16x9_left.png", "dur": 1.4, "zoom": {"to": 1.12, "cx": 620, "cy": 650}},
+    {"note": "as a team: Cranebot and Flop bounce together", "type": "clip", "src": "output/v6/shot2_take1.mp4", "dur": 6.4},
+    {"note": "hands-on challenge", "type": "card", "dur": 6.0, "card": {
+      "background": "refs/04_mascot_and_flop.png",
+      "title": "TRY IT!",
+      "lines": ["Pick a job to try first:", "Builder - Coder - Driver"],
+      "footer": "Everyone helps the team!"}}
+  ],
+  "captions": [
+    {"start": 0.6, "end": 3.0, "pos": "bottom", "size": 110, "parts": [["ROBO CRANES", "yellow"]]},
+    {"start": 3.0, "end": 6.0, "pos": "bottom", "size": 96, "parts": [["WORLD CHAMPIONSHIP!", "white"]]},
+    {"start": 6.2, "end": 8.0, "size": 130, "pos": "topright", "parts": [["YOUR TURN!", "yellow"]]},
+    {"start": 8.1, "end": 9.4, "size": 140, "parts": [["BUILD", "white"]]},
+    {"start": 9.5, "end": 10.8, "size": 140, "pos": "topleft", "parts": [["CODE", "cyan"]]},
+    {"start": 10.9, "end": 12.2, "size": 140, "parts": [["DRIVE", "yellow"]]},
+    {"start": 12.4, "end": 14.0, "size": 110, "pos": "topright", "parts": [["AS A TEAM!", "white"]]},
+    {"start": 14.0, "end": 15.6, "size": 96, "pos": "topright", "parts": [["ARE YOU READY?", "cyan"]]},
+    {"start": 15.6, "end": 16.9, "size": 110, "pos": "topright", "parts": [["ROBO CRANES,", "white"]]},
+    {"start": 16.9, "end": 18.6, "size": 140, "pos": "topright", "parts": [["LET'S GO!", "yellow"]]}
+  ],
+  "narration": [
+    {"start": 0.4, "end": 5.7, "text": "Last season, the Robo Cranes from Grulla Elementary went to the VEX World Championship!"},
+    {"start": 6.1, "end": 7.9, "text": "This year, it's your turn."},
+    {"start": 8.2, "end": 13.6, "text": "We'll build a robot, code a robot, drive a robot, and do it as a team."},
+    {"start": 14.0, "end": 15.3, "text": "Are you ready?"},
+    {"start": 15.6, "end": 17.9, "text": "Robo Cranes, let's go!"}
+  ]
+}

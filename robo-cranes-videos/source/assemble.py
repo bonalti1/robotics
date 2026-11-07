@@ -3,9 +3,11 @@
 Usage (from the project folder):  python3 source/assemble.py edits/v1.json
 
 Timeline JSON:
-  segments  - played in order. {"type": "clip", "src": mp4, "dur": s}  (shorter clips hold their last frame)
+  segments  - played in order. {"type": "clip", "src": mp4, "dur": s, "src_end": s}  (shorter clips hold their
+              last frame; optional "src_end" uses only the first seconds of the clip)
               or {"type": "still", "src": png, "dur": s, "zoom": {"to": 1.8, "cx": px, "cy": px}}  (slow push-in
-              toward point cx,cy given in 1920x1080 pixels; omit "zoom" for a plain hold)
+              toward point cx,cy given in 1920x1080 pixels, optional "ease": 0.7 share of the shot spent zooming;
+              omit "zoom" for a plain hold; optional "wobble": {"deg": 4, "period": 3} gently rocks the picture)
   captions  - BIG key-word captions burned in during editing (never inside generated frames).
               {"start": s, "end": s, "parts": [["WHEELS", "white"], [" = ", "yellow"], ["LEGS", "cyan"]],
                "pos": "top"|"bottom"|"topleft"|"topright"|[x, y], "size": 118}
@@ -60,6 +62,34 @@ def caption_png(parts, pos, path, size=118):
     img.save(path)
 
 
+def draw_block(d, b, y):
+    """A simple drawn code block (illustration of a VEXcode-style block, not a screenshot).
+    b = {"text": "turn to heading 90 degrees", "extra": "and don't wait", "mark": "check"|"x", "dim": false}"""
+    f = ImageFont.truetype(FONT_SMALL, b.get("size", 64))
+    h, pad = round(b.get("size", 64) * 1.9), 44
+    tw = d.textlength(b["text"], font=f)
+    ew = d.textlength(b["extra"], font=f) + 2 * pad if b.get("extra") else 0
+    arrow = 70
+    bw = tw + 2 * pad + arrow + ew
+    x0 = (W - bw) / 2
+    fill = "#9fb7e8" if b.get("dim") else col("blue")
+    d.rounded_rectangle([x0, y, x0 + bw, y + h], radius=26, fill=fill, outline=col("navy"), width=6)
+    d.text((x0 + pad, y + h / 2), b["text"], font=f, fill="white", anchor="lm")
+    ax = x0 + pad + tw + 24  # the little expand arrow
+    d.polygon([(ax, y + h / 2 - 20), (ax, y + h / 2 + 20), (ax + 30, y + h / 2)], fill="white")
+    if b.get("extra"):
+        ex = ax + arrow - 14
+        d.rounded_rectangle([ex, y + 14, ex + ew, y + h - 14], radius=20, fill=col("yellow"), outline=col("navy"), width=5)
+        d.text((ex + ew / 2, y + h / 2), b["extra"], font=f, fill=col("navy"), anchor="mm")
+    m, mx, my = b.get("mark"), x0 - 90, y + h / 2
+    if m == "check":
+        d.line([(mx - 34, my), (mx - 8, my + 28), (mx + 38, my - 30)], fill=col("green"), width=18, joint="curve")
+    elif m == "x":
+        d.line([(mx - 30, my - 30), (mx + 30, my + 30)], fill=col("red"), width=18)
+        d.line([(mx - 30, my + 30), (mx + 30, my - 30)], fill=col("red"), width=18)
+    return y + h
+
+
 def card_png(card, path):
     """Full-frame end card (e.g. the "Try it!" challenge) over a dimmed background image."""
     bg = Image.open(card["background"]).convert("RGB").resize((W, H), Image.LANCZOS).filter(ImageFilter.GaussianBlur(14))
@@ -75,7 +105,11 @@ def card_png(card, path):
     d.rounded_rectangle([x0, y0, x0 + bw, y0 + bh], radius=bh / 2, fill=col("yellow"), outline=col("navy"), width=10)
     d.text((W / 2, y0 + bh / 2), t, font=title, fill=col("navy"), anchor="mm")
     y = 520
-    for line in card["lines"]:
+    for b in card.get("blocks", []):
+        y = draw_block(d, b, y) + 50
+    if card.get("blocks"):
+        y += 30
+    for line in card.get("lines", []):
         d.text((W / 2, y), line, font=body, fill=col("navy"), anchor="mm")
         y += 110
     if card.get("footer"):
@@ -96,7 +130,8 @@ def render_segment(seg, out, tmp):
     n = round(dur * FPS)
     norm = f"scale={W}:{H}:flags=lanczos,fps={FPS},format=yuv420p"
     if seg["type"] == "clip":
-        vf = f"{norm},tpad=stop_mode=clone:stop_duration={dur},trim=duration={dur},setpts=PTS-STARTPTS"
+        cut = f"trim=end={seg['src_end']},setpts=PTS-STARTPTS," if seg.get("src_end") else ""  # use only the start of the clip
+        vf = f"{cut}{norm},tpad=stop_mode=clone:stop_duration={dur},trim=duration={dur},setpts=PTS-STARTPTS"
         run(["ffmpeg", "-y", "-v", "error", "-i", seg["src"], "-an", "-vf", vf, "-frames:v", str(n),
              "-c:v", "libx264", "-crf", "16", "-preset", "medium", out])
         return
@@ -108,7 +143,7 @@ def render_segment(seg, out, tmp):
     if z:
         # Ease (smoothstep) from the full frame toward (cx, cy) over the first 70% of the shot, then hold.
         # Work on a 2x upscale so zoompan's integer positioning doesn't jitter.
-        k = max(1, round(n * 0.7))
+        k = max(1, round(n * z.get("ease", 0.7)))  # "ease": share of the shot spent moving
         s = f"(3*pow(min(on/{k},1),2)-2*pow(min(on/{k},1),3))"
         zt, cx, cy = z["to"], z["cx"] * 2, z["cy"] * 2
         zexp = f"1+{zt - 1}*{s}"
@@ -118,6 +153,9 @@ def render_segment(seg, out, tmp):
               f"format=yuv420p")
     else:
         vf = norm
+    if seg.get("wobble"):  # gentle rocking, e.g. {"deg": 4, "period": 3}: a = -deg*sin(2*pi*t/period)
+        wb = seg["wobble"]
+        vf += f",rotate=a='-{wb['deg']}*PI/180*sin(2*PI*t/{wb['period']})':c=0xfff8ec"
     run(["ffmpeg", "-y", "-v", "error", "-loop", "1", "-framerate", str(FPS), "-i", src, "-vf", vf,
          "-frames:v", str(n), "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-tune", "stillimage", out])
 
