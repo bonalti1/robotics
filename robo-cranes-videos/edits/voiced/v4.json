@@ -6,7 +6,7 @@
   {
    "note": "chapter card",
    "type": "card",
-   "dur": 2.4,
+   "dur": 1.7,
    "card": {
     "background": "refs/16x9/02_flop_robot_16x9.png",
     "title": "LESSON 4",
@@ -19,24 +19,24 @@
    "note": "one at a time: drive, stop",
    "type": "clip",
    "src": "output/v4/shot1_take2.mp4",
-   "dur": 5.6333
+   "dur": 5.1667
   },
   {
    "note": "...then lift the arm",
    "type": "still",
    "src": "refs/16x9/03_flop_arm_up_with_bag_16x9.png",
-   "dur": 2.6333
+   "dur": 2.2
   },
   {
    "note": "two at once: drive WHILE the arm rises",
    "type": "clip",
    "src": "output/v4/shot2_take2.mp4",
-   "dur": 5.9
+   "dur": 5.2
   },
   {
    "note": "VEXcode tip: the little arrow -> and don't wait (drawn illustration of one block)",
    "type": "card",
-   "dur": 8.7333,
+   "dur": 7.7,
    "card": {
     "background": "refs/16x9/03_flop_arm_up_with_bag_16x9.png",
     "title": "AND DON'T WAIT",
@@ -56,13 +56,13 @@
    "note": "walking and chewing gum",
    "type": "clip",
    "src": "output/v4/shot3_take1.mp4",
-   "dur": 3.9333
+   "dur": 3.4333
   },
   {
    "note": "save seconds -> more bags",
    "type": "still",
    "src": "refs/05_field_topdown.png",
-   "dur": 5.3667,
+   "dur": 4.8667,
    "zoom": {
     "to": 1.12,
     "cx": 960,
@@ -72,7 +72,7 @@
   {
    "note": "hands-on challenge",
    "type": "card",
-   "dur": 6.0,
+   "dur": 4.333333333333333,
    "card": {
     "background": "refs/16x9/02_flop_robot_16x9.png",
     "title": "TRY IT!",
@@ -86,8 +86,8 @@
  ],
  "captions": [
   {
-   "start": 3.028,
-   "end": 5.078,
+   "start": 2.307,
+   "end": 4.172,
    "parts": [
     [
      "DRIVE...",
@@ -96,8 +96,8 @@
    ]
   },
   {
-   "start": 5.078,
-   "end": 7.356,
+   "start": 4.172,
+   "end": 6.243,
    "parts": [
     [
      "STOP...",
@@ -106,8 +106,8 @@
    ]
   },
   {
-   "start": 7.356,
-   "end": 9.234,
+   "start": 6.243,
+   "end": 7.828,
    "parts": [
     [
      "THEN LIFT",
@@ -116,8 +116,8 @@
    ]
   },
   {
-   "start": 9.234,
-   "end": 10.655,
+   "start": 7.828,
+   "end": 9.068,
    "size": 130,
    "parts": [
     [
@@ -127,8 +127,8 @@
    ]
   },
   {
-   "start": 11.064,
-   "end": 13.886,
+   "start": 9.347,
+   "end": 11.918,
    "size": 84,
    "pos": [
     56,
@@ -142,8 +142,8 @@
    ]
   },
   {
-   "start": 13.886,
-   "end": 16.574,
+   "start": 11.918,
+   "end": 14.273,
    "pos": "topleft",
    "parts": [
     [
@@ -161,8 +161,8 @@
    ]
   },
   {
-   "start": 25.488,
-   "end": 29.248,
+   "start": 22.097,
+   "end": 25.401,
    "pos": "bottom",
    "size": 96,
    "parts": [
@@ -181,8 +181,8 @@
    ]
   },
   {
-   "start": 29.631,
-   "end": 31.094,
+   "start": 25.688,
+   "end": 27.021,
    "parts": [
     [
      "1 SECOND HERE",
@@ -191,8 +191,8 @@
    ]
   },
   {
-   "start": 31.094,
-   "end": 32.558,
+   "start": 27.021,
+   "end": 28.355,
    "parts": [
     [
      "1 SECOND THERE",
@@ -201,8 +201,8 @@
    ]
   },
   {
-   "start": 32.558,
-   "end": 34.604,
+   "start": 28.355,
+   "end": 30.255,
    "size": 130,
    "parts": [
     [
@@ -214,69 +214,69 @@
  ],
  "narration": [
   {
-   "start": 2.8,
-   "end": 8.723,
+   "start": 2.1,
+   "end": 7.486,
    "text": "Flop can do things one at a time: drive... stop... then lift the arm."
   },
   {
-   "start": 9.123,
-   "end": 10.455,
+   "start": 7.726,
+   "end": 8.948,
    "text": "That's slow!"
   },
   {
-   "start": 10.955,
-   "end": 16.274,
+   "start": 9.248,
+   "end": 14.093,
    "text": "Or Flop can do two things at once: lift the arm WHILE it drives."
   },
   {
-   "start": 16.774,
-   "end": 22.181,
+   "start": 14.393,
+   "end": 19.325,
    "text": "In VEXcode, click the little arrow on the arm block and pick 'and don't wait.'"
   },
   {
-   "start": 22.581,
-   "end": 25.088,
+   "start": 19.565,
+   "end": 21.857,
    "text": "Now the next block starts right away."
   },
   {
-   "start": 25.588,
-   "end": 28.948,
+   "start": 22.157,
+   "end": 25.221,
    "text": "It's like walking and chewing gum at the same time."
   },
   {
-   "start": 29.448,
-   "end": 34.204,
+   "start": 25.521,
+   "end": 29.855,
    "text": "Save a second here, a second there, and you'll have time for more bean bags!"
   }
  ],
  "voice_clips": [
   {
-   "src": "audio/voice_trim/v4_01.wav",
-   "start": 2.8
+   "src": "audio/voice_tempo/v4_01.wav",
+   "start": 2.1
   },
   {
-   "src": "audio/voice_trim/v4_02.wav",
-   "start": 9.123
+   "src": "audio/voice_tempo/v4_02.wav",
+   "start": 7.726
   },
   {
-   "src": "audio/voice_trim/v4_03.wav",
-   "start": 10.955
+   "src": "audio/voice_tempo/v4_03.wav",
+   "start": 9.248
   },
   {
-   "src": "audio/voice_trim/v4_04.wav",
-   "start": 16.774
+   "src": "audio/voice_tempo/v4_04.wav",
+   "start": 14.393
   },
   {
-   "src": "audio/voice_trim/v4_05.wav",
-   "start": 22.581
+   "src": "audio/voice_tempo/v4_05.wav",
+   "start": 19.565
   },
   {
-   "src": "audio/voice_trim/v4_06.wav",
-   "start": 25.588
+   "src": "audio/voice_tempo/v4_06.wav",
+   "start": 22.157
   },
   {
-   "src": "audio/voice_trim/v4_07.wav",
-   "start": 29.448
+   "src": "audio/voice_tempo/v4_07.wav",
+   "start": 25.521
   }
  ],
  "sfx": [
@@ -287,27 +287,27 @@
   },
   {
    "src": "audio/sfx/motor.mp3",
-   "start": 2.914,
+   "start": 2.204,
    "volume": 0.35
   },
   {
    "src": "audio/sfx/pop.mp3",
-   "start": 9.234,
+   "start": 7.828,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/motor.mp3",
-   "start": 10.855,
+   "start": 9.188,
    "volume": 0.35
   },
   {
    "src": "audio/sfx/ding.mp3",
-   "start": 32.558,
+   "start": 28.355,
    "volume": 0.45
   },
   {
    "src": "audio/sfx/pop.mp3",
-   "start": 34.604,
+   "start": 30.255,
    "volume": 0.55
   }
  ],

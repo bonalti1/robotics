@@ -1,32 +1,32 @@
 1
-00:00:02,800 --> 00:00:07,720
+00:00:02,100 --> 00:00:06,581
 Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot!
 
 2
-00:00:08,120 --> 00:00:11,215
+00:00:06,821 --> 00:00:09,643
 Flop has five parts, just like a body.
 
 3
-00:00:11,715 --> 00:00:15,518
+00:00:09,943 --> 00:00:13,407
 Wheels are Flop's legs: they drive and turn.
 
 4
-00:00:16,018 --> 00:00:21,315
+00:00:13,707 --> 00:00:18,529
 The intake is Flop's mouth: it grabs bean bags and spits them out.
 
 5
-00:00:21,815 --> 00:00:28,585
+00:00:18,829 --> 00:00:24,997
 The arm is Flop's neck: it lifts bags up high, just like my long crane neck!
 
 6
-00:00:29,085 --> 00:00:33,935
+00:00:25,297 --> 00:00:29,720
 The camera is Flop's eyes: it sees red, blue and yellow.
 
 7
-00:00:34,435 --> 00:00:37,246
+00:00:30,020 --> 00:00:32,579
 And the bumper is Flop's nose: boop!
 
 8
-00:00:37,946 --> 00:00:42,443
+00:00:32,999 --> 00:00:37,097
 Five parts, one robot, one team. Let's build it!
 

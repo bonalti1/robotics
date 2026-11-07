@@ -1,184 +1,184 @@
 1
-00:00:00,300 --> 00:00:04,154
+00:00:00,300 --> 00:00:03,814
 This is the Robo Cranes, from Grulla Elementary!
 
 2
-00:00:04,554 --> 00:00:09,434
+00:00:04,054 --> 00:00:08,497
 Last season, we made it all the way to the VEX World Championship.
 
 3
-00:00:09,834 --> 00:00:12,452
+00:00:08,737 --> 00:00:11,124
 This year, the game is Level Up.
 
 4
-00:00:12,852 --> 00:00:18,132
+00:00:11,364 --> 00:00:16,172
 We stack bean bags higher and higher, and we learn something new every day.
 
 5
-00:00:18,532 --> 00:00:19,538
+00:00:16,412 --> 00:00:17,332
 Let's go!
 
 6
-00:00:24,233 --> 00:00:29,153
+00:00:21,333 --> 00:00:25,814
 Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot!
 
 7
-00:00:29,553 --> 00:00:32,648
+00:00:26,054 --> 00:00:28,876
 Flop has five parts, just like a body.
 
 8
-00:00:33,148 --> 00:00:36,951
+00:00:29,176 --> 00:00:32,640
 Wheels are Flop's legs: they drive and turn.
 
 9
-00:00:37,451 --> 00:00:42,748
+00:00:32,940 --> 00:00:37,762
 The intake is Flop's mouth: it grabs bean bags and spits them out.
 
 10
-00:00:43,248 --> 00:00:50,018
+00:00:38,062 --> 00:00:44,230
 The arm is Flop's neck: it lifts bags up high, just like my long crane neck!
 
 11
-00:00:50,518 --> 00:00:55,368
+00:00:44,530 --> 00:00:48,953
 The camera is Flop's eyes: it sees red, blue and yellow.
 
 12
-00:00:55,868 --> 00:00:58,679
+00:00:49,253 --> 00:00:51,812
 And the bumper is Flop's nose: boop!
 
 13
-00:00:59,379 --> 00:01:03,876
+00:00:52,232 --> 00:00:56,330
 Five parts, one robot, one team. Let's build it!
 
 14
-00:01:12,867 --> 00:01:16,454
+00:01:02,967 --> 00:01:06,238
 How do we score in Level Up? With bean bags!
 
 15
-00:01:17,154 --> 00:01:20,390
+00:01:06,658 --> 00:01:09,611
 Drop a bean bag in the floor goal: one point.
 
 16
-00:01:20,990 --> 00:01:24,077
+00:01:09,971 --> 00:01:12,793
 Put it on top of the pyramid: three points!
 
 17
-00:01:24,677 --> 00:01:26,234
+00:01:13,153 --> 00:01:14,583
 Now here's the secret.
 
 18
-00:01:26,634 --> 00:01:33,296
+00:01:14,823 --> 00:01:20,891
 Put a bag ON TOP of another bag on the pyramid, and it reaches the next level: six points!
 
 19
-00:01:33,646 --> 00:01:34,738
+00:01:21,091 --> 00:01:22,091
 That's double!
 
 20
-00:01:35,438 --> 00:01:41,198
+00:01:22,511 --> 00:01:27,757
 So the best teams drop every bag in the exact same spot, so they stack.
 
 21
-00:01:41,698 --> 00:01:45,985
+00:01:28,057 --> 00:01:31,965
 One, three, six. Higher means more points!
 
 22
-00:01:55,900 --> 00:01:58,331
+00:01:39,500 --> 00:01:41,724
 Bean bags come in three colors.
 
 23
-00:01:58,731 --> 00:02:00,841
+00:01:41,964 --> 00:01:43,887
 Red bags go on the red goal.
 
 24
-00:02:03,241 --> 00:02:05,533
+00:01:45,327 --> 00:01:47,414
 Blue bags go on the blue goal.
 
 25
-00:02:06,133 --> 00:02:08,944
+00:01:47,774 --> 00:01:50,340
 And yellow? Yellow is WILD!
 
 26
-00:02:09,294 --> 00:02:11,116
+00:01:50,540 --> 00:01:52,209
 It counts on any goal.
 
 27
-00:02:11,516 --> 00:02:16,633
+00:01:52,449 --> 00:01:57,101
 If a bag is the wrong color, or still touching the robot, it's zero points.
 
 28
-00:02:17,233 --> 00:02:20,375
+00:01:57,461 --> 00:02:00,332
 Match the color, let it go, and score!
 
 29
-00:02:29,367 --> 00:02:35,290
+00:02:06,967 --> 00:02:12,353
 Flop can do things one at a time: drive... stop... then lift the arm.
 
 30
-00:02:35,690 --> 00:02:37,022
+00:02:12,593 --> 00:02:13,815
 That's slow!
 
 31
-00:02:37,522 --> 00:02:42,841
+00:02:14,115 --> 00:02:18,960
 Or Flop can do two things at once: lift the arm WHILE it drives.
 
 32
-00:02:43,341 --> 00:02:48,748
+00:02:19,260 --> 00:02:24,192
 In VEXcode, click the little arrow on the arm block and pick 'and don't wait.'
 
 33
-00:02:49,148 --> 00:02:51,655
+00:02:24,432 --> 00:02:26,724
 Now the next block starts right away.
 
 34
-00:02:52,155 --> 00:02:55,515
+00:02:27,024 --> 00:02:30,088
 It's like walking and chewing gum at the same time.
 
 35
-00:02:56,015 --> 00:03:00,771
+00:02:30,388 --> 00:02:34,722
 Save a second here, a second there, and you'll have time for more bean bags!
 
 36
-00:03:09,967 --> 00:03:13,682
+00:02:41,567 --> 00:02:44,956
 Every time Flop turns, it can be a tiny bit wrong.
 
 37
-00:03:14,082 --> 00:03:16,482
+00:02:45,196 --> 00:02:47,379
 One little mistake is okay.
 
 38
-00:03:16,982 --> 00:03:21,682
+00:02:47,679 --> 00:02:51,955
 But after many turns, the mistakes add up, and Flop gets lost!
 
 39
-00:03:22,082 --> 00:03:27,602
+00:02:52,195 --> 00:02:57,225
 The fix: instead of 'turn right 90,' use 'turn to heading.'
 
 40
-00:03:28,002 --> 00:03:32,018
+00:02:57,465 --> 00:03:01,121
 That means 'face that direction,' like 'face the window.'
 
 41
-00:03:32,418 --> 00:03:37,058
+00:03:01,361 --> 00:03:05,597
 Flop checks its compass every time, so mistakes don't pile up.
 
 42
-00:03:37,458 --> 00:03:38,818
+00:03:05,837 --> 00:03:07,087
 Smart robot!
 
 43
-00:03:45,534 --> 00:03:47,658
+00:03:12,133 --> 00:03:14,068
 This year, it's your turn.
 
 44
-00:03:48,008 --> 00:03:53,848
+00:03:14,268 --> 00:03:19,591
 We'll build a robot, code a robot, drive a robot, and do it as a team.
 
 45
-00:03:54,198 --> 00:03:55,398
+00:03:19,791 --> 00:03:20,889
 Are you ready?
 
 46
-00:03:56,098 --> 00:03:58,418
+00:03:21,309 --> 00:03:23,421
 Robo Cranes, let's go!
 

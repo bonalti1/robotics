@@ -9,6 +9,8 @@ For every part in the plan it:
   2. optionally adds a "LESSON n" chapter card (with a whoosh) at the start;
   3. renders the part with source/assemble.py (voice + sfx + music that ducks under the voice);
 then joins all parts into one video with one narration subtitle track, normalized to -16 LUFS.
+Pacing ("pace" in the plan): voice_tempo speeds the voice up (pitch kept), gap_scale/min_gap shorten the pauses
+between lines, tail_card_scale shortens the "Try it!"/end cards.
 SKIP_RENDER=1 re-uses parts that are already rendered (delete a part's mp4 to re-render just that part).
 Each part is also a finished stand-alone video in output/full/parts/.
 """
@@ -25,9 +27,12 @@ TRIM = ("silenceremove=start_periods=1:start_threshold=-42dB:start_silence=0.04,
         "aresample=48000,aformat=channel_layouts=stereo")
 
 
-def ensure_trimmed():
-    """audio/voice/*.mp3 (from Runway) -> audio/voice_trim/*.wav with the silence at both ends removed."""
+def ensure_trimmed(tempo=1.0):
+    """audio/voice/*.mp3 (from Runway) -> audio/voice_trim/*.wav with the silence at both ends removed.
+    With tempo != 1 the lines are also sped up (pitch kept) into audio/voice_tempo/. Returns ({name: seconds}, dir)."""
     os.makedirs("audio/voice_trim", exist_ok=True)
+    vdir = "audio/voice_trim" if tempo == 1.0 else "audio/voice_tempo"
+    os.makedirs(vdir, exist_ok=True)
     durs = {}
     for f in sorted(os.listdir("audio/voice")):
         if not f.endswith(".mp3"):
@@ -35,12 +40,15 @@ def ensure_trimmed():
         w = os.path.join("audio/voice_trim", f[:-4] + ".wav")
         if not os.path.exists(w):
             assemble.run(["ffmpeg", "-y", "-v", "error", "-i", os.path.join("audio/voice", f), "-af", TRIM, w])
+        if tempo != 1.0:
+            src, w = w, os.path.join(vdir, f[:-4] + ".wav")
+            assemble.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-af", f"atempo={tempo}", w])
         durs[f[:-4]] = round(duration(w), 3)
-    json.dump(durs, open("audio/voice_trim/durations.json", "w"), indent=1)
-    return durs
+    json.dump(durs, open(os.path.join(vdir, "durations.json"), "w"), indent=1)
+    return durs, vdir
 
 
-def fit(edit, voice, chapter, chapter_dur, sfx, music, out):
+def fit(edit, voice, chapter, chapter_dur, sfx, music, out, pace):
     e = json.loads(json.dumps(edit))
     nar = e["narration"]
     n = len(nar)
@@ -48,7 +56,7 @@ def fit(edit, voice, chapter, chapter_dur, sfx, music, out):
     ns = [nar[0]["start"]]
     for i in range(n):
         if i + 1 < n:
-            gap = max(0.35, nar[i + 1]["start"] - nar[i]["end"])
+            gap = max(pace["min_gap"], (nar[i + 1]["start"] - nar[i]["end"]) * pace["gap_scale"])
             ns.append(ns[i] + d[i] + gap)
     ne = [ns[i] + d[i] for i in range(n)]
     T_old = sum(s["dur"] for s in e["segments"])
@@ -64,12 +72,14 @@ def fit(edit, voice, chapter, chapter_dur, sfx, music, out):
     # segment boundaries -> warped, snapped to whole frames
     b_old = np.cumsum([0] + [s["dur"] for s in e["segments"]])
     b_new = [round(f(b) * FPS) / FPS for b in b_old]
-    for s, a, b in zip(e["segments"], b_new, b_new[1:]):
+    for s, a, b, oa in zip(e["segments"], b_new, b_new[1:], b_old):
         s["dur"] = round(b - a, 4)
+        if s["type"] == "card" and oa >= nar[-1]["end"] - 1e-6:  # "Try it!" / end cards after the last line
+            s["dur"] = round(max(pace["min_tail_card"], s["dur"] * pace["tail_card_scale"]) * FPS) / FPS
     for c in e.get("captions", []):
         c["start"], c["end"] = round(f(c["start"]), 3), round(max(f(c["end"]), f(c["start"]) + 0.4), 3)
     e["narration"] = [{"start": round(ns[i], 3), "end": round(ne[i], 3), "text": nar[i]["text"]} for i in range(n)]
-    e["voice_clips"] = [{"src": f"audio/voice_trim/{voice}_{i + 1:02d}.wav", "start": round(ns[i], 3)} for i in range(n)]
+    e["voice_clips"] = [{"src": f"{VDIR}/{voice}_{i + 1:02d}.wav", "start": round(ns[i], 3)} for i in range(n)]
     e["sfx"] = [{"src": f"audio/sfx/{x[0]}.mp3", "start": round(f(x[1]), 3), "volume": x[2] if len(x) > 2 else 0.55} for x in sfx]
     e.pop("watermark", None)
 
@@ -93,16 +103,17 @@ def duration(path):
 
 
 def main(plan_path):
-    global DUR
-    DUR = ensure_trimmed()
+    global DUR, VDIR
     plan = json.load(open(plan_path))
+    pace = {"gap_scale": 1.0, "min_gap": 0.35, "tail_card_scale": 1.0, "min_tail_card": 3.5, **plan.get("pace", {})}
+    DUR, VDIR = ensure_trimmed(plan.get("pace", {}).get("voice_tempo", 1.0))
     os.makedirs("edits/voiced", exist_ok=True)
     os.makedirs("output/full/parts", exist_ok=True)
     outs, srt_lines, offset = [], [], 0.0
     for p in plan["parts"]:
         name = os.path.splitext(os.path.basename(p["edit"]))[0]
         e = fit(json.load(open(p["edit"])), p["voice"], p.get("chapter"), plan.get("chapter_card_dur", 2.4),
-                p.get("sfx", []), p.get("music"), f"output/full/parts/{name}.mp4")
+                p.get("sfx", []), p.get("music"), f"output/full/parts/{name}.mp4", pace)
         vp = f"edits/voiced/{name}.json"
         json.dump(e, open(vp, "w"), indent=1)
         if not os.environ.get("SKIP_RENDER") or not os.path.exists(e["out"]):

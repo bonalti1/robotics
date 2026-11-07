@@ -7,36 +7,36 @@
    "note": "confetti jump",
    "type": "clip",
    "src": "output/v6/shot1_take2.mp4",
-   "dur": 4.2667
+   "dur": 3.8667
   },
   {
    "note": "Cranebot and Flop bounce",
    "type": "clip",
    "src": "output/v6/shot2_take1.mp4",
-   "dur": 5.3667
+   "dur": 4.7667
   },
   {
    "note": "Flop drives",
    "type": "clip",
    "src": "output/v1/shot2_take1.mp4",
-   "dur": 3.1333
+   "dur": 2.6667
   },
   {
    "note": "bag lands on the stack",
    "type": "clip",
    "src": "output/v2/shot3_take2.mp4",
-   "dur": 2.7333
+   "dur": 2.4667
   },
   {
    "note": "Cranebot blinks and bobs",
    "type": "clip",
    "src": "output/v1/shot4_take1.mp4",
-   "dur": 2.8333
+   "dur": 2.5333
   },
   {
    "note": "show title",
    "type": "card",
-   "dur": 3.1,
+   "dur": 2.9333,
    "card": {
     "background": "refs/04_mascot_and_flop.png",
     "title": "ROBO CRANES",
@@ -50,7 +50,7 @@
  "captions": [
   {
    "start": 0.3,
-   "end": 2.383,
+   "end": 2.199,
    "pos": "bottom",
    "size": 130,
    "parts": [
@@ -61,8 +61,8 @@
    ]
   },
   {
-   "start": 2.383,
-   "end": 4.254,
+   "start": 2.199,
+   "end": 3.874,
    "pos": "bottom",
    "size": 96,
    "parts": [
@@ -73,8 +73,8 @@
    ]
   },
   {
-   "start": 4.554,
-   "end": 6.587,
+   "start": 4.054,
+   "end": 5.905,
    "pos": "topright",
    "size": 100,
    "parts": [
@@ -85,8 +85,8 @@
    ]
   },
   {
-   "start": 6.587,
-   "end": 9.634,
+   "start": 5.905,
+   "end": 8.617,
    "pos": "topright",
    "size": 150,
    "parts": [
@@ -97,8 +97,8 @@
    ]
   },
   {
-   "start": 9.834,
-   "end": 12.752,
+   "start": 8.737,
+   "end": 11.304,
    "size": 110,
    "parts": [
     [
@@ -112,8 +112,8 @@
    ]
   },
   {
-   "start": 12.852,
-   "end": 15.492,
+   "start": 11.364,
+   "end": 13.768,
    "size": 100,
    "parts": [
     [
@@ -123,8 +123,8 @@
    ]
   },
   {
-   "start": 15.688,
-   "end": 18.332,
+   "start": 13.946,
+   "end": 16.292,
    "pos": "bottom",
    "size": 90,
    "parts": [
@@ -138,50 +138,50 @@
  "narration": [
   {
    "start": 0.3,
-   "end": 4.154,
+   "end": 3.814,
    "text": "This is the Robo Cranes, from Grulla Elementary!"
   },
   {
-   "start": 4.554,
-   "end": 9.434,
+   "start": 4.054,
+   "end": 8.497,
    "text": "Last season, we made it all the way to the VEX World Championship."
   },
   {
-   "start": 9.834,
-   "end": 12.452,
+   "start": 8.737,
+   "end": 11.124,
    "text": "This year, the game is Level Up."
   },
   {
-   "start": 12.852,
-   "end": 18.132,
+   "start": 11.364,
+   "end": 16.172,
    "text": "We stack bean bags higher and higher, and we learn something new every day."
   },
   {
-   "start": 18.532,
-   "end": 19.538,
+   "start": 16.412,
+   "end": 17.332,
    "text": "Let's go!"
   }
  ],
  "voice_clips": [
   {
-   "src": "audio/voice_trim/opener_01.wav",
+   "src": "audio/voice_tempo/opener_01.wav",
    "start": 0.3
   },
   {
-   "src": "audio/voice_trim/opener_02.wav",
-   "start": 4.554
+   "src": "audio/voice_tempo/opener_02.wav",
+   "start": 4.054
   },
   {
-   "src": "audio/voice_trim/opener_03.wav",
-   "start": 9.834
+   "src": "audio/voice_tempo/opener_03.wav",
+   "start": 8.737
   },
   {
-   "src": "audio/voice_trim/opener_04.wav",
-   "start": 12.852
+   "src": "audio/voice_tempo/opener_04.wav",
+   "start": 11.364
   },
   {
-   "src": "audio/voice_trim/opener_05.wav",
-   "start": 18.532
+   "src": "audio/voice_tempo/opener_05.wav",
+   "start": 16.412
   }
  ],
  "sfx": [
@@ -192,42 +192,42 @@
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 4.204,
+   "start": 3.844,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 9.584,
+   "start": 8.587,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/motor.mp3",
-   "start": 9.834,
+   "start": 8.737,
    "volume": 0.35
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 12.702,
+   "start": 11.274,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/thud.mp3",
-   "start": 15.101,
+   "start": 13.412,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 15.443,
+   "start": 13.723,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/whoosh.mp3",
-   "start": 18.282,
+   "start": 16.262,
    "volume": 0.55
   },
   {
    "src": "audio/sfx/pop.mp3",
-   "start": 18.532,
+   "start": 16.412,
    "volume": 0.55
   }
  ],

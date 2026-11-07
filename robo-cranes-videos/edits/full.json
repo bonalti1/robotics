@@ -1,7 +1,8 @@
 {
   "title": "Robo Cranes: Level Up Lessons",
   "out": "output/full/robo_cranes_level_up.mp4",
-  "chapter_card_dur": 2.4,
+  "chapter_card_dur": 1.7,
+  "pace": {"voice_tempo": 1.1, "gap_scale": 0.6, "min_gap": 0.2, "tail_card_scale": 0.72, "min_tail_card": 3.5},
   "parts": [
     {"edit": "edits/opener.json", "voice": "opener", "music": {"src": "audio/music/hype.mp3", "volume": 0.38},
      "sfx": [["cheer", 0.2, 0.5], ["whoosh", 4.05], ["whoosh", 9.35], ["motor", 9.6, 0.35], ["whoosh", 12.75],

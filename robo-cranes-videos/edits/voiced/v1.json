@@ -6,7 +6,7 @@
   {
    "note": "chapter card",
    "type": "card",
-   "dur": 2.4,
+   "dur": 1.7,
    "card": {
     "background": "refs/04_mascot_and_flop.png",
     "title": "LESSON 1",
@@ -19,13 +19,13 @@
    "note": "intro: Cranebot waves at Flop",
    "type": "clip",
    "src": "output/v1/shot1_take2.mp4",
-   "dur": 5.5333
+   "dur": 5.0
   },
   {
    "note": "five parts: gentle push-in on the whole robot",
    "type": "still",
    "src": "refs/16x9/02_flop_robot_16x9.png",
-   "dur": 3.4667,
+   "dur": 3.0667,
    "zoom": {
     "to": 1.08,
     "cx": 894,
@@ -36,13 +36,13 @@
    "note": "wheels = legs: Flop drives right",
    "type": "clip",
    "src": "output/v1/shot2_take1.mp4",
-   "dur": 4.3333
+   "dur": 3.7667
   },
   {
    "note": "intake = mouth: zoom to the green intake",
    "type": "still",
    "src": "refs/16x9/02_flop_robot_16x9.png",
-   "dur": 5.7667,
+   "dur": 5.1,
    "zoom": {
     "to": 1.9,
     "cx": 1306,
@@ -53,13 +53,13 @@
    "note": "arm = neck: arm lifts the bag (holds last frame)",
    "type": "clip",
    "src": "output/v1/shot3_take2.mp4",
-   "dur": 7.3
+   "dur": 6.5
   },
   {
    "note": "camera = eyes: zoom to the eye panel",
    "type": "still",
    "src": "refs/16x9/02_flop_robot_16x9.png",
-   "dur": 5.3333,
+   "dur": 4.7,
    "zoom": {
     "to": 2.0,
     "cx": 894,
@@ -70,7 +70,7 @@
    "note": "bumper = nose: zoom to the red bumper",
    "type": "still",
    "src": "refs/16x9/02_flop_robot_16x9.png",
-   "dur": 3.3,
+   "dur": 2.8667,
    "zoom": {
     "to": 2.2,
     "cx": 1153,
@@ -81,12 +81,12 @@
    "note": "outro: Cranebot bobs happily (holds last frame)",
    "type": "clip",
    "src": "output/v1/shot4_take1.mp4",
-   "dur": 5.2
+   "dur": 4.6
   },
   {
    "note": "hands-on challenge card",
    "type": "card",
-   "dur": 6.0,
+   "dur": 4.333333333333333,
    "card": {
     "background": "refs/04_mascot_and_flop.png",
     "title": "TRY IT!",
@@ -100,8 +100,8 @@
  ],
  "captions": [
   {
-   "start": 3.695,
-   "end": 7.92,
+   "start": 2.915,
+   "end": 6.701,
    "size": 100,
    "parts": [
     [
@@ -115,8 +115,8 @@
    ]
   },
   {
-   "start": 8.292,
-   "end": 11.415,
+   "start": 6.978,
+   "end": 9.763,
    "parts": [
     [
      "5 ",
@@ -129,8 +129,8 @@
    ]
   },
   {
-   "start": 11.884,
-   "end": 15.718,
+   "start": 10.097,
+   "end": 13.527,
    "parts": [
     [
      "WHEELS",
@@ -147,8 +147,8 @@
    ]
   },
   {
-   "start": 16.23,
-   "end": 21.515,
+   "start": 13.9,
+   "end": 18.649,
    "parts": [
     [
      "INTAKE",
@@ -165,8 +165,8 @@
    ]
   },
   {
-   "start": 22.061,
-   "end": 28.785,
+   "start": 19.053,
+   "end": 25.117,
    "pos": "topleft",
    "parts": [
     [
@@ -185,8 +185,8 @@
    "size": 90
   },
   {
-   "start": 29.301,
-   "end": 32.103,
+   "start": 25.494,
+   "end": 28.049,
    "parts": [
     [
      "CAMERA",
@@ -203,8 +203,8 @@
    ]
   },
   {
-   "start": 32.103,
-   "end": 34.135,
+   "start": 28.049,
+   "end": 29.84,
    "parts": [
     [
      "RED  ",
@@ -221,8 +221,8 @@
    ]
   },
   {
-   "start": 34.596,
-   "end": 36.202,
+   "start": 30.166,
+   "end": 31.629,
    "parts": [
     [
      "BUMPER",
@@ -239,8 +239,8 @@
    ]
   },
   {
-   "start": 36.202,
-   "end": 37.446,
+   "start": 31.629,
+   "end": 32.699,
    "size": 140,
    "parts": [
     [
@@ -254,8 +254,8 @@
    ]
   },
   {
-   "start": 37.946,
-   "end": 40.661,
+   "start": 32.999,
+   "end": 35.473,
    "pos": "bottom",
    "size": 84,
    "parts": [
@@ -282,8 +282,8 @@
    ]
   },
   {
-   "start": 40.661,
-   "end": 42.643,
+   "start": 35.473,
+   "end": 37.297,
    "pos": "bottom",
    "size": 96,
    "parts": [
@@ -296,78 +296,78 @@
  ],
  "narration": [
   {
-   "start": 2.8,
-   "end": 7.72,
+   "start": 2.1,
+   "end": 6.581,
    "text": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot!"
   },
   {
-   "start": 8.12,
-   "end": 11.215,
+   "start": 6.821,
+   "end": 9.643,
    "text": "Flop has five parts, just like a body."
   },
   {
-   "start": 11.715,
-   "end": 15.518,
+   "start": 9.943,
+   "end": 13.407,
    "text": "Wheels are Flop's legs: they drive and turn."
   },
   {
-   "start": 16.018,
-   "end": 21.315,
+   "start": 13.707,
+   "end": 18.529,
    "text": "The intake is Flop's mouth: it grabs bean bags and spits them out."
   },
   {
-   "start": 21.815,
-   "end": 28.585,
+   "start": 18.829,
+   "end": 24.997,
    "text": "The arm is Flop's neck: it lifts bags up high, just like my long crane neck!"
   },
   {
-   "start": 29.085,
-   "end": 33.935,
+   "start": 25.297,
+   "end": 29.72,
    "text": "The camera is Flop's eyes: it sees red, blue and yellow."
   },
   {
-   "start": 34.435,
-   "end": 37.246,
+   "start": 30.02,
+   "end": 32.579,
    "text": "And the bumper is Flop's nose: boop!"
   },
   {
-   "start": 37.946,
-   "end": 42.443,
+   "start": 32.999,
+   "end": 37.097,
    "text": "Five parts, one robot, one team. Let's build it!"
   }
  ],
  "voice_clips": [
   {
-   "src": "audio/voice_trim/v1_01.wav",
-   "start": 2.8
+   "src": "audio/voice_tempo/v1_01.wav",
+   "start": 2.1
   },
   {
-   "src": "audio/voice_trim/v1_02.wav",
-   "start": 8.12
+   "src": "audio/voice_tempo/v1_02.wav",
+   "start": 6.821
   },
   {
-   "src": "audio/voice_trim/v1_03.wav",
-   "start": 11.715
+   "src": "audio/voice_tempo/v1_03.wav",
+   "start": 9.943
   },
   {
-   "src": "audio/voice_trim/v1_04.wav",
-   "start": 16.018
+   "src": "audio/voice_tempo/v1_04.wav",
+   "start": 13.707
   },
   {
-   "src": "audio/voice_trim/v1_05.wav",
-   "start": 21.815
+   "src": "audio/voice_tempo/v1_05.wav",
+   "start": 18.829
   },
   {
-   "src": "audio/voice_trim/v1_06.wav",
-   "start": 29.085
+   "src": "audio/voice_tempo/v1_06.wav",
+   "start": 25.297
   },
   {
-   "src": "audio/voice_trim/v1_07.wav",
-   "start": 34.435
+   "src": "audio/voice_tempo/v1_07.wav",
+   "start": 30.02
   },
   {
-   "src": "audio/voice_trim/v1_08.wav",
-   "start": 37.946
+   "src": "audio/voice_tempo/v1_08.wav",
+   "start": 32.999
   }
  ],
  "sfx": [
@@ -378,17 +378,17 @@
   },
   {
    "src": "audio/sfx/motor.mp3",
-   "start": 11.615,
+   "start": 9.883,
    "volume": 0.35
   },
   {
    "src": "audio/sfx/boop.mp3",
-   "start": 36.202,
+   "start": 31.629,
    "volume": 0.7
   },
   {
    "src": "audio/sfx/pop.mp3",
-   "start": 42.643,
+   "start": 37.297,
    "volume": 0.55
   }
  ],

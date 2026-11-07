@@ -1,28 +1,28 @@
 1
-00:00:02,800 --> 00:00:06,515
+00:00:02,100 --> 00:00:05,489
 Every time Flop turns, it can be a tiny bit wrong.
 
 2
-00:00:06,915 --> 00:00:09,315
+00:00:05,729 --> 00:00:07,912
 One little mistake is okay.
 
 3
-00:00:09,815 --> 00:00:14,515
+00:00:08,212 --> 00:00:12,488
 But after many turns, the mistakes add up, and Flop gets lost!
 
 4
-00:00:14,915 --> 00:00:20,435
+00:00:12,728 --> 00:00:17,758
 The fix: instead of 'turn right 90,' use 'turn to heading.'
 
 5
-00:00:20,835 --> 00:00:24,851
+00:00:17,998 --> 00:00:21,654
 That means 'face that direction,' like 'face the window.'
 
 6
-00:00:25,251 --> 00:00:29,891
+00:00:21,894 --> 00:00:26,130
 Flop checks its compass every time, so mistakes don't pile up.
 
 7
-00:00:30,291 --> 00:00:31,651
+00:00:26,370 --> 00:00:27,620
 Smart robot!
 

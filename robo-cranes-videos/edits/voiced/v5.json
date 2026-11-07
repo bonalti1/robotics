@@ -6,7 +6,7 @@
   {
    "note": "chapter card",
    "type": "card",
-   "dur": 2.4,
+   "dur": 1.7,
    "card": {
     "background": "refs/05_field_topdown.png",
     "title": "LESSON 5",
@@ -19,7 +19,7 @@
    "note": "every turn can be a tiny bit wrong: field rocks ~4 degrees (ffmpeg; both Runway takes spun the field ~90 deg and warped the bags)",
    "type": "still",
    "src": "refs/05_field_topdown.png",
-   "dur": 7.0,
+   "dur": 6.2667,
    "wobble": {
     "deg": 4,
     "period": 3.0
@@ -29,7 +29,7 @@
    "note": "mistakes add up: planned square (dashed) vs real path (red)",
    "type": "still",
    "src": "refs/diagrams/drift_path.png",
-   "dur": 5.3,
+   "dur": 4.6333,
    "zoom": {
     "to": 1.15,
     "cx": 860,
@@ -39,7 +39,7 @@
   {
    "note": "the fix: turn for -> turn to heading (drawn illustration of two blocks)",
    "type": "card",
-   "dur": 6.0333,
+   "dur": 5.3333,
    "card": {
     "background": "refs/05_field_topdown.png",
     "title": "THE FIX",
@@ -62,18 +62,18 @@
    "note": "face that direction, like 'face the window'",
    "type": "still",
    "src": "refs/diagrams/compass_heading.png",
-   "dur": 4.4333
+   "dur": 3.9
   },
   {
    "note": "Cranebot points at the field and nods",
    "type": "clip",
    "src": "output/v5/shot2_take1.mp4",
-   "dur": 7.0
+   "dur": 6.3
   },
   {
    "note": "hands-on challenge",
    "type": "card",
-   "dur": 6.0,
+   "dur": 4.333333333333333,
    "card": {
     "background": "refs/05_field_topdown.png",
     "title": "TRY IT!",
@@ -87,8 +87,8 @@
  ],
  "captions": [
   {
-   "start": 3.148,
-   "end": 6.715,
+   "start": 2.418,
+   "end": 5.609,
    "parts": [
     [
      "A TINY BIT WRONG",
@@ -97,8 +97,8 @@
    ]
   },
   {
-   "start": 6.915,
-   "end": 9.415,
+   "start": 5.729,
+   "end": 7.972,
    "size": 100,
    "parts": [
     [
@@ -116,8 +116,8 @@
    ]
   },
   {
-   "start": 9.815,
-   "end": 12.592,
+   "start": 8.212,
+   "end": 10.739,
    "parts": [
     [
      "MISTAKES ADD UP",
@@ -126,8 +126,8 @@
    ]
   },
   {
-   "start": 12.592,
-   "end": 14.715,
+   "start": 10.739,
+   "end": 12.608,
    "size": 130,
    "parts": [
     [
@@ -137,8 +137,8 @@
    ]
   },
   {
-   "start": 21.046,
-   "end": 23.266,
+   "start": 18.19,
+   "end": 20.211,
    "size": 90,
    "parts": [
     [
@@ -148,8 +148,8 @@
    ]
   },
   {
-   "start": 23.266,
-   "end": 25.151,
+   "start": 20.211,
+   "end": 21.834,
    "size": 90,
    "parts": [
     [
@@ -159,8 +159,8 @@
    ]
   },
   {
-   "start": 25.591,
-   "end": 29.991,
+   "start": 22.204,
+   "end": 26.19,
    "pos": [
     700,
     895
@@ -174,8 +174,8 @@
    ]
   },
   {
-   "start": 30.091,
-   "end": 32.151,
+   "start": 26.25,
+   "end": 28.12,
    "pos": [
     760,
     885
@@ -191,69 +191,69 @@
  ],
  "narration": [
   {
-   "start": 2.8,
-   "end": 6.515,
+   "start": 2.1,
+   "end": 5.489,
    "text": "Every time Flop turns, it can be a tiny bit wrong."
   },
   {
-   "start": 6.915,
-   "end": 9.315,
+   "start": 5.729,
+   "end": 7.912,
    "text": "One little mistake is okay."
   },
   {
-   "start": 9.815,
-   "end": 14.515,
+   "start": 8.212,
+   "end": 12.488,
    "text": "But after many turns, the mistakes add up, and Flop gets lost!"
   },
   {
-   "start": 14.915,
-   "end": 20.435,
+   "start": 12.728,
+   "end": 17.758,
    "text": "The fix: instead of 'turn right 90,' use 'turn to heading.'"
   },
   {
-   "start": 20.835,
-   "end": 24.851,
+   "start": 17.998,
+   "end": 21.654,
    "text": "That means 'face that direction,' like 'face the window.'"
   },
   {
-   "start": 25.251,
-   "end": 29.891,
+   "start": 21.894,
+   "end": 26.13,
    "text": "Flop checks its compass every time, so mistakes don't pile up."
   },
   {
-   "start": 30.291,
-   "end": 31.651,
+   "start": 26.37,
+   "end": 27.62,
    "text": "Smart robot!"
   }
  ],
  "voice_clips": [
   {
-   "src": "audio/voice_trim/v5_01.wav",
-   "start": 2.8
+   "src": "audio/voice_tempo/v5_01.wav",
+   "start": 2.1
   },
   {
-   "src": "audio/voice_trim/v5_02.wav",
-   "start": 6.915
+   "src": "audio/voice_tempo/v5_02.wav",
+   "start": 5.729
   },
   {
-   "src": "audio/voice_trim/v5_03.wav",
-   "start": 9.815
+   "src": "audio/voice_tempo/v5_03.wav",
+   "start": 8.212
   },
   {
-   "src": "audio/voice_trim/v5_04.wav",
-   "start": 14.915
+   "src": "audio/voice_tempo/v5_04.wav",
+   "start": 12.728
   },
   {
-   "src": "audio/voice_trim/v5_05.wav",
-   "start": 20.835
+   "src": "audio/voice_tempo/v5_05.wav",
+   "start": 17.998
   },
   {
-   "src": "audio/voice_trim/v5_06.wav",
-   "start": 25.251
+   "src": "audio/voice_tempo/v5_06.wav",
+   "start": 21.894
   },
   {
-   "src": "audio/voice_trim/v5_07.wav",
-   "start": 30.291
+   "src": "audio/voice_tempo/v5_07.wav",
+   "start": 26.37
   }
  ],
  "sfx": [
@@ -264,22 +264,22 @@
   },
   {
    "src": "audio/sfx/buzz.mp3",
-   "start": 12.592,
+   "start": 10.739,
    "volume": 0.4
   },
   {
    "src": "audio/sfx/ding.mp3",
-   "start": 17.368,
+   "start": 14.964,
    "volume": 0.45
   },
   {
    "src": "audio/sfx/ding.mp3",
-   "start": 30.091,
+   "start": 26.25,
    "volume": 0.45
   },
   {
    "src": "audio/sfx/pop.mp3",
-   "start": 32.151,
+   "start": 28.12,
    "volume": 0.55
   }
  ],
