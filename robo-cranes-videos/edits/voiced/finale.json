@@ -1,0 +1,258 @@
+{
+ "id": "finale",
+ "title": "Robo Cranes finale (v6 without its first line, which is in the opener)",
+ "out": "output/full/parts/finale.mp4",
+ "segments": [
+  {
+   "note": "your turn",
+   "type": "still",
+   "src": "refs/04_mascot_and_flop.png",
+   "dur": 2.5667,
+   "zoom": {
+    "to": 1.05,
+    "cx": 960,
+    "cy": 600
+   }
+  },
+  {
+   "note": "build",
+   "type": "still",
+   "src": "refs/16x9/02_flop_robot_16x9.png",
+   "dur": 1.4,
+   "zoom": {
+    "to": 1.12,
+    "cx": 894,
+    "cy": 650
+   }
+  },
+  {
+   "note": "code",
+   "type": "still",
+   "src": "refs/16x9/03_flop_arm_up_with_bag_16x9.png",
+   "dur": 1.4333,
+   "zoom": {
+    "to": 1.12,
+    "cx": 960,
+    "cy": 600
+   }
+  },
+  {
+   "note": "drive",
+   "type": "still",
+   "src": "refs/16x9/02_flop_robot_16x9_left.png",
+   "dur": 1.4,
+   "zoom": {
+    "to": 1.12,
+    "cx": 620,
+    "cy": 650
+   }
+  },
+  {
+   "note": "as a team",
+   "type": "clip",
+   "src": "output/v6/shot2_take1.mp4",
+   "dur": 3.8667
+  },
+  {
+   "note": "let's go: confetti",
+   "type": "clip",
+   "src": "output/v6/shot1_take2.mp4",
+   "dur": 5.0333
+  },
+  {
+   "note": "hands-on challenge",
+   "type": "card",
+   "dur": 5.5,
+   "card": {
+    "background": "refs/04_mascot_and_flop.png",
+    "title": "TRY IT!",
+    "lines": [
+     "Pick a job to try first:",
+     "Builder - Coder - Driver"
+    ],
+    "footer": "Everyone helps the team!"
+   }
+  },
+  {
+   "note": "end card",
+   "type": "card",
+   "dur": 4.5,
+   "card": {
+    "background": "refs/16x9/01_mascot_hero_16x9.png",
+    "title": "ROBO CRANES",
+    "lines": [
+     "Grulla Elementary",
+     "VEX IQ Level Up 2026-27"
+    ],
+    "footer": "Thanks for watching!"
+   }
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.2,
+   "end": 2.557,
+   "pos": "topright",
+   "size": 130,
+   "parts": [
+    [
+     "YOUR TURN!",
+     "yellow"
+    ]
+   ]
+  },
+  {
+   "start": 2.674,
+   "end": 3.983,
+   "size": 140,
+   "parts": [
+    [
+     "BUILD",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 3.983,
+   "end": 5.393,
+   "size": 140,
+   "pos": "topleft",
+   "parts": [
+    [
+     "CODE",
+     "cyan"
+    ]
+   ]
+  },
+  {
+   "start": 5.393,
+   "end": 6.802,
+   "size": 140,
+   "parts": [
+    [
+     "DRIVE",
+     "yellow"
+    ]
+   ]
+  },
+  {
+   "start": 7.004,
+   "end": 8.747,
+   "pos": "topright",
+   "size": 110,
+   "parts": [
+    [
+     "AS A TEAM!",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 8.864,
+   "end": 10.664,
+   "pos": "topright",
+   "size": 96,
+   "parts": [
+    [
+     "ARE YOU READY?",
+     "cyan"
+    ]
+   ]
+  },
+  {
+   "start": 10.764,
+   "end": 11.974,
+   "pos": "bottom",
+   "size": 110,
+   "parts": [
+    [
+     "ROBO CRANES,",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 11.974,
+   "end": 15.684,
+   "pos": "bottom",
+   "size": 120,
+   "parts": [
+    [
+     "LET'S GO!",
+     "yellow"
+    ]
+   ]
+  }
+ ],
+ "narration": [
+  {
+   "start": 0.2,
+   "end": 2.324,
+   "text": "This year, it's your turn."
+  },
+  {
+   "start": 2.674,
+   "end": 8.514,
+   "text": "We'll build a robot, code a robot, drive a robot, and do it as a team."
+  },
+  {
+   "start": 8.864,
+   "end": 10.064,
+   "text": "Are you ready?"
+  },
+  {
+   "start": 10.764,
+   "end": 13.084,
+   "text": "Robo Cranes, let's go!"
+  }
+ ],
+ "voice_clips": [
+  {
+   "src": "audio/voice_trim/finale_01.wav",
+   "start": 0.2
+  },
+  {
+   "src": "audio/voice_trim/finale_02.wav",
+   "start": 2.674
+  },
+  {
+   "src": "audio/voice_trim/finale_03.wav",
+   "start": 8.864
+  },
+  {
+   "src": "audio/voice_trim/finale_04.wav",
+   "start": 10.764
+  }
+ ],
+ "sfx": [
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 2.674,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 3.983,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 5.393,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/cheer.mp3",
+   "start": 10.714,
+   "volume": 0.5
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 15.684,
+   "volume": 0.55
+  }
+ ],
+ "music": {
+  "src": "audio/music/hype.mp3",
+  "volume": 0.38
+ }
+}

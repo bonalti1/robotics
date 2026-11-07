@@ -15,7 +15,11 @@ Timeline JSON:
               is also a segment type: a full-frame end card (e.g. the hands-on challenge).
   narration - voiceover lines with timings; written to <out>.srt and embedded as a toggleable subtitle track,
               so the voice can be recorded to the same timing (or the timing changed to fit the voice).
-  voice     - optional path to a recorded voiceover (wav/m4a/mp3); without it a silent track is used.
+  voice     - optional path to one recorded voiceover file (wav/m4a/mp3) starting at 0 s.
+  voice_clips - optional [{"src": wav, "start": s}] voice lines placed on the timeline (see source/voiced.py).
+  sfx       - optional [{"src": mp3, "start": s, "volume": 0.55}] sound effects.
+  music     - optional {"src": mp3, "volume": 0.3}: looped under everything, ducking whenever voice/sfx play.
+              Without voice, sfx and music the video gets a silent track.
   watermark - optional small corner label, e.g. "DRAFT - no voice yet".
 """
 import json, os, subprocess, sys, tempfile
@@ -160,6 +164,44 @@ def render_segment(seg, out, tmp):
          "-frames:v", str(n), "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-tune", "stillimage", out])
 
 
+def build_audio(e, total, tmp):
+    """Mix voice clips + sound effects, with optional looping music that ducks under them. Returns a wav path."""
+    out = os.path.join(tmp, "mix.wav")
+    clips = list(e.get("voice_clips", []))
+    if e.get("voice"):
+        clips.append({"src": e["voice"], "start": 0})
+    fx = [dict(c, volume=c.get("volume", 1.0)) for c in clips] + [dict(c, volume=c.get("volume", 0.55)) for c in e.get("sfx", [])]
+    music = e.get("music")
+    if not fx and not music:
+        run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-t", f"{total}", "-i", "anullsrc=channel_layout=stereo:sample_rate=48000", out])
+        return out
+    cmd, chain = ["ffmpeg", "-y", "-v", "error"], []
+    norm = "aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo"
+    for k, c in enumerate(fx):
+        cmd += ["-i", c["src"]]
+        ms = max(0, round(c["start"] * 1000))
+        chain.append(f"[{k}:a]{norm},volume={c['volume']},adelay={ms}:all=1[c{k}]")
+    if fx:
+        chain.append("".join(f"[c{k}]" for k in range(len(fx))) +
+                     f"amix=inputs={len(fx)}:normalize=0:duration=longest,apad,atrim=0:{total}[fg]")
+    else:
+        chain.append(f"anullsrc=channel_layout=stereo:sample_rate=48000,atrim=0:{total}[fg]")
+    if music:
+        m = len(fx)
+        cmd += ["-stream_loop", "-1", "-i", music["src"]]
+        fo = max(0.0, total - 1.5)
+        chain.append(f"[{m}:a]{norm},atrim=0:{total},asetpts=N/SR/TB,volume={music.get('volume', 0.3)},"
+                     f"afade=t=in:d=0.6,afade=t=out:st={fo:.3f}:d=1.5[mus]")
+        chain.append("[fg]asplit=2[fg1][fg2]")
+        chain.append("[mus][fg1]sidechaincompress=threshold=0.015:ratio=8:attack=20:release=450[duck]")
+        chain.append("[fg2][duck]amix=inputs=2:normalize=0,alimiter=limit=0.95[out]")
+    else:
+        chain.append("[fg]alimiter=limit=0.95[out]")
+    cmd += ["-filter_complex", ";".join(chain), "-map", "[out]", "-t", f"{total}", "-c:a", "pcm_s16le", out]
+    run(cmd)
+    return out
+
+
 def srt_time(t):
     ms = round(t * 1000)
     return f"{ms // 3600000:02d}:{ms // 60000 % 60:02d}:{ms // 1000 % 60:02d},{ms % 1000:03d}"
@@ -205,10 +247,7 @@ def main(edit_path):
             chain.append(f"[{idx}:v]format=rgba{fade},setpts=PTS-STARTPTS+{c['start']}/TB[o{j}]")
             chain.append(f"[{last}][o{j}]overlay=0:0:eof_action=pass[v{j}]")
             last, idx = f"v{j}", idx + 1
-        if e.get("voice"):
-            cmd += ["-i", e["voice"]]
-        else:
-            cmd += ["-f", "lavfi", "-t", f"{total}", "-i", "anullsrc=channel_layout=stereo:sample_rate=48000"]
+        cmd += ["-i", build_audio(e, total, tmp)]
         audio_idx = idx
         cmd += ["-i", srt]
         chain_str = ";".join(chain) if chain else "[0:v]null[vout]"

@@ -1,0 +1,62 @@
+{
+  "opener": [
+    "This is the Robo Cranes, from Grulla Elementary!",
+    "Last season, we made it all the way to the VEX World Championship.",
+    "This year, the game is Level Up.",
+    "We stack bean bags higher and higher, and we learn something new every day.",
+    "Let's go!"
+  ],
+  "v1": [
+    "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot!",
+    "Flop has five parts, just like a body.",
+    "Wheels are Flop's legs: they drive and turn.",
+    "The intake is Flop's mouth: it grabs bean bags and spits them out.",
+    "The arm is Flop's neck: it lifts bags up high, just like my long crane neck!",
+    "The camera is Flop's eyes: it sees red, blue and yellow.",
+    "And the bumper is Flop's nose: boop!",
+    "Five parts, one robot, one team. Let's build it!"
+  ],
+  "v2": [
+    "How do we score in Level Up? With bean bags!",
+    "Drop a bean bag in the floor goal: one point.",
+    "Put it on top of the pyramid: three points!",
+    "Now here's the secret.",
+    "Put a bag ON TOP of another bag on the pyramid, and it reaches the next level: six points!",
+    "That's double!",
+    "So the best teams drop every bag in the exact same spot, so they stack.",
+    "One, three, six. Higher means more points!"
+  ],
+  "v3": [
+    "Bean bags come in three colors.",
+    "Red bags go on the red goal.",
+    "Blue bags go on the blue goal.",
+    "And yellow? Yellow is WILD!",
+    "It counts on any goal.",
+    "If a bag is the wrong color, or still touching the robot, it's zero points.",
+    "Match the color, let it go, and score!"
+  ],
+  "v4": [
+    "Flop can do things one at a time: drive... stop... then lift the arm.",
+    "That's slow!",
+    "Or Flop can do two things at once: lift the arm WHILE it drives.",
+    "In VEXcode, click the little arrow on the arm block and pick 'and don't wait.'",
+    "Now the next block starts right away.",
+    "It's like walking and chewing gum at the same time.",
+    "Save a second here, a second there, and you'll have time for more bean bags!"
+  ],
+  "v5": [
+    "Every time Flop turns, it can be a tiny bit wrong.",
+    "One little mistake is okay.",
+    "But after many turns, the mistakes add up, and Flop gets lost!",
+    "The fix: instead of 'turn right 90,' use 'turn to heading.'",
+    "That means 'face that direction,' like 'face the window.'",
+    "Flop checks its compass every time, so mistakes don't pile up.",
+    "Smart robot!"
+  ],
+  "finale": [
+    "This year, it's your turn.",
+    "We'll build a robot, code a robot, drive a robot, and do it as a team.",
+    "Are you ready?",
+    "Robo Cranes, let's go!"
+  ]
+}

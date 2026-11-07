@@ -1,0 +1,20 @@
+1
+00:00:00,300 --> 00:00:03,882
+This is the Robo Cranes, from Grulla Elementary!
+
+2
+00:00:04,282 --> 00:00:09,162
+Last season, we made it all the way to the VEX World Championship.
+
+3
+00:00:09,562 --> 00:00:12,180
+This year, the game is Level Up.
+
+4
+00:00:12,580 --> 00:00:17,860
+We stack bean bags higher and higher, and we learn something new every day.
+
+5
+00:00:18,260 --> 00:00:19,266
+Let's go!
+

@@ -1,0 +1,39 @@
+{
+  "id": "finale",
+  "title": "Robo Cranes finale (v6 without its first line, which is in the opener)",
+  "out": "output/full/parts/finale.mp4",
+  "segments": [
+    {"note": "your turn", "type": "still", "src": "refs/04_mascot_and_flop.png", "dur": 2.2, "zoom": {"to": 1.05, "cx": 960, "cy": 600}},
+    {"note": "build", "type": "still", "src": "refs/16x9/02_flop_robot_16x9.png", "dur": 1.4, "zoom": {"to": 1.12, "cx": 894, "cy": 650}},
+    {"note": "code", "type": "still", "src": "refs/16x9/03_flop_arm_up_with_bag_16x9.png", "dur": 1.4, "zoom": {"to": 1.12, "cx": 960, "cy": 600}},
+    {"note": "drive", "type": "still", "src": "refs/16x9/02_flop_robot_16x9_left.png", "dur": 1.4, "zoom": {"to": 1.12, "cx": 620, "cy": 650}},
+    {"note": "as a team", "type": "clip", "src": "output/v6/shot2_take1.mp4", "dur": 3.8},
+    {"note": "let's go: confetti", "type": "clip", "src": "output/v6/shot1_take2.mp4", "dur": 5.0},
+    {"note": "hands-on challenge", "type": "card", "dur": 5.5, "card": {
+      "background": "refs/04_mascot_and_flop.png",
+      "title": "TRY IT!",
+      "lines": ["Pick a job to try first:", "Builder - Coder - Driver"],
+      "footer": "Everyone helps the team!"}},
+    {"note": "end card", "type": "card", "dur": 4.5, "card": {
+      "background": "refs/16x9/01_mascot_hero_16x9.png",
+      "title": "ROBO CRANES",
+      "lines": ["Grulla Elementary", "VEX IQ Level Up 2026-27"],
+      "footer": "Thanks for watching!"}}
+  ],
+  "captions": [
+    {"start": 0.2, "end": 2.2, "pos": "topright", "size": 130, "parts": [["YOUR TURN!", "yellow"]]},
+    {"start": 2.3, "end": 3.6, "size": 140, "parts": [["BUILD", "white"]]},
+    {"start": 3.6, "end": 5.0, "size": 140, "pos": "topleft", "parts": [["CODE", "cyan"]]},
+    {"start": 5.0, "end": 6.4, "size": 140, "parts": [["DRIVE", "yellow"]]},
+    {"start": 6.6, "end": 8.3, "pos": "topright", "size": 110, "parts": [["AS A TEAM!", "white"]]},
+    {"start": 8.4, "end": 10.2, "pos": "topright", "size": 96, "parts": [["ARE YOU READY?", "cyan"]]},
+    {"start": 10.3, "end": 11.5, "pos": "bottom", "size": 110, "parts": [["ROBO CRANES,", "white"]]},
+    {"start": 11.5, "end": 15.2, "pos": "bottom", "size": 120, "parts": [["LET'S GO!", "yellow"]]}
+  ],
+  "narration": [
+    {"start": 0.2, "end": 2.0, "text": "This year, it's your turn."},
+    {"start": 2.3, "end": 8.1, "text": "We'll build a robot, code a robot, drive a robot, and do it as a team."},
+    {"start": 8.4, "end": 9.6, "text": "Are you ready?"},
+    {"start": 10.3, "end": 12.6, "text": "Robo Cranes, let's go!"}
+  ]
+}

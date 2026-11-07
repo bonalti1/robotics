@@ -1,0 +1,916 @@
+[
+  {
+    "out": "audio/voice/opener_01.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "This is the Robo Cranes, from Grulla Elementary!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "nextText": "Last season, we made it all the way to the VEX World Championship."
+    },
+    "text": "This is the Robo Cranes, from Grulla Elementary!"
+  },
+  {
+    "out": "audio/voice/opener_02.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Last season, we made it all the way to the VEX World Championship.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "This is the Robo Cranes, from Grulla Elementary!",
+      "nextText": "This year, the game is Level Up."
+    },
+    "text": "Last season, we made it all the way to the VEX World Championship."
+  },
+  {
+    "out": "audio/voice/opener_03.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "This year, the game is Level Up.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Last season, we made it all the way to the VEX World Championship.",
+      "nextText": "We stack bean bags higher and higher, and we learn something new every day."
+    },
+    "text": "This year, the game is Level Up."
+  },
+  {
+    "out": "audio/voice/opener_04.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "We stack bean bags higher and higher, and we learn something new every day.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "This year, the game is Level Up.",
+      "nextText": "Let's go!"
+    },
+    "text": "We stack bean bags higher and higher, and we learn something new every day."
+  },
+  {
+    "out": "audio/voice/opener_05.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Let's go!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "We stack bean bags higher and higher, and we learn something new every day."
+    },
+    "text": "Let's go!"
+  },
+  {
+    "out": "audio/voice/v1_01.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "nextText": "Flop has five parts, just like a body."
+    },
+    "text": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot!"
+  },
+  {
+    "out": "audio/voice/v1_02.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Flop has five parts, just like a body.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot!",
+      "nextText": "Wheels are Flop's legs: they drive and turn."
+    },
+    "text": "Flop has five parts, just like a body."
+  },
+  {
+    "out": "audio/voice/v1_03.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Wheels are Flop's legs: they drive and turn.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Flop has five parts, just like a body.",
+      "nextText": "The intake is Flop's mouth: it grabs bean bags and spits them out."
+    },
+    "text": "Wheels are Flop's legs: they drive and turn."
+  },
+  {
+    "out": "audio/voice/v1_04.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "The intake is Flop's mouth: it grabs bean bags and spits them out.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Wheels are Flop's legs: they drive and turn.",
+      "nextText": "The arm is Flop's neck: it lifts bags up high, just like my long crane neck!"
+    },
+    "text": "The intake is Flop's mouth: it grabs bean bags and spits them out."
+  },
+  {
+    "out": "audio/voice/v1_05.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "The arm is Flop's neck: it lifts bags up high, just like my long crane neck!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "The intake is Flop's mouth: it grabs bean bags and spits them out.",
+      "nextText": "The camera is Flop's eyes: it sees red, blue and yellow."
+    },
+    "text": "The arm is Flop's neck: it lifts bags up high, just like my long crane neck!"
+  },
+  {
+    "out": "audio/voice/v1_06.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "The camera is Flop's eyes: it sees red, blue and yellow.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "The arm is Flop's neck: it lifts bags up high, just like my long crane neck!",
+      "nextText": "And the bumper is Flop's nose: boop!"
+    },
+    "text": "The camera is Flop's eyes: it sees red, blue and yellow."
+  },
+  {
+    "out": "audio/voice/v1_07.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "And the bumper is Flop's nose: boop!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "The camera is Flop's eyes: it sees red, blue and yellow.",
+      "nextText": "Five parts, one robot, one team. Let's build it!"
+    },
+    "text": "And the bumper is Flop's nose: boop!"
+  },
+  {
+    "out": "audio/voice/v1_08.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Five parts, one robot, one team. Let's build it!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "And the bumper is Flop's nose: boop!"
+    },
+    "text": "Five parts, one robot, one team. Let's build it!"
+  },
+  {
+    "out": "audio/voice/v2_01.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "How do we score in Level Up? With bean bags!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "nextText": "Drop a bean bag in the floor goal: one point."
+    },
+    "text": "How do we score in Level Up? With bean bags!"
+  },
+  {
+    "out": "audio/voice/v2_02.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Drop a bean bag in the floor goal: one point.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "How do we score in Level Up? With bean bags!",
+      "nextText": "Put it on top of the pyramid: three points!"
+    },
+    "text": "Drop a bean bag in the floor goal: one point."
+  },
+  {
+    "out": "audio/voice/v2_03.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Put it on top of the pyramid: three points!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Drop a bean bag in the floor goal: one point.",
+      "nextText": "Now here's the secret."
+    },
+    "text": "Put it on top of the pyramid: three points!"
+  },
+  {
+    "out": "audio/voice/v2_04.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Now here's the secret.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Put it on top of the pyramid: three points!",
+      "nextText": "Put a bag ON TOP of another bag on the pyramid, and it reaches the next level: six points!"
+    },
+    "text": "Now here's the secret."
+  },
+  {
+    "out": "audio/voice/v2_05.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Put a bag ON TOP of another bag on the pyramid, and it reaches the next level: six points!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Now here's the secret.",
+      "nextText": "That's double!"
+    },
+    "text": "Put a bag ON TOP of another bag on the pyramid, and it reaches the next level: six points!"
+  },
+  {
+    "out": "audio/voice/v2_06.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "That's double!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Put a bag ON TOP of another bag on the pyramid, and it reaches the next level: six points!",
+      "nextText": "So the best teams drop every bag in the exact same spot, so they stack."
+    },
+    "text": "That's double!"
+  },
+  {
+    "out": "audio/voice/v2_07.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "So the best teams drop every bag in the exact same spot, so they stack.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "That's double!",
+      "nextText": "One, three, six. Higher means more points!"
+    },
+    "text": "So the best teams drop every bag in the exact same spot, so they stack."
+  },
+  {
+    "out": "audio/voice/v2_08.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "One, three, six. Higher means more points!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "So the best teams drop every bag in the exact same spot, so they stack."
+    },
+    "text": "One, three, six. Higher means more points!"
+  },
+  {
+    "out": "audio/voice/v3_01.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Bean bags come in three colors.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "nextText": "Red bags go on the red goal."
+    },
+    "text": "Bean bags come in three colors."
+  },
+  {
+    "out": "audio/voice/v3_02.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Red bags go on the red goal.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Bean bags come in three colors.",
+      "nextText": "Blue bags go on the blue goal."
+    },
+    "text": "Red bags go on the red goal."
+  },
+  {
+    "out": "audio/voice/v3_03.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Blue bags go on the blue goal.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Red bags go on the red goal.",
+      "nextText": "And yellow? Yellow is WILD!"
+    },
+    "text": "Blue bags go on the blue goal."
+  },
+  {
+    "out": "audio/voice/v3_04.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "And yellow? Yellow is WILD!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Blue bags go on the blue goal.",
+      "nextText": "It counts on any goal."
+    },
+    "text": "And yellow? Yellow is WILD!"
+  },
+  {
+    "out": "audio/voice/v3_05.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "It counts on any goal.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "And yellow? Yellow is WILD!",
+      "nextText": "If a bag is the wrong color, or still touching the robot, it's zero points."
+    },
+    "text": "It counts on any goal."
+  },
+  {
+    "out": "audio/voice/v3_06.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "If a bag is the wrong color, or still touching the robot, it's zero points.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "It counts on any goal.",
+      "nextText": "Match the color, let it go, and score!"
+    },
+    "text": "If a bag is the wrong color, or still touching the robot, it's zero points."
+  },
+  {
+    "out": "audio/voice/v3_07.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Match the color, let it go, and score!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "If a bag is the wrong color, or still touching the robot, it's zero points."
+    },
+    "text": "Match the color, let it go, and score!"
+  },
+  {
+    "out": "audio/voice/v4_01.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Flop can do things one at a time: drive... stop... then lift the arm.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "nextText": "That's slow!"
+    },
+    "text": "Flop can do things one at a time: drive... stop... then lift the arm."
+  },
+  {
+    "out": "audio/voice/v4_02.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "That's slow!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Flop can do things one at a time: drive... stop... then lift the arm.",
+      "nextText": "Or Flop can do two things at once: lift the arm WHILE it drives."
+    },
+    "text": "That's slow!"
+  },
+  {
+    "out": "audio/voice/v4_03.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Or Flop can do two things at once: lift the arm WHILE it drives.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "That's slow!",
+      "nextText": "In VEX code, click the little arrow on the arm block and pick 'and don't wait.'"
+    },
+    "text": "Or Flop can do two things at once: lift the arm WHILE it drives."
+  },
+  {
+    "out": "audio/voice/v4_04.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "In VEX code, click the little arrow on the arm block and pick 'and don't wait.'",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Or Flop can do two things at once: lift the arm WHILE it drives.",
+      "nextText": "Now the next block starts right away."
+    },
+    "text": "In VEXcode, click the little arrow on the arm block and pick 'and don't wait.'"
+  },
+  {
+    "out": "audio/voice/v4_05.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Now the next block starts right away.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "In VEX code, click the little arrow on the arm block and pick 'and don't wait.'",
+      "nextText": "It's like walking and chewing gum at the same time."
+    },
+    "text": "Now the next block starts right away."
+  },
+  {
+    "out": "audio/voice/v4_06.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "It's like walking and chewing gum at the same time.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Now the next block starts right away.",
+      "nextText": "Save a second here, a second there, and you'll have time for more bean bags!"
+    },
+    "text": "It's like walking and chewing gum at the same time."
+  },
+  {
+    "out": "audio/voice/v4_07.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Save a second here, a second there, and you'll have time for more bean bags!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "It's like walking and chewing gum at the same time."
+    },
+    "text": "Save a second here, a second there, and you'll have time for more bean bags!"
+  },
+  {
+    "out": "audio/voice/v5_01.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Every time Flop turns, it can be a tiny bit wrong.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "nextText": "One little mistake is okay."
+    },
+    "text": "Every time Flop turns, it can be a tiny bit wrong."
+  },
+  {
+    "out": "audio/voice/v5_02.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "One little mistake is okay.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Every time Flop turns, it can be a tiny bit wrong.",
+      "nextText": "But after many turns, the mistakes add up, and Flop gets lost!"
+    },
+    "text": "One little mistake is okay."
+  },
+  {
+    "out": "audio/voice/v5_03.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "But after many turns, the mistakes add up, and Flop gets lost!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "One little mistake is okay.",
+      "nextText": "The fix: instead of 'turn right 90,' use 'turn to heading.'"
+    },
+    "text": "But after many turns, the mistakes add up, and Flop gets lost!"
+  },
+  {
+    "out": "audio/voice/v5_04.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "The fix: instead of 'turn right 90,' use 'turn to heading.'",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "But after many turns, the mistakes add up, and Flop gets lost!",
+      "nextText": "That means 'face that direction,' like 'face the window.'"
+    },
+    "text": "The fix: instead of 'turn right 90,' use 'turn to heading.'"
+  },
+  {
+    "out": "audio/voice/v5_05.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "That means 'face that direction,' like 'face the window.'",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "The fix: instead of 'turn right 90,' use 'turn to heading.'",
+      "nextText": "Flop checks its compass every time, so mistakes don't pile up."
+    },
+    "text": "That means 'face that direction,' like 'face the window.'"
+  },
+  {
+    "out": "audio/voice/v5_06.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Flop checks its compass every time, so mistakes don't pile up.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "That means 'face that direction,' like 'face the window.'",
+      "nextText": "Smart robot!"
+    },
+    "text": "Flop checks its compass every time, so mistakes don't pile up."
+  },
+  {
+    "out": "audio/voice/v5_07.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Smart robot!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Flop checks its compass every time, so mistakes don't pile up."
+    },
+    "text": "Smart robot!"
+  },
+  {
+    "out": "audio/voice/finale_01.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "This year, it's your turn.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "nextText": "We'll build a robot, code a robot, drive a robot, and do it as a team."
+    },
+    "text": "This year, it's your turn."
+  },
+  {
+    "out": "audio/voice/finale_02.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "We'll build a robot, code a robot, drive a robot, and do it as a team.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "This year, it's your turn.",
+      "nextText": "Are you ready?"
+    },
+    "text": "We'll build a robot, code a robot, drive a robot, and do it as a team."
+  },
+  {
+    "out": "audio/voice/finale_03.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Are you ready?",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "We'll build a robot, code a robot, drive a robot, and do it as a team.",
+      "nextText": "Robo Cranes, let's go!"
+    },
+    "text": "Are you ready?"
+  },
+  {
+    "out": "audio/voice/finale_04.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Robo Cranes, let's go!",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7,
+      "previousText": "Are you ready?"
+    },
+    "text": "Robo Cranes, let's go!"
+  },
+  {
+    "out": "audio/music/calm.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Gentle, playful, warm background music loop for a children's science lesson video: soft marimba melody, light ukulele strums, soft shaker, simple happy chords, 100 BPM, instrumental, calm and unobtrusive.",
+      "duration": 30,
+      "loop": true
+    }
+  },
+  {
+    "out": "audio/music/hype.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Upbeat, energetic, cheerful kids team hype music loop: punchy drums, hand claps, bright synth melody, bouncy bass, 120 BPM, instrumental, exciting and positive.",
+      "duration": 30,
+      "loop": true
+    }
+  },
+  {
+    "out": "audio/sfx/boop.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Cute cartoon boop sound, a soft squeaky nose boop",
+      "duration": 1.0,
+      "loop": false
+    }
+  },
+  {
+    "out": "audio/sfx/whoosh.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Quick soft cartoon whoosh transition",
+      "duration": 1.0,
+      "loop": false
+    }
+  },
+  {
+    "out": "audio/sfx/cheer.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Party popper pop followed by a small crowd cheering and clapping",
+      "duration": 3.0,
+      "loop": false
+    }
+  },
+  {
+    "out": "audio/sfx/thud.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Soft bean bag landing with a gentle thud",
+      "duration": 1.0,
+      "loop": false
+    }
+  },
+  {
+    "out": "audio/sfx/ding.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Bright cheerful correct answer ding chime",
+      "duration": 1.0,
+      "loop": false
+    }
+  },
+  {
+    "out": "audio/sfx/buzz.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Gentle friendly cartoon wrong answer buzzer, short",
+      "duration": 1.0,
+      "loop": false
+    }
+  },
+  {
+    "out": "audio/sfx/pop.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Light cartoon pop",
+      "duration": 0.6,
+      "loop": false
+    }
+  },
+  {
+    "out": "audio/sfx/motor.mp3",
+    "endpoint": "/sound_effect",
+    "body": {
+      "model": "eleven_text_to_sound_v2",
+      "promptText": "Small toy robot electric motor whirring as it drives",
+      "duration": 2.5,
+      "loop": false
+    }
+  }
+]

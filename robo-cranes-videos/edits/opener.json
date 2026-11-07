@@ -1,0 +1,32 @@
+{
+  "id": "opener",
+  "title": "Robo Cranes promo opener",
+  "out": "output/full/parts/opener.mp4",
+  "segments": [
+    {"note": "confetti jump", "type": "clip", "src": "output/v6/shot1_take2.mp4", "dur": 4.1},
+    {"note": "Cranebot and Flop bounce", "type": "clip", "src": "output/v6/shot2_take1.mp4", "dur": 5.3},
+    {"note": "Flop drives", "type": "clip", "src": "output/v1/shot2_take1.mp4", "dur": 3.4},
+    {"note": "bag lands on the stack", "type": "clip", "src": "output/v2/shot3_take2.mp4", "dur": 2.8},
+    {"note": "Cranebot blinks and bobs", "type": "clip", "src": "output/v1/shot4_take1.mp4", "dur": 2.9},
+    {"note": "show title", "type": "card", "dur": 3.1, "card": {
+      "background": "refs/04_mascot_and_flop.png",
+      "title": "ROBO CRANES",
+      "lines": ["Level Up Lessons", "with Cranebot and Flop"]}}
+  ],
+  "captions": [
+    {"start": 0.3, "end": 2.3, "pos": "bottom", "size": 130, "parts": [["ROBO CRANES", "yellow"]]},
+    {"start": 2.3, "end": 4.1, "pos": "bottom", "size": 96, "parts": [["GRULLA ELEMENTARY", "white"]]},
+    {"start": 4.4, "end": 6.4, "pos": "topright", "size": 100, "parts": [["LAST SEASON...", "white"]]},
+    {"start": 6.4, "end": 9.4, "pos": "topright", "size": 150, "parts": [["WORLDS!", "yellow"]]},
+    {"start": 9.6, "end": 12.8, "size": 110, "parts": [["THIS YEAR: ", "white"], ["LEVEL UP", "yellow"]]},
+    {"start": 12.9, "end": 15.6, "size": 100, "parts": [["HIGHER AND HIGHER!", "cyan"]]},
+    {"start": 15.8, "end": 18.5, "pos": "bottom", "size": 90, "parts": [["LEARN SOMETHING NEW!", "white"]]}
+  ],
+  "narration": [
+    {"start": 0.3, "end": 4.0, "text": "This is the Robo Cranes, from Grulla Elementary!"},
+    {"start": 4.4, "end": 9.2, "text": "Last season, we made it all the way to the VEX World Championship."},
+    {"start": 9.6, "end": 12.5, "text": "This year, the game is Level Up."},
+    {"start": 12.9, "end": 18.3, "text": "We stack bean bags higher and higher, and we learn something new every day."},
+    {"start": 18.7, "end": 19.7, "text": "Let's go!"}
+  ]
+}

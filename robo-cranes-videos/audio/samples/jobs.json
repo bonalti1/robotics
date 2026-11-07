@@ -1,0 +1,92 @@
+[
+  {
+    "out": "audio/samples/Maya.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot! Flop has five parts, just like a body.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Maya"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7
+    }
+  },
+  {
+    "out": "audio/samples/Pip.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot! Flop has five parts, just like a body.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Pip"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7
+    }
+  },
+  {
+    "out": "audio/samples/Kylie.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot! Flop has five parts, just like a body.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Kylie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7
+    }
+  },
+  {
+    "out": "audio/samples/Elliot.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot! Flop has five parts, just like a body.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Elliot"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7
+    }
+  },
+  {
+    "out": "audio/samples/Noah.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot! Flop has five parts, just like a body.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Noah"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7
+    }
+  },
+  {
+    "out": "audio/samples/Katie.mp3",
+    "endpoint": "/text_to_speech",
+    "body": {
+      "model": "eleven_v4",
+      "promptText": "Hi Robo Cranes! I'm Cranebot, and this is Flop, our robot! Flop has five parts, just like a body.",
+      "voice": {
+        "type": "runway-preset",
+        "presetId": "Katie"
+      },
+      "speed": 0.92,
+      "languageCode": "en",
+      "seed": 7
+    }
+  }
+]

@@ -1,0 +1,238 @@
+{
+ "id": "opener",
+ "title": "Robo Cranes promo opener",
+ "out": "output/full/parts/opener.mp4",
+ "segments": [
+  {
+   "note": "confetti jump",
+   "type": "clip",
+   "src": "output/v6/shot1_take2.mp4",
+   "dur": 3.9667
+  },
+  {
+   "note": "Cranebot and Flop bounce",
+   "type": "clip",
+   "src": "output/v6/shot2_take1.mp4",
+   "dur": 5.4
+  },
+  {
+   "note": "Flop drives",
+   "type": "clip",
+   "src": "output/v1/shot2_take1.mp4",
+   "dur": 3.1
+  },
+  {
+   "note": "bag lands on the stack",
+   "type": "clip",
+   "src": "output/v2/shot3_take2.mp4",
+   "dur": 2.7667
+  },
+  {
+   "note": "Cranebot blinks and bobs",
+   "type": "clip",
+   "src": "output/v1/shot4_take1.mp4",
+   "dur": 2.8333
+  },
+  {
+   "note": "show title",
+   "type": "card",
+   "dur": 3.1,
+   "card": {
+    "background": "refs/04_mascot_and_flop.png",
+    "title": "ROBO CRANES",
+    "lines": [
+     "Level Up Lessons",
+     "with Cranebot and Flop"
+    ]
+   }
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.3,
+   "end": 2.236,
+   "pos": "bottom",
+   "size": 130,
+   "parts": [
+    [
+     "ROBO CRANES",
+     "yellow"
+    ]
+   ]
+  },
+  {
+   "start": 2.236,
+   "end": 3.982,
+   "pos": "bottom",
+   "size": 96,
+   "parts": [
+    [
+     "GRULLA ELEMENTARY",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 4.282,
+   "end": 6.315,
+   "pos": "topright",
+   "size": 100,
+   "parts": [
+    [
+     "LAST SEASON...",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 6.315,
+   "end": 9.362,
+   "pos": "topright",
+   "size": 150,
+   "parts": [
+    [
+     "WORLDS!",
+     "yellow"
+    ]
+   ]
+  },
+  {
+   "start": 9.562,
+   "end": 12.48,
+   "size": 110,
+   "parts": [
+    [
+     "THIS YEAR: ",
+     "white"
+    ],
+    [
+     "LEVEL UP",
+     "yellow"
+    ]
+   ]
+  },
+  {
+   "start": 12.58,
+   "end": 15.22,
+   "size": 100,
+   "parts": [
+    [
+     "HIGHER AND HIGHER!",
+     "cyan"
+    ]
+   ]
+  },
+  {
+   "start": 15.416,
+   "end": 18.06,
+   "pos": "bottom",
+   "size": 90,
+   "parts": [
+    [
+     "LEARN SOMETHING NEW!",
+     "white"
+    ]
+   ]
+  }
+ ],
+ "narration": [
+  {
+   "start": 0.3,
+   "end": 3.882,
+   "text": "This is the Robo Cranes, from Grulla Elementary!"
+  },
+  {
+   "start": 4.282,
+   "end": 9.162,
+   "text": "Last season, we made it all the way to the VEX World Championship."
+  },
+  {
+   "start": 9.562,
+   "end": 12.18,
+   "text": "This year, the game is Level Up."
+  },
+  {
+   "start": 12.58,
+   "end": 17.86,
+   "text": "We stack bean bags higher and higher, and we learn something new every day."
+  },
+  {
+   "start": 18.26,
+   "end": 19.266,
+   "text": "Let's go!"
+  }
+ ],
+ "voice_clips": [
+  {
+   "src": "audio/voice_trim/opener_01.wav",
+   "start": 0.3
+  },
+  {
+   "src": "audio/voice_trim/opener_02.wav",
+   "start": 4.282
+  },
+  {
+   "src": "audio/voice_trim/opener_03.wav",
+   "start": 9.562
+  },
+  {
+   "src": "audio/voice_trim/opener_04.wav",
+   "start": 12.58
+  },
+  {
+   "src": "audio/voice_trim/opener_05.wav",
+   "start": 18.26
+  }
+ ],
+ "sfx": [
+  {
+   "src": "audio/sfx/cheer.mp3",
+   "start": 0.2,
+   "volume": 0.5
+  },
+  {
+   "src": "audio/sfx/whoosh.mp3",
+   "start": 3.932,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/whoosh.mp3",
+   "start": 9.312,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/motor.mp3",
+   "start": 9.562,
+   "volume": 0.35
+  },
+  {
+   "src": "audio/sfx/whoosh.mp3",
+   "start": 12.43,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/thud.mp3",
+   "start": 14.829,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/whoosh.mp3",
+   "start": 15.171,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/whoosh.mp3",
+   "start": 18.01,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 18.26,
+   "volume": 0.55
+  }
+ ],
+ "music": {
+  "src": "audio/music/hype.mp3",
+  "volume": 0.38
+ }
+}

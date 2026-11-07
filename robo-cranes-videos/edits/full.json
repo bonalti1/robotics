@@ -1,0 +1,27 @@
+{
+  "title": "Robo Cranes: Level Up Lessons",
+  "out": "output/full/robo_cranes_level_up.mp4",
+  "chapter_card_dur": 2.4,
+  "parts": [
+    {"edit": "edits/opener.json", "voice": "opener", "music": {"src": "audio/music/hype.mp3", "volume": 0.38},
+     "sfx": [["cheer", 0.2, 0.5], ["whoosh", 4.05], ["whoosh", 9.35], ["motor", 9.6, 0.35], ["whoosh", 12.75],
+             ["thud", 15.2], ["whoosh", 15.55], ["whoosh", 18.45], ["pop", 18.7]]},
+    {"edit": "edits/v1.json", "voice": "v1", "chapter": ["LESSON 1", "Meet Flop, Our Robot", "refs/04_mascot_and_flop.png"],
+     "music": {"src": "audio/music/calm.mp3", "volume": 0.3},
+     "sfx": [["motor", 9.2, 0.35], ["boop", 33.0, 0.7], ["pop", 40.5]]},
+    {"edit": "edits/v2.json", "voice": "v2", "chapter": ["LESSON 2", "How Points Work", "refs/07_scoring_floor_L1_stack.png"],
+     "music": {"src": "audio/music/calm.mp3", "volume": 0.3},
+     "sfx": [["pop", 23.6], ["thud", 27.7], ["ding", 31.4, 0.45], ["ding", 32.2, 0.45], ["ding", 33.0, 0.45], ["pop", 37.5]]},
+    {"edit": "edits/v3.json", "voice": "v3", "chapter": ["LESSON 3", "The Color Rule", "refs/06_beanbags_three.png"],
+     "music": {"src": "audio/music/calm.mp3", "volume": 0.3},
+     "sfx": [["ding", 14.0, 0.45], ["buzz", 16.4, 0.4], ["buzz", 19.0, 0.4], ["ding", 22.3, 0.45], ["pop", 25.7]]},
+    {"edit": "edits/v4.json", "voice": "v4", "chapter": ["LESSON 4", "Wait vs. Don't Wait", "refs/16x9/02_flop_robot_16x9.png"],
+     "music": {"src": "audio/music/calm.mp3", "volume": 0.3},
+     "sfx": [["motor", 0.5, 0.35], ["pop", 6.1], ["motor", 7.6, 0.35], ["ding", 29.4, 0.45], ["pop", 31.6]]},
+    {"edit": "edits/v5.json", "voice": "v5", "chapter": ["LESSON 5", "Turn to Heading", "refs/05_field_topdown.png"],
+     "music": {"src": "audio/music/calm.mp3", "volume": 0.3},
+     "sfx": [["buzz", 9.0, 0.4], ["ding", 13.2, 0.45], ["ding", 24.6, 0.45], ["pop", 26.6]]},
+    {"edit": "edits/finale.json", "voice": "finale", "music": {"src": "audio/music/hype.mp3", "volume": 0.38},
+     "sfx": [["pop", 2.3], ["pop", 3.6], ["pop", 5.0], ["cheer", 10.25, 0.5], ["pop", 15.2]]}
+  ]
+}

@@ -1,0 +1,290 @@
+{
+ "id": "v5",
+ "title": "The Lost Robot: Turn to Heading",
+ "out": "output/full/parts/v5.mp4",
+ "segments": [
+  {
+   "note": "chapter card",
+   "type": "card",
+   "dur": 2.4,
+   "card": {
+    "background": "refs/05_field_topdown.png",
+    "title": "LESSON 5",
+    "lines": [
+     "Turn to Heading"
+    ]
+   }
+  },
+  {
+   "note": "every turn can be a tiny bit wrong: field rocks ~4 degrees (ffmpeg; both Runway takes spun the field ~90 deg and warped the bags)",
+   "type": "still",
+   "src": "refs/05_field_topdown.png",
+   "dur": 7.0,
+   "wobble": {
+    "deg": 4,
+    "period": 3.0
+   }
+  },
+  {
+   "note": "mistakes add up: planned square (dashed) vs real path (red)",
+   "type": "still",
+   "src": "refs/diagrams/drift_path.png",
+   "dur": 5.3,
+   "zoom": {
+    "to": 1.15,
+    "cx": 860,
+    "cy": 640
+   }
+  },
+  {
+   "note": "the fix: turn for -> turn to heading (drawn illustration of two blocks)",
+   "type": "card",
+   "dur": 6.0333,
+   "card": {
+    "background": "refs/05_field_topdown.png",
+    "title": "THE FIX",
+    "blocks": [
+     {
+      "text": "turn right for 90 degrees",
+      "mark": "x",
+      "dim": true,
+      "size": 72
+     },
+     {
+      "text": "turn to heading 90 degrees",
+      "mark": "check",
+      "size": 72
+     }
+    ]
+   }
+  },
+  {
+   "note": "face that direction, like 'face the window'",
+   "type": "still",
+   "src": "refs/diagrams/compass_heading.png",
+   "dur": 4.4333
+  },
+  {
+   "note": "Cranebot points at the field and nods",
+   "type": "clip",
+   "src": "output/v5/shot2_take1.mp4",
+   "dur": 7.0
+  },
+  {
+   "note": "hands-on challenge",
+   "type": "card",
+   "dur": 6.0,
+   "card": {
+    "background": "refs/05_field_topdown.png",
+    "title": "TRY IT!",
+    "lines": [
+     "Drive a square: 4 turns.",
+     "Where does Flop end up?"
+    ],
+    "footer": "Try 'turn for' first, then 'turn to heading'"
+   }
+  }
+ ],
+ "captions": [
+  {
+   "start": 3.148,
+   "end": 6.715,
+   "parts": [
+    [
+     "A TINY BIT WRONG",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 6.915,
+   "end": 9.415,
+   "size": 100,
+   "parts": [
+    [
+     "ONE MISTAKE",
+     "white"
+    ],
+    [
+     " = ",
+     "yellow"
+    ],
+    [
+     "OKAY",
+     "cyan"
+    ]
+   ]
+  },
+  {
+   "start": 9.815,
+   "end": 12.592,
+   "parts": [
+    [
+     "MISTAKES ADD UP",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 12.592,
+   "end": 14.715,
+   "size": 130,
+   "parts": [
+    [
+     "FLOP GETS LOST!",
+     "yellow"
+    ]
+   ]
+  },
+  {
+   "start": 21.046,
+   "end": 23.266,
+   "size": 90,
+   "parts": [
+    [
+     "FACE THAT DIRECTION",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 23.266,
+   "end": 25.151,
+   "size": 90,
+   "parts": [
+    [
+     "LIKE \"FACE THE WINDOW\"",
+     "cyan"
+    ]
+   ]
+  },
+  {
+   "start": 25.591,
+   "end": 29.991,
+   "pos": [
+    700,
+    895
+   ],
+   "size": 90,
+   "parts": [
+    [
+     "CHECK EVERY TIME",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 30.091,
+   "end": 32.151,
+   "pos": [
+    760,
+    885
+   ],
+   "size": 100,
+   "parts": [
+    [
+     "SMART ROBOT!",
+     "yellow"
+    ]
+   ]
+  }
+ ],
+ "narration": [
+  {
+   "start": 2.8,
+   "end": 6.515,
+   "text": "Every time Flop turns, it can be a tiny bit wrong."
+  },
+  {
+   "start": 6.915,
+   "end": 9.315,
+   "text": "One little mistake is okay."
+  },
+  {
+   "start": 9.815,
+   "end": 14.515,
+   "text": "But after many turns, the mistakes add up, and Flop gets lost!"
+  },
+  {
+   "start": 14.915,
+   "end": 20.435,
+   "text": "The fix: instead of 'turn right 90,' use 'turn to heading.'"
+  },
+  {
+   "start": 20.835,
+   "end": 24.851,
+   "text": "That means 'face that direction,' like 'face the window.'"
+  },
+  {
+   "start": 25.251,
+   "end": 29.891,
+   "text": "Flop checks its compass every time, so mistakes don't pile up."
+  },
+  {
+   "start": 30.291,
+   "end": 31.651,
+   "text": "Smart robot!"
+  }
+ ],
+ "voice_clips": [
+  {
+   "src": "audio/voice_trim/v5_01.wav",
+   "start": 2.8
+  },
+  {
+   "src": "audio/voice_trim/v5_02.wav",
+   "start": 6.915
+  },
+  {
+   "src": "audio/voice_trim/v5_03.wav",
+   "start": 9.815
+  },
+  {
+   "src": "audio/voice_trim/v5_04.wav",
+   "start": 14.915
+  },
+  {
+   "src": "audio/voice_trim/v5_05.wav",
+   "start": 20.835
+  },
+  {
+   "src": "audio/voice_trim/v5_06.wav",
+   "start": 25.251
+  },
+  {
+   "src": "audio/voice_trim/v5_07.wav",
+   "start": 30.291
+  }
+ ],
+ "sfx": [
+  {
+   "src": "audio/sfx/whoosh.mp3",
+   "start": 0.0,
+   "volume": 0.5
+  },
+  {
+   "src": "audio/sfx/buzz.mp3",
+   "start": 12.592,
+   "volume": 0.4
+  },
+  {
+   "src": "audio/sfx/ding.mp3",
+   "start": 17.368,
+   "volume": 0.45
+  },
+  {
+   "src": "audio/sfx/ding.mp3",
+   "start": 30.091,
+   "volume": 0.45
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 32.151,
+   "volume": 0.55
+  }
+ ],
+ "music": {
+  "src": "audio/music/calm.mp3",
+  "volume": 0.3
+ }
+}

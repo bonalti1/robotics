@@ -1,0 +1,318 @@
+{
+ "id": "v4",
+ "title": "Walk and Chew Gum: Wait vs. Don't Wait",
+ "out": "output/full/parts/v4.mp4",
+ "segments": [
+  {
+   "note": "chapter card",
+   "type": "card",
+   "dur": 2.4,
+   "card": {
+    "background": "refs/16x9/02_flop_robot_16x9.png",
+    "title": "LESSON 4",
+    "lines": [
+     "Wait vs. Don't Wait"
+    ]
+   }
+  },
+  {
+   "note": "one at a time: drive, stop",
+   "type": "clip",
+   "src": "output/v4/shot1_take2.mp4",
+   "dur": 5.6333
+  },
+  {
+   "note": "...then lift the arm",
+   "type": "still",
+   "src": "refs/16x9/03_flop_arm_up_with_bag_16x9.png",
+   "dur": 2.6333
+  },
+  {
+   "note": "two at once: drive WHILE the arm rises",
+   "type": "clip",
+   "src": "output/v4/shot2_take2.mp4",
+   "dur": 5.9
+  },
+  {
+   "note": "VEXcode tip: the little arrow -> and don't wait (drawn illustration of one block)",
+   "type": "card",
+   "dur": 8.7333,
+   "card": {
+    "background": "refs/16x9/03_flop_arm_up_with_bag_16x9.png",
+    "title": "AND DON'T WAIT",
+    "blocks": [
+     {
+      "text": "spin Arm up for 90 degrees",
+      "extra": "and don't wait",
+      "size": 72
+     }
+    ],
+    "lines": [
+     "The next block starts right away!"
+    ]
+   }
+  },
+  {
+   "note": "walking and chewing gum",
+   "type": "clip",
+   "src": "output/v4/shot3_take1.mp4",
+   "dur": 3.9333
+  },
+  {
+   "note": "save seconds -> more bags",
+   "type": "still",
+   "src": "refs/05_field_topdown.png",
+   "dur": 5.3667,
+   "zoom": {
+    "to": 1.12,
+    "cx": 960,
+    "cy": 540
+   }
+  },
+  {
+   "note": "hands-on challenge",
+   "type": "card",
+   "dur": 6.0,
+   "card": {
+    "background": "refs/16x9/02_flop_robot_16x9.png",
+    "title": "TRY IT!",
+    "lines": [
+     "Time Flop both ways:",
+     "wait vs. don't wait."
+    ],
+    "footer": "Which is faster? Write it in your notebook!"
+   }
+  }
+ ],
+ "captions": [
+  {
+   "start": 3.028,
+   "end": 5.078,
+   "parts": [
+    [
+     "DRIVE...",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 5.078,
+   "end": 7.356,
+   "parts": [
+    [
+     "STOP...",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 7.356,
+   "end": 9.234,
+   "parts": [
+    [
+     "THEN LIFT",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 9.234,
+   "end": 10.655,
+   "size": 130,
+   "parts": [
+    [
+     "THAT'S SLOW!",
+     "yellow"
+    ]
+   ]
+  },
+  {
+   "start": 11.064,
+   "end": 13.886,
+   "size": 84,
+   "pos": [
+    56,
+    300
+   ],
+   "parts": [
+    [
+     "2 AT ONCE!",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 13.886,
+   "end": 16.574,
+   "pos": "topleft",
+   "parts": [
+    [
+     "DRIVE",
+     "white"
+    ],
+    [
+     " + ",
+     "yellow"
+    ],
+    [
+     "LIFT",
+     "cyan"
+    ]
+   ]
+  },
+  {
+   "start": 25.488,
+   "end": 29.248,
+   "pos": "bottom",
+   "size": 96,
+   "parts": [
+    [
+     "WALK",
+     "white"
+    ],
+    [
+     " + ",
+     "yellow"
+    ],
+    [
+     "CHEW GUM",
+     "cyan"
+    ]
+   ]
+  },
+  {
+   "start": 29.631,
+   "end": 31.094,
+   "parts": [
+    [
+     "1 SECOND HERE",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 31.094,
+   "end": 32.558,
+   "parts": [
+    [
+     "1 SECOND THERE",
+     "white"
+    ]
+   ]
+  },
+  {
+   "start": 32.558,
+   "end": 34.604,
+   "size": 130,
+   "parts": [
+    [
+     "MORE BEAN BAGS!",
+     "yellow"
+    ]
+   ]
+  }
+ ],
+ "narration": [
+  {
+   "start": 2.8,
+   "end": 8.723,
+   "text": "Flop can do things one at a time: drive... stop... then lift the arm."
+  },
+  {
+   "start": 9.123,
+   "end": 10.455,
+   "text": "That's slow!"
+  },
+  {
+   "start": 10.955,
+   "end": 16.274,
+   "text": "Or Flop can do two things at once: lift the arm WHILE it drives."
+  },
+  {
+   "start": 16.774,
+   "end": 22.181,
+   "text": "In VEXcode, click the little arrow on the arm block and pick 'and don't wait.'"
+  },
+  {
+   "start": 22.581,
+   "end": 25.088,
+   "text": "Now the next block starts right away."
+  },
+  {
+   "start": 25.588,
+   "end": 28.948,
+   "text": "It's like walking and chewing gum at the same time."
+  },
+  {
+   "start": 29.448,
+   "end": 34.204,
+   "text": "Save a second here, a second there, and you'll have time for more bean bags!"
+  }
+ ],
+ "voice_clips": [
+  {
+   "src": "audio/voice_trim/v4_01.wav",
+   "start": 2.8
+  },
+  {
+   "src": "audio/voice_trim/v4_02.wav",
+   "start": 9.123
+  },
+  {
+   "src": "audio/voice_trim/v4_03.wav",
+   "start": 10.955
+  },
+  {
+   "src": "audio/voice_trim/v4_04.wav",
+   "start": 16.774
+  },
+  {
+   "src": "audio/voice_trim/v4_05.wav",
+   "start": 22.581
+  },
+  {
+   "src": "audio/voice_trim/v4_06.wav",
+   "start": 25.588
+  },
+  {
+   "src": "audio/voice_trim/v4_07.wav",
+   "start": 29.448
+  }
+ ],
+ "sfx": [
+  {
+   "src": "audio/sfx/whoosh.mp3",
+   "start": 0.0,
+   "volume": 0.5
+  },
+  {
+   "src": "audio/sfx/motor.mp3",
+   "start": 2.914,
+   "volume": 0.35
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 9.234,
+   "volume": 0.55
+  },
+  {
+   "src": "audio/sfx/motor.mp3",
+   "start": 10.855,
+   "volume": 0.35
+  },
+  {
+   "src": "audio/sfx/ding.mp3",
+   "start": 32.558,
+   "volume": 0.45
+  },
+  {
+   "src": "audio/sfx/pop.mp3",
+   "start": 34.604,
+   "volume": 0.55
+  }
+ ],
+ "music": {
+  "src": "audio/music/calm.mp3",
+  "volume": 0.3
+ }
+}

@@ -1,0 +1,16 @@
+1
+00:00:00,200 --> 00:00:02,324
+This year, it's your turn.
+
+2
+00:00:02,674 --> 00:00:08,514
+We'll build a robot, code a robot, drive a robot, and do it as a team.
+
+3
+00:00:08,864 --> 00:00:10,064
+Are you ready?
+
+4
+00:00:10,764 --> 00:00:13,084
+Robo Cranes, let's go!
+

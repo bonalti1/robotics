@@ -19,7 +19,7 @@ Mascot: **Cranebot**, an original cartoon robot crane (refs/01_mascot_hero.png).
 
 ## Pipeline (built while making v1; reuse for v2–v6)
 - **Generator:** Runway Gen-4.5 (`gen4.5`, 12 credits/s → 60 credits per 5 s take). Rolando asked for the best model.
-  v1 cost 480 credits; v2–v6 cost 1,440 (all approved). Runway balance afterwards: 2,328. Higgsfield had only ~24
+  v1 cost 480 credits; v2–v6 cost 1,440 (all approved). Runway balance after video: 2,328; after the audio for the full video (123 credits): 2,205. Higgsfield had only ~24
   credits, so it isn't used. All 6 drafts exist (`output/v1/NOTES.md`, `output/REVIEW_v2-v6.md`); next step is
   Rolando's voiceover, then the finals.
 - Gen-4.5 tends to overdo camera moves on flat art (v5 shot 1 spun the field ~90°). Free ffmpeg moves in the edit
@@ -32,6 +32,14 @@ Mascot: **Cranebot**, an original cartoon robot crane (refs/01_mascot_hero.png).
   the start), free ffmpeg zooms (`zoom` with `ease`) or rocking (`wobble`) on the ref art, BIG captions (pos
   top/bottom/topleft/topright/[x,y]), cards with drawn code blocks, a "Try it!" card, and a narration `.srt`.
   The script's docstring lists every option.
+- **Full video with sound** (Rolando asked for all of them in one, a bit promotional):
+  `python3 source/build_full.py edits/full.json` → `output/full/robo_cranes_level_up.mp4` (about 4 min 11 s): a promo
+  opener (`edits/opener.json`), LESSON 1–5 chapter cards + v1–v5, and the finale (`edits/finale.json`, v6 without its
+  Worlds line, which the opener says). The timeline of each part is fitted to the real voice lines. Each part is also
+  a stand-alone voiced video in `output/full/parts/`. The finished file was loudness-normalized to -16 LUFS.
+  Audio from Runway (123 credits): AI voice **Kylie** (eleven_v4, speed 0.92) as a stand-in for Rolando's own voice,
+  music loops `audio/music/{calm,hype}.mp3`, sound effects in `audio/sfx/`. `source/runway_audio.py` runs these jobs.
+  To use Rolando's recordings instead: replace `audio/voice/<part>_NN.mp3` (one file per narration line) and rebuild.
 - `source/diagrams.py` draws edit-time teaching diagrams (`refs/diagrams/`: drift path, compass heading).
 - Each video ends with a short **"Try it!"** card: a hands-on challenge that links the video's idea to the real robot
   (watch → try → measure → decide), so the kids learn while getting better at the game.
